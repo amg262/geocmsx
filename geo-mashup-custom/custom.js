@@ -111,27 +111,32 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
     if (properties.map_content == 'global') {
         //alert(b);
-        var bikeLayer = new google.maps.BicyclingLayer();
-        bikeLayer.setMap(google_map);
+       // alert(options.bike_layer);
+        if (options.bike_layer == '1') {
+            var bikeLayer = new google.maps.BicyclingLayer();
+            bikeLayer.setMap(google_map);
+        }
+        if (options.transit_layer == '1') {
+            var trafficLayer = new google.maps.TrafficLayer();
+            trafficLayer.setMap(google_map);
 
-        var trafficLayer = new google.maps.TrafficLayer();
-        trafficLayer.setMap(google_map);
+        }
+
+        if (options.fusion_heat_layer == '1') {
+            var layer = new google.maps.FusionTablesLayer({
+              query: {
+                select: 'location',
+                from: '1xWyeuAhIFK_aED1ikkQEGmR8mINSCJO9Vq-BPQ'
+              },
+              heatmap: {
+                enabled: true
+              }
+            });
+
+            layer.setMap(google_map);
 
 
-        var layer = new google.maps.FusionTablesLayer({
-          query: {
-            select: 'location',
-            from: '1xWyeuAhIFK_aED1ikkQEGmR8mINSCJO9Vq-BPQ'
-          },
-          heatmap: {
-            enabled: true
-          }
-        });
-
-        layer.setMap(google_map);
-
-
-
+        }
        // google_map.data.addGeoJson('https://storage.googleapis.com/maps-devrel/quakes.geo.json');
           
        

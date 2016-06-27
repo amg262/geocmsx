@@ -243,54 +243,8 @@ class TrailStorySettings {
                 <p>
                 <table class="form-table">
                     <tbody>
-                         <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Marker Animatinos
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'marker_animatinos'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                    </label>
-                                <p class="description">.</p>
-                                
-                            </td>
-                        </tr>
-                            <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Marker Animatinos
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'marker_animatinos'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                    </label>
-                                <p class="description">.</p>
-                                
-                            </td>
-                        </tr>
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Location Elevation
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'elevation'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                    </label>
-                                <p class="description">.</p>
-                                
-                            </td>
-                        </tr>
+                         
+                       
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
@@ -339,37 +293,143 @@ class TrailStorySettings {
                                 
                             </td>
                         </tr>
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Max Zoom
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'max_zoom'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                    </label>
-                                <p class="description">.</p>
-                                
-                            </td>
-                        </tr>
                         
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                KML File URL
+                                Delimiter
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'delimiter';
+
+                                if ($trail_story_options[$key] == null) {
+                                    $trail_story_options[$key] = ',';
+                                } elseif (strlen($trail_story_options[$key]) > 1) {
+                                    $trail_story_options[$key] = ',';
+                                }
+                                                                            //var_dump($trail_story_options[$key]); ?>
+
+                                    
+                                    <input type="text"  style="width:50px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" placeholder="," />
+                                    <br>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                    Override Delimiter
+                                    </label>
+                                <p class="description">You can enter a character to delimit by, otherwise it will use commas.</p>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                # of Data Layers
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'count_data_layers';
+                                if ($trail_story_options[$key]==null):
+                                    $trail_story_options[$key]='1';
+                                endif;
+                                                                            //var_dump($trail_story_options[$key]); ?>
+
+                                    
+                                    <input type="text"  style="width:75px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" placeholder="1" value="<?php if ($trail_story_options[$key] == null) { echo '1';$trail_story_options[$key]='1'; } else { echo $trail_story_options[$key]; } ?>" />
+                                    <input type="submit" value="Add Layer" />
+                                    <br>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                    Override Delimiter
+                                    </label>
+                                <p class="description">You can enter a character to delimit by, otherwise it will use commas.</p>
+                                
+                            </td>
+                        </tr>
+
+                        <?php if ($trail_story_options['count_data_layers']) {
+                            $count = intval($trail_story_options['count_data_layers']);
+                           // var_dump($count);
+                            for ($i=0;$i<$count;$i++) { ?>
+
+                                <tr>
+                                    <?php //$key = 'delete_data'; ?>
+                                    <th scope="row">
+                                        Data Layer
+                                    </th>
+                                    <td>
+                                    <?php $str = 'data-layer-'.$i; ?>
+                                        <fieldset><?php $key = 'trail-story-add-icon-text-box-'.$str?>
+
+                                            
+                                           
+                                        <?php $var = 'data_layer_'.$i;
+                                        $post_type = $str;?>
+                           
+                                        <div class="icon-content">
+                                        <div class="<?php echo $post_type; ?>">
+                                            <div class="icon-post-type">
+                                                <h4><?php _e( esc_html( $post_type ) ); ?></h4>
+                                            </div>
+                                            <div class="icon-image-buttons">
+
+                                                <?php $key = 'trail-story-add-icon-text-box-' . $post_type; ?>
+
+                                                <div class="trail-story-icon-button-container">
+                                                    <?php // Holster for Image url (Hidden) ?>
+                                                    <label for="trail-story-add-icon-button-<?php echo $post_type; ?>">
+                                                    <?php _e(esc_html($trail_story_options['trail-story-add-icon-text-box-'. $post_type ]), 'geocmsx'); ?>
+                                                    <input type="hidden" 
+                                                           id="trail-story-add-icon-text-box-<?php echo $post_type; ?>" 
+                                                           class="trail-story-icon-url" 
+                                                           name="trail_story_options[trail-story-add-icon-text-box-<?php echo $post_type; ?>]" 
+                                                           value="<?php echo $trail_story_options['trail-story-add-icon-text-box-'. $post_type ]; ?>"/>
+
+                                                    <?php // Button to add Image icon ?>
+                                                    <input type="button" 
+                                                           id="trail-story-add-icon-button-<?php echo $post_type; ?>" 
+                                                           class="button trail-story-add-icon-button <?php echo $trail_story_options[$key] ? 'hidden' : ''; ?>" 
+                                                           name="trail-story-add-icon-button" 
+                                                           value="<?php _e( 'Add File', 'geo-mashup-trail-story-add-on' ); ?>"/>
+
+                                                    <?php // Button to remove Image icon ?>
+                                                    <input type="button" 
+                                                           id="trail-story-remove-icon-button-<?php echo $post_type; ?>" 
+                                                           class="button trail-story-remove-icon-button <?php echo !$trail_story_options[$key] ? 'hidden' : ''; ?>" 
+                                                           name="trail-story-add-icon-button" 
+                                                           value="<?php _e( 'Remove File', 'geo-mashup-trail-story-add-on' ); ?>"/>
+
+                                                           <div style="clear:both;height:0;"></div>
+                                                </div>
+
+                                                <div class="trail-story-icon-image-container">
+
+                                                <?php if( $trail_story_options[ $key ] ){ ?>
+
+                                                    <img src="<?php echo esc_attr( $trail_story_options[ $key ] ); ?>" alt="" style="max-width:100%;" />
+
+                                                <?php } ?>
+
+                                                </div>
+
+                                            </div>
+                                            <div style="clear:both;height:0;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <?php }
+                            } ?>
+                            <hr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                KML URLs
                             </th>
                             <td>
                                 <fieldset><?php $key = 'custom_kml_layers';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    Sepearte URLs by commma
-                                    </label>
-                                    <input type="text" style="width:700px; " name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-                                <!--<p class="description">Use this as a factory restore.</p>-->
+                                    
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <br>
+                                    
+                                <p class="description">DEFAULT IS COMMA DELIMITED</p>
                                 
                             </td>
                         </tr>
@@ -384,12 +444,30 @@ class TrailStorySettings {
 
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                     </label>
-                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
                                 <!--<p class="description">Use this as a factory restore.</p>-->
                                 
                             </td>
                         </tr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Custom Overlay
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'custom_overlay';
+                                                                            //var_dump($trail_story_options[$key]); ?>
 
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                    </label>
+                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+
+                                   
+                                <!--<p class="description">Use this as a factory restore.</p>-->
+                                
+                            </td>
+                        
+                        </tr>
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
@@ -402,7 +480,7 @@ class TrailStorySettings {
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                     Sepearte URLs by commma
                                     </label>
-                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
 
                                     <?php $key = 'earthqauke_styles'; 
                                     //var_dump($trail_story_options[$key]);?>
@@ -416,25 +494,7 @@ class TrailStorySettings {
                             </td>
                         
                         </tr>
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Overlay
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'overlay';
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    </label>
-                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-
-                                   
-                                <!--<p class="description">Use this as a factory restore.</p>-->
-                                
-                            </td>
                         
-                        </tr>
                          
                         Marker glow cb, Overlay text box,  preloaded map styles select, Plugin map/frontend page set up button, add image size icons, Json data,  json post import export, Json settings import export,  
                     </tbody>
