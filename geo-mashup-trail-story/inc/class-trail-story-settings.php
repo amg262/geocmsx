@@ -234,60 +234,6 @@ class TrailStorySettings {
                             </td>
                         </tr>
 
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Delete Posts
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'delete_posts'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                        Delete all posts, attachments, and plugin settings when uninstalled.
-                                    </label>
-                               
-                                
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Delete Options
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'delete_options'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                        Delete all plugin options.
-                                    </label>
-                                
-                                
-                            </td>
-                        </tr>
-                       
-                        <tr>
-                            <th scope="row">
-                                Delete All Data
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'delete_data'; 
-                                    //var_dump(isset($trail_story_options["delete_dbo"])); ?>
-
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                        Drop all database tables and plugin data when uninstalled.
-                                    </label>
-                                <p class="description"><span class="icon warn">&nbsp;</span>
-                                ON UNINSTALL. Use at your own risk. A backup is recommended beforehand.</p>
-                                </fieldset>
-                                
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
                     
@@ -351,31 +297,7 @@ class TrailStorySettings {
                             </td>
                         </tr>
                         
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Global Delimiter
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'delimiter';
-
-                                if ($trail_story_options[$key] == null) {
-                                    $trail_story_options[$key] = ',';
-                                } elseif (strlen($trail_story_options[$key]) > 1) {
-                                    $trail_story_options[$key] = ',';
-                                }
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    
-                                    <input type="text"  style="width:50px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" placeholder="," />
-                                    <br>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    Override Delimiter
-                                    </label>
-                                <p class="description">You can enter a character to delimit by, otherwise it will use commas.</p>
-                                
-                            </td>
-                        </tr>
+                        
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
