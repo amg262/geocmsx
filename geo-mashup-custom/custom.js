@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
     //console.log(kmls);
     var k = objects.custom_kml_layers;
     console.log(objects);
+    console.log(options);
     //get_kmls_obj(kmls);
     $('#trail-story-post').submit(function($) {
 

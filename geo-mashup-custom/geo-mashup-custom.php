@@ -254,7 +254,8 @@ function trail_story_locations_custom_kmls() {
 
     var_dump($objects);
     wp_localize_script( 'geo-mashup-custom', $objects, $arr );
-    
+
+    wp_localize_script( 'geo-mashup-custom', 'options' , $trail_story_options );
 
 
     wp_localize_script( 'geo-mashup-custom', 'icons', $translation_array );
