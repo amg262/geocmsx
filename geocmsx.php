@@ -91,7 +91,7 @@ class GsxInit {
         'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
         //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
         'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
-        'post_title'    => 'GeoPost Map', //The title of your post.
+        'post_title'    => 'GeoCMSx Map', //The title of your post.
         'post_type'     => 'page' //Sometimes you want to post a page.
         //'tags_input'    => [  ], //For tags.
        // 'tax_input'       => array( 'trail-story-category' => 'trail-stories' ) //For taxonomies.
@@ -105,7 +105,27 @@ class GsxInit {
     }
 
     public function gsx_fe_page() {
-
+      global $post_ID;
+      global $user_ID;
+      //if ( $_POST['geo_mashup_add_location'] ) {
+      $post = array(
+        'post_author'   => $user_ID, //The user ID number of the author.
+        //'post_category'   => $trail_story_post_category, //Add some categories. Apparently doesn't work
+        'post_content'    => '[geo_mashup_map]<hr>[geo_mashup_term_legend]', //The full text of the post.
+        'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
+        //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
+        'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
+        'post_title'    => 'GeoCMSx Post', //The title of your post.
+        'post_type'     => 'page' //Sometimes you want to post a page.
+        //'tags_input'    => [  ], //For tags.
+       // 'tax_input'       => array( 'trail-story-category' => 'trail-stories' ) //For taxonomies.
+      );
+        
+        //include_once( 'class-trail-story-db.php' );
+        // Insert the post into the database
+        $id = wp_insert_post( $post );
+        wp_set_post_terms( $id );
+        var_dump($id);
     }
 
     public function gsx_plugin_links( $actions, $plugin_file ) {
