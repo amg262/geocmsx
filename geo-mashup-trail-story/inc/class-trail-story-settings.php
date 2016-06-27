@@ -435,61 +435,7 @@ class TrailStorySettings {
                             </td>
                         
                         </tr>
-                         <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Overlay
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'overlay';
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    </label>
-                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-
-                                   
-                                <!--<p class="description">Use this as a factory restore.</p>-->
-                                
-                            </td>
-                        
-                        </tr> <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Overlay
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'overlay';
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    </label>
-                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-
-                                   
-                                <!--<p class="description">Use this as a factory restore.</p>-->
-                                
-                            </td>
-                        
-                        </tr> <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Overlay
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'overlay';
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    </label>
-                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-
-                                   
-                                <!--<p class="description">Use this as a factory restore.</p>-->
-                                
-                            </td>
-                        
-                        </tr>
+                         
                         Marker glow cb, Overlay text box,  preloaded map styles select, Plugin map/frontend page set up button, add image size icons, Json data,  json post import export, Json settings import export,  
                     </tbody>
                 </table></p>
