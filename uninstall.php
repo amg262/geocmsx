@@ -5,20 +5,17 @@ defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
 
 
 if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-    //exit();
+    exit();
 }
 
-interface i_GsxDataRemoval() {
 
-}
-
-class GsxDataRemoval() {
+class GsxDataRemoval {
 
 	public $trail_story_options;
 
 	public function __construct() {
 
-		$this->$trail_story_options = (array) get_option('trail_story_options');
+		$trail_story_options =  get_option('trail_story_options');
 
 	}
 
@@ -91,10 +88,9 @@ class GsxDataRemoval() {
 				$wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . $table );
 
 			}
+			endif;
 		}
 
-
-	}
 
 
 
