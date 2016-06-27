@@ -235,8 +235,8 @@ geo_mashup_uninstall_db();
 
 	}
 
+execute_uninstallion();
 
 
 
-	
 }
