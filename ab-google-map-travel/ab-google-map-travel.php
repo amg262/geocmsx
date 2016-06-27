@@ -1,13 +1,5 @@
 <?php
-/*
-  Plugin Name: AB Google Map Travel (AB-MAP)
-  Plugin URI: http://wp.aboobacker.com
-  Version: 4.1
-  Author: Aboobacker P Ummer
-  Author URI: http://aboobacker.com
-  Description: If you are a taxi provider, make your customers allow to calculate their travel distance, fare with different charges for day and night travels.
-  Tags: Google Maps, Distance Calculator, Google Maps, Calculate Distance, Driving Directions, Google Travel, AB Google Map Travel, Abooze Map Plugin
- */
+
 global $wp_version;
 // Wordppress Version Check
 if (version_compare($wp_version, '3.0', '<')) {
@@ -349,7 +341,13 @@ function ab_print_options_form() {
 <?php
 }
 function add_menu_item() {
-    add_menu_page('AB-MAP Options', 'Google Map Travel', 'add_users','ab_map_options', 'ab_options_page', plugins_url('/images/icon.png', __FILE__));
+    //add_menu_page('AB-MAP Options', 'Google Map Travel', 'add_users','ab_map_options', 'ab_options_page', plugins_url('/images/icon.png', __FILE__));
+  add_submenu_page('edit.php?post_type=geopost',
+            'Travel',
+            'Travel',
+            'manage_options',
+            'travel',
+            'ab_options_page');
 }
 add_action('admin_menu', 'add_menu_item');
 ?>

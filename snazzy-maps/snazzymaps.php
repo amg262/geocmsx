@@ -1,13 +1,5 @@
 <?php
-/**
- * Plugin Name: Snazzy Maps
- * Plugin URI: https://snazzymaps.com/plugins
- * Description: Apply styles to your Google Maps with the official Snazzy Maps WordPress plugin.
- * Version: 1.1.2
- * Author: Atmist
- * Author URI: http://atmist.com/
- * License: GPL2
- */
+
 /*  Copyright 2014  Atmist  (email : hello@atmist.com)
 
     This program is free software; you can redistribute it and/or modify
@@ -89,7 +81,14 @@ add_action( 'wp_enqueue_scripts', 'enqueue_script');
 add_action( 'admin_enqueue_scripts', 'admin_enqueue_script');
 
 function admin_add_custom_menu(){    
-    add_theme_page('Snazzy Maps', 'Snazzy Maps', 'manage_options', 'snazzy_maps', 'admin_add_custom_content');
+    //add_theme_page('Snazzy Maps', 'Snazzy Maps', 'manage_options', 'snazzy_maps', 'admin_add_custom_content');
+
+    add_submenu_page('edit.php?post_type=geopost',
+            'Snazzy Maps',
+            'Snazzy Maps',
+            'manage_options',
+            'snazzy-maps',
+            'admin_add_custom_content');
 }
 add_action( 'admin_menu', 'admin_add_custom_menu');
 
