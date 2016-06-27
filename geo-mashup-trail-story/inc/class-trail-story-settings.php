@@ -259,7 +259,70 @@ class TrailStorySettings {
                                 
                             </td>
                         </tr>
-                            
+                            <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Marker Animatinos
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'marker_animatinos'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description">.</p>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Marker Animatinos
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'marker_animatinos'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description">.</p>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Marker Animatinos
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'marker_animatinos'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description">.</p>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Marker Animatinos
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'marker_animatinos'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description">.</p>
+                                
+                            </td>
+                        </tr>
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
@@ -339,24 +402,55 @@ class TrailStorySettings {
                             </td>
                         
                         </tr>
-                        <tr>
+                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Map Skin
+                                Overlay
                             </th>
                             <td>
-                                <fieldset><?php $key = 'msp_skin';
+                                <fieldset><?php $key = 'overlay';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                     </label>
-                                    <select name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-                                    <option >One</option>
-                                    <option >2</option>
-                                    <option >3</option>
-                                    <option >4</option>
+                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
 
-                                    2</select>
+                                   
+                                <!--<p class="description">Use this as a factory restore.</p>-->
+                                
+                            </td>
+                        
+                        </tr> <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Overlay
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'overlay';
+                                                                            //var_dump($trail_story_options[$key]); ?>
+
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                    </label>
+                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+
+                                   
+                                <!--<p class="description">Use this as a factory restore.</p>-->
+                                
+                            </td>
+                        
+                        </tr> <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Overlay
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'overlay';
+                                                                            //var_dump($trail_story_options[$key]); ?>
+
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                    </label>
+                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+
                                    
                                 <!--<p class="description">Use this as a factory restore.</p>-->
                                 
