@@ -71,9 +71,9 @@ class GsxInit {
     public function __construct()
     {
         //add_action( 'admin_menu', array( $this, 'add_trail_story_menu_page' ) );
-        add_action( 'admin_init', array( $this, 'gsx_map_page' ) );
-        add_filter( 'plugin_action_links', array( $this, 'gsx_plugin_links'), 10, 5 );
-        register_activation_hook( __FILE__, array($this, 'gsx_map_page') );
+        //add_action( 'admin_init', array( $this, 'gsx_map_page' ) );
+        //add_filter( 'plugin_action_links', array( $this, 'gsx_plugin_links'), 10, 5 );
+        //register_activation_hook( __FILE__, array($this, 'gsx_map_page') );
     }
     public function gsx_setup() {
       //create map page
@@ -106,7 +106,7 @@ class GsxInit {
         // Insert the post into the database
         $id = wp_insert_post( $post );
         wp_set_post_terms( $id );
-        var_dump($id);
+      
     }
 
     public function gsx_fe_page() {
@@ -130,7 +130,7 @@ class GsxInit {
         // Insert the post into the database
         $id = wp_insert_post( $post );
         wp_set_post_terms( $id );
-        var_dump($id);
+     
     }
 
     public function gsx_plugin_links( $actions, $plugin_file ) {
