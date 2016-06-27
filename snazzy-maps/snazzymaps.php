@@ -92,14 +92,6 @@ function admin_add_custom_menu(){
 }
 add_action( 'admin_menu', 'admin_add_custom_menu');
 
-// Add a settings link to the plugin listing page
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'my_plugin_action_links' );
 
-function my_plugin_action_links( $links ) {
-   array_unshift($links, '<a href="'. admin_url('themes.php?page=snazzy_maps') .'">Settings</a>');
-   return $links;
-}
 
-//The post method is performed by the tab before redirecting
-add_action ('admin_head-appearance_page_snazzy_maps', 'admin_perform_post');
 ?>

@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) die( 'No way, jose!' );
 /**
  * Defining constants
  */
+define( 'GSX_VER', '1.0.0');
 define( 'IGTM_NAME', 'interactive-geo-trail-map' );
 define( 'IGTM_DIR', dirname( __FILE__ ) );
 define( 'IGTM_URL', plugins_url( __FILE__ ) );

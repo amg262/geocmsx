@@ -94,16 +94,21 @@ class TrailStorySettings {
         $this->trail_story_options = get_option( 'trail_story_option' );
         ?>
         <div class="wrap">
-            <h1>Interactive Geo Trail Map</h1>
+            <h1>GeoCMSx Map Maker</h1>
+            <div>
+            <p>
             <form method="post" action="options.php">
 
             <?php
+
                 // This prints out all hidden setting fields
                 settings_fields( 'trail_story_options_group' );
                 do_settings_sections( 'trail-story-options-admin' );
-                submit_button('Save All Options');
+                submit_button('Save Options');
             ?>
             </form>
+            </p>
+            </div>
         </div>
         <?php
     }
@@ -155,9 +160,85 @@ class TrailStorySettings {
         <div id="plugin-info-header" class="plugin-info header">
             <div class="plugin-info content">
                 
+                <p><h3>Plugin developed by <a target="_blank" href="http://andrewgunn.xyz/">Andrew Gunn</a>. For Support please <a href="http://andrewgunn.xyz/support/" target="_blank">follow this link.</a></h3>
+                </p>
+                <p><h3>You can also <a href="mailto:andrewmgunn26@gmail.com" target="_blank">email me</a> to to in touch faster, any feedback is welcomed!</h3>
+                </p>
+                <br>
+                 <p><h3>Want to go pro? Get it <a href="http://www.cloud-3d.com/product/geocmsx-map-maker-pro/" target="_blank">right here!</a> Licenses are a 1 time fee and free support for life!</h3>
+                </p>
+                <br>
+                <p>
+                 <h3><a target="_blank" href="<?php echo 'http://andrewgunn.xyz/geocmsx/assets.zip' ?>">Download</a> plugin How-To Guide and Documentation</h3>
+                <h3><div class="mapsmarker">Find more Map icons at <a href="https://mapicons.mapsmarker.com/" target="_blank">Maps Marker's</a> website</div></h3>
+                        </p>
+                <br>
+                <fieldset><?php $key = 'setup'; ?>
+                    
+                <input class="button button-primary" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Plugin Setup"  />
+            
+
+                <?php $key = 'restore'; ?>
+                &nbsp;
+                <input class="button-secondary delete" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Factory Restore"  />
+            
+                    </fieldset>
+                </td>
+
                    
-                </div>
             </div>
+
+            <hr>
+
+            <div>
+            <td>
+            
+            </div>
+        </div>
+    <?php }
+
+      /**
+     * Print the Section text
+     */
+    public function print_option_info2() { ?>
+        <div id="plugin-info-header" class="plugin-info header">
+            <div class="plugin-info content">
+                
+                <p><h3>Plugin developed by <a target="_blank" href="http://andrewgunn.xyz/">Andrew Gunn</a>. For Support please <a href="http://andrewgunn.xyz/support/" target="_blank">follow this link.</a></h3>
+                </p>
+                <p><h3>You can also <a href="mailto:andrewmgunn26@gmail.com" target="_blank">email me</a> to to in touch faster, any feedback is welcomed!</h3>
+                </p>
+                <br>
+                 <p><h3>Want to go pro? Get it <a href="http://www.cloud-3d.com/product/geocmsx-map-maker-pro/" target="_blank">right here!</a> Licenses are a 1 time fee and free support for life!</h3>
+                </p>
+                <br>
+                <p>
+                 <h3><a target="_blank" href="<?php echo 'http://andrewgunn.xyz/geocmsx/assets.zip' ?>">Download</a> plugin How-To Guide and Documentation</h3>
+                <h3><div class="mapsmarker">Find more Map icons at <a href="https://mapicons.mapsmarker.com/" target="_blank">Maps Marker's</a> website</div></h3>
+                        </p>
+                <br>
+                <fieldset><?php $key = 'setup'; ?>
+                    
+                <input class="button button-primary" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Plugin Setup"  />
+            
+
+                <?php $key = 'restore'; ?>
+                &nbsp;
+                <input class="button-secondary delete" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Factory Restore"  />
+            
+                    </fieldset>
+                </td>
+
+                   
+            </div>
+
+            <hr>
+
+            <div>
+            <td>
+            
+            </div>
+        </div>
     <?php }
 
     /**
@@ -175,11 +256,11 @@ class TrailStorySettings {
         //var_dump($trail_story_options);?>
         <div>
             <div>
-                <h3>Plugin Uninstallation</h3>
                 <hr>
                 <table class="form-table">
                     <tbody>
                         <tr>
+
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
                                 GeoCMSx License Key
@@ -189,44 +270,44 @@ class TrailStorySettings {
                                 <fieldset><?php $key = 'gsx_license'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
-                                        Delete all posts, attachments, and plugin settings when uninstalled.
+                                        <input style="width:60%;"id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    
                                     </label>
-                                <p class="description">Use this as a factory restore.</p>
-                                
+                            
                             </td>
                         </tr>
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Uninstall Posts
+                                Delete Options
                             </th>
                             <td>
        
-                                <fieldset><?php $key = 'delete_posts'; 
+                                <fieldset><?php $key = 'delete_options'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
                                         Delete all posts, attachments, and plugin settings when uninstalled.
                                     </label>
-                                <p class="description">Use this as a factory restore.</p>
+                                <p class="description">ON UNINSTALL. Use this as a factory restore.</p>
                                 
                             </td>
                         </tr>
                        
                         <tr>
                             <th scope="row">
-                                Uninstall Database
+                                Delete All Data
                             </th>
                             <td>
-                                <fieldset><?php $key = 'delete_dbo'; 
+                                <fieldset><?php $key = 'delete_data'; 
                                     //var_dump(isset($trail_story_options["delete_dbo"])); ?>
 
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
                                         Drop all database tables and plugin data when uninstalled.
                                     </label>
-                                <p class="description"><span class="icon warn">&nbsp;</span>Use at your own risk. A backup is recommended beforehand.</p>
+                                <p class="description"><span class="icon warn">&nbsp;</span>
+                                ON UNINSTALL. Use at your own risk. A backup is recommended beforehand.</p>
                                 </fieldset>
                                 
                             </td>
@@ -235,11 +316,11 @@ class TrailStorySettings {
                 </table>
                     
       
-                <?php submit_button('Save All Options'); ?>
+                <?php submit_button('Save Options'); ?>
             </div>
             <p><hr></p>
-            <div id="custom-kml">
-                <h3><strong>Custom KML Layers</strong></h3>
+            <div id="">
+                <h1><strong>Map Customization and Data Layers</strong></h1>
                 <p>
                 <table class="form-table">
                     <tbody>
@@ -297,7 +378,7 @@ class TrailStorySettings {
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Delimiter
+                                Global Delimiter
                             </th>
                             <td>
                                 <fieldset><?php $key = 'delimiter';
@@ -332,7 +413,7 @@ class TrailStorySettings {
                                                                             //var_dump($trail_story_options[$key]); ?>
 
                                     
-                                    <input type="text"  style="width:75px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" placeholder="1" value="<?php if ($trail_story_options[$key] == null) { echo '1';$trail_story_options[$key]='1'; } else { echo $trail_story_options[$key]; } ?>" />
+                                    <input type="text"  style="width:50px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" placeholder="1" value="<?php if ($trail_story_options[$key] == null) { echo '1';$trail_story_options[$key]='1'; } else { echo $trail_story_options[$key]; } ?>" />
                                     <input type="submit" value="Add Layer" />
                                     <br>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
@@ -346,12 +427,14 @@ class TrailStorySettings {
                         <?php if ($trail_story_options['count_data_layers']) {
                             $count = intval($trail_story_options['count_data_layers']);
                            // var_dump($count);
-                            for ($i=0;$i<$count;$i++) { ?>
+
+
+                            for ($i=1;$i<=$count;$i++) { ?>
 
                                 <tr>
                                     <?php //$key = 'delete_data'; ?>
                                     <th scope="row">
-                                        Data Layer
+                                        Layer <?php echo '<strong>'.$i.'</strong>'; ?>
                                     </th>
                                     <td>
                                     <?php $str = 'data-layer-'.$i; ?>
@@ -361,11 +444,12 @@ class TrailStorySettings {
                                            
                                         <?php $var = 'data_layer_'.$i;
                                         $post_type = $str;?>
-                           
+                           <div class="icon-wrapper">
+                             <div class="icon-header">
                                         <div class="icon-content">
                                         <div class="<?php echo $post_type; ?>">
                                             <div class="icon-post-type">
-                                                <h4><?php _e( esc_html( $post_type ) ); ?></h4>
+                                                <h4><?php// _e( esc_html( $post_type ) ); ?></h4>
                                             </div>
                                             <div class="icon-image-buttons">
 
@@ -407,10 +491,10 @@ class TrailStorySettings {
                                                 <?php } ?>
 
                                                 </div>
-
+                                                </label>
                                             </div>
                                             <div style="clear:both;height:0;"></div>
-                                        </div>
+                                        </div></div></div>
                                     </td>
                                 </tr>
                                 <?php }
@@ -494,21 +578,19 @@ class TrailStorySettings {
                             </td>
                         
                         </tr>
-                        
-                         
-                        Marker glow cb, Overlay text box,  preloaded map styles select, Plugin map/frontend page set up button, add image size icons, Json data,  json post import export, Json settings import export,  
+                
                     </tbody>
                 </table></p>
-                <?php submit_button('Save All Options'); ?>
+                <?php submit_button('Save Options'); ?>
             </div>
             <p><hr></p>
             <div>
-                <h2><strong>Trail Map Options</strong></h2>
+                <h1><strong>Map Marker Images</strong></h1>
             <div class="icon-wrapper">
                 <div class="icon-header">
 
                     <div class="icon-header-post-type-title">
-                        <h3><?php _e( 'Custom Map Markers', 'geo-mashup-trail-story-add-on' ); ?></h3>
+                        <h2><?php _e( 'Post Types', 'geo-mashup-trail-story-add-on' ); ?></h2>
                     </div>
 
                     <div class="icon-header-image-title">
@@ -525,7 +607,7 @@ class TrailStorySettings {
                 <div class="icon-content">
                     <div class="<?php echo $post_type; ?>">
                         <div class="icon-post-type">
-                            <h4><?php _e( esc_html( $post_type ) ); ?></h4>
+                            <h5><?php _e( esc_html( $post_type ) ); ?></h5>
                         </div>
                         <div class="icon-image-buttons">
 
@@ -572,6 +654,7 @@ class TrailStorySettings {
                 </div>
             <?php //} ?>
         <?php endforeach; // post types ?>
+
         <?php foreach( get_post_types( array( 'show_ui' => true ), 'objects' ) as $post_type ) : ?>
             <?php if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
 
@@ -625,10 +708,10 @@ class TrailStorySettings {
                 </div>
             <?php } ?>
         <?php endforeach; // post types ?>
-
+        <p><hr></p>
         <?php $include_taxonomies = $geo_mashup_options->get( 'overall', 'include_taxonomies' ); ?>
 
-        <h3 style="text-decoration:underline;"><?php _e('Post Type Categories','geo-mashup-trail-story-add-on'); ?></h3>
+        <h1><?php _e('Categories','geo-mashup-trail-story-add-on'); ?></h1>
 
         <?php if ( !empty( $include_taxonomies ) and !defined( 'GEO_MASHUP_DISABLE_CATEGORIES' ) ) : ?>
             <?php foreach( $include_taxonomies as $include_taxonomy ) : ?>
@@ -697,10 +780,7 @@ class TrailStorySettings {
         <?php endif; ?>
             <div style="clear:both;height:0;"></div>
         </div>
-        <br>
-        <hr>
-        <h4><a target="_blank" href="<?php //echo IGTM_PDF_URL; ?>">Download</a> plugin How-To Guide and Documentation</h4>
-        <div class="mapsmarker">Find more Map icons at <a href="https://mapicons.mapsmarker.com/" target="_blank">Maps Marker's</a> website</div>
+       <br><br>
 
     <?php }
     // TODO: Input fields for KMLs
