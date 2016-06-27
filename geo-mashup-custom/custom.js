@@ -450,7 +450,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
    // google_map.mapTypes.set( 'grey', map_type ); 
     // google_map.setMapTypeId( 'grey' ); 
    // } ); 
-var infowindow = new google.maps.InfoWindow();
+/*var infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
 
         service.getDetails({
@@ -577,7 +577,7 @@ var infowindow = new google.maps.InfoWindow();
     </div>
 
     var input = /** @type {!HTMLInputElement} */(
-            document.getElementById('pac-input'));
+           /* document.getElementById('pac-input'));
 
         var types = document.getElementById('type-selector');
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -609,7 +609,7 @@ var infowindow = new google.maps.InfoWindow();
             map.setZoom(17);  // Why 17? Because it looks good.
           }
           marker.setIcon(/** @type {google.maps.Icon} */({
-            url: place.icon,
+         /*   url: place.icon,
             size: new google.maps.Size(71, 71),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(17, 34),
@@ -644,7 +644,7 @@ var infowindow = new google.maps.InfoWindow();
         setupClickListener('changetype-address', ['address']);
         setupClickListener('changetype-establishment', ['establishment']);
         setupClickListener('changetype-geocode', ['geocode']);
-      }
+      }*/
 
        panorama = new google.maps.StreetViewPanorama(
             document.getElementById('street-view'),
