@@ -177,20 +177,8 @@ class TrailStorySettings {
                 <h3><div class="mapsmarker">Find more Map icons at <a href="https://mapicons.mapsmarker.com/" target="_blank">Maps Marker's</a> website</div></h3>
                         </p>
                 <br>
-                <fieldset><?php $key = 'setup'; ?>
-                    
-                <input class="button button-primary" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Plugin Setup"  />
-            
 
-                <?php $key = 'restore'; ?>
-                &nbsp;
-                <input class="button-secondary delete" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Factory Restore"  />
-                
-                <?php $key = 'delete'; ?>
-                    
-                <input class="button button-primary" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Plugin Setup"  />
-                    </fieldset>
-                </td>
+              
 
                    
             </div>
