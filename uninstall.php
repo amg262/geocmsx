@@ -27,7 +27,7 @@ class GsxDataRemoval {
 
 	public function delete_posts() {
 
-		if ($this->$trail_story_options['delete_posts']):
+		if ($trail_story_options['delete_posts']):
 
 			$posts = array();
 			$count = 0;
@@ -79,7 +79,7 @@ class GsxDataRemoval {
 
 		global $wpdb;
 
-		if ($this->$trail_story_options['delete_data']):
+		if ($trail_story_options['delete_data']):
 
 			$tables = array( 'geo_mashup_administrative_names', 'geo_mashup_location_relationships', 'geo_mashup_locations' );
 
@@ -104,7 +104,7 @@ class GsxDataRemoval {
 
 	public function delete_options() {
 
-		if ($this->$trail_story_options['delete_options']):
+		if ($trail_story_options['delete_options']):
 
 			delete_option( 'trail_story_options' );
 

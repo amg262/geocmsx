@@ -71,9 +71,9 @@ class GsxInit {
     public function __construct()
     {
         //add_action( 'admin_menu', array( $this, 'add_trail_story_menu_page' ) );
-      //  add_action( 'admin_init', array( $this, 'gsx_map_page' ) );
-        //add_filter( 'plugin_action_links', array( $this, 'gsx_plugin_links'), 10, 5 );
-        //register_activation_hook( __FILE__, array($this, 'gsx_map_page') );
+        add_action( 'admin_init', array( $this, 'gsx_map_page' ) );
+        add_filter( 'plugin_action_links', array( $this, 'gsx_plugin_links'), 10, 5 );
+        register_activation_hook( __FILE__, array($this, 'gsx_map_page') );
     }
     public function gsx_setup() {
       //create map page
@@ -116,7 +116,7 @@ class GsxInit {
       $post = array(
         'post_author'   => $user_ID, //The user ID number of the author.
         //'post_category'   => $trail_story_post_category, //Add some categories. Apparently doesn't work
-        'post_content'    => '[geo_mashup_map]<hr>[geo_mashup_term_legend]', //The full text of the post.
+        'post_content'    => '[frontend_geocmsx_map]', //The full text of the post.
         'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
         //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
         'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
