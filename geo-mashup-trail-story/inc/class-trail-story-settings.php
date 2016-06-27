@@ -1,5 +1,6 @@
 <?php
 defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
+
 interface iTrailStorySettings {
     public function __construct();
     public function add_trail_story_menu_page();
@@ -355,7 +356,60 @@ class TrailStorySettings {
                 </div>
 
                 <h3><?php _e('Post Types','geo-mashup-trail-story-add-on'); ?></h3>
+                <?php $arr = array('multi-marker', 'glow-marker');$c=0;$i=1;var_dump($arr);?>
+        <?php foreach( $arr as $post_type ) : ?>
+            <?php //if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
 
+                <div class="icon-content">
+                    <div class="<?php echo $post_type; ?>">
+                        <div class="icon-post-type">
+                            <h4><?php _e( esc_html( $post_type ) ); ?></h4>
+                        </div>
+                        <div class="icon-image-buttons">
+
+                            <?php $key = 'trail-story-add-icon-text-box-' . $post_type; ?>
+
+                            <div class="trail-story-icon-button-container">
+                                <?php // Holster for Image url (Hidden) ?>
+                                <input type="hidden" 
+                                       id="trail-story-add-icon-text-box-<?php echo $post_type; ?>" 
+                                       class="trail-story-icon-url" 
+                                       name="trail_story_options[trail-story-add-icon-text-box-<?php echo $post_type; ?>]" 
+                                       value="<?php echo $trail_story_options['trail-story-add-icon-text-box-'. $post_type ]; ?>"/>
+
+                                <?php // Button to add Image icon ?>
+                                <input type="button" 
+                                       id="trail-story-add-icon-button-<?php echo $post_type; ?>" 
+                                       class="button trail-story-add-icon-button <?php echo $trail_story_options[$key] ? 'hidden' : ''; ?>" 
+                                       name="trail-story-add-icon-button" 
+                                       value="<?php _e( 'Add Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+
+                                <?php // Button to remove Image icon ?>
+                                <input type="button" 
+                                       id="trail-story-remove-icon-button-<?php echo $post_type; ?>" 
+                                       class="button trail-story-remove-icon-button <?php echo !$trail_story_options[$key] ? 'hidden' : ''; ?>" 
+                                       name="trail-story-add-icon-button" 
+                                       value="<?php _e( 'Remove Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+
+                                       <div style="clear:both;height:0;"></div>
+                            </div>
+
+                            <div class="trail-story-icon-image-container">
+
+                            <?php if( $trail_story_options[ $key ] ){ ?>
+
+                                <img src="<?php echo esc_attr( $trail_story_options[ $key ] ); ?>" alt="" style="max-width:100%;" />
+
+                            <?php } ?>
+
+                            </div>
+
+                        </div>
+                        <div style="clear:both;height:0;"></div>
+                    </div>
+                </div>
+            <?php //} ?>
+        <?php endforeach; // post types ?>
         <?php foreach( get_post_types( array( 'show_ui' => true ), 'objects' ) as $post_type ) : ?>
             <?php if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
 
