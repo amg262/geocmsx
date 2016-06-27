@@ -204,7 +204,6 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 		};
 
 		navigator.geolocation.getCurrentPosition(success, error, options);
-		document.getElementById('geo_mashup_location').value = crd.latitude;
 
 	</script>
 	<input id="geo_mashup_ui_manager" name="geo_mashup_ui_manager" type="hidden" value="<?php echo $ui_manager; ?>" />

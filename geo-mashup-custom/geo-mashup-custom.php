@@ -237,6 +237,26 @@ function trail_story_locations_custom_kmls() {
     );*/
     
     // Localize the array to custom.js
+    $objects = 'objects';
+
+    $key = 'custom_kml_layers';
+    $arr = array();
+    $option = $trail_story_options[$key];
+    $arr[$key] = $option;
+
+    $key = 'custom_styles';
+    $option = $trail_story_options[$key];
+    $arr[$key] = $option;
+
+    $key = 'geo_json';
+    $option = $trail_story_options[$key];
+    $arr[$key] = $option;
+
+    var_dump($arr);
+    wp_localize_script( 'geo-mashup-custom', $objects, $arr );
+    
+
+
     wp_localize_script( 'geo-mashup-custom', 'icons', $translation_array );
 
 }

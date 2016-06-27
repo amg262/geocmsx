@@ -12,6 +12,8 @@ public function __construct()
   //  add_action( 'admin_init', array( $this, 'gsx_map_page' ) );
     add_action( 'init', array($this, 'register_cpt_geocms_pro' ));
     add_action( 'init', array($this, 'register_txn_geocms_pro' ));
+    add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ) );
+    add_action( 'save_post',      array( $this, 'save'         ) );
 
 
 }
@@ -40,7 +42,7 @@ public function register_cpt_geocms_pro() {
     $args = array( 
         'labels' => $labels,
         'hierarchical' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail' , 'custom-fields', 'post-formats' ),// 'excerpt' 
+        'supports' => array( 'title', 'editor', 'thumbnail' , 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' ),// 'excerpt' 
         'taxonomies' => array(  'geopost-category' ), //, 'post_tag' ),
         'public' => true,
         'show_ui' => true,
@@ -52,7 +54,7 @@ public function register_cpt_geocms_pro() {
         //'menu_position' => 5001,
         //'menu_icon' => 'dashicons-format-status',//'dashicons-controls-volumeon', //'dashicons-media-audio',
        // 'menu_icon' => 'dashicons-format-status',//'dashicons-controls-volumeon', //'dashicons-media-audio',
-        //'menu_icon' => plugins_url( 'geocms-pro/geocms-core/assets/icon-20x20.png' ),
+        'menu_icon' => plugins_url( 'assets/icon-20x20.png', dirname( __FILE__)  ),
         'has_archive' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
@@ -112,6 +114,100 @@ public function register_txn_geocms_pro() {
         wp_insert_term( 'GeoPosts','geopost-category', array('GeoPosts', 'geoposts') );
     }
 }
+
+/**
+     * Adds the meta box container.
+     */
+    public function add_meta_box( $post_type ) {
+        // Limit meta box to certain post types.
+        $post_types = array( 'geopost' );
+ 
+        if ( in_array( $post_type, $post_types ) ) {
+            add_meta_box(
+                'some_meta_box_name',
+                __( 'Some Meta Box Headline', 'textdomain' ),
+                array( $this, 'render_meta_box_content' ),
+                $post_type,
+                'advanced',
+                'high'
+            );
+        }
+    }
+ 
+    /**
+     * Save the meta when the post is saved.
+     *
+     * @param int $post_id The ID of the post being saved.
+     */
+    public function save( $post_id ) {
+ 
+        /*
+         * We need to verify this came from the our screen and with proper authorization,
+         * because save_post can be triggered at other times.
+         */
+ 
+        // Check if our nonce is set.
+        if ( ! isset( $_POST['myplugin_inner_custom_box_nonce'] ) ) {
+            return $post_id;
+        }
+ 
+        $nonce = $_POST['myplugin_inner_custom_box_nonce'];
+ 
+        // Verify that the nonce is valid.
+        if ( ! wp_verify_nonce( $nonce, 'myplugin_inner_custom_box' ) ) {
+            return $post_id;
+        }
+ 
+        /*
+         * If this is an autosave, our form has not been submitted,
+         * so we don't want to do anything.
+         */
+        if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+            return $post_id;
+        }
+ 
+        // Check the user's permissions.
+        if ( 'page' == $_POST['post_type'] ) {
+            if ( ! current_user_can( 'edit_page', $post_id ) ) {
+                return $post_id;
+            }
+        } else {
+            if ( ! current_user_can( 'edit_post', $post_id ) ) {
+                return $post_id;
+            }
+        }
+ 
+        /* OK, it's safe for us to save the data now. */
+ 
+        // Sanitize the user input.
+        $mydata = sanitize_text_field( $_POST['myplugin_new_field'] );
+ 
+        // Update the meta field.
+        update_post_meta( $post_id, '_my_meta_value_key', $mydata );
+    }
+ 
+ 
+    /**
+     * Render Meta Box content.
+     *
+     * @param WP_Post $post The post object.
+     */
+    public function render_meta_box_content( $post ) {
+ 
+        // Add an nonce field so we can check for it later.
+        wp_nonce_field( 'myplugin_inner_custom_box', 'myplugin_inner_custom_box_nonce' );
+ 
+        // Use get_post_meta to retrieve an existing value from the database.
+        $value = get_post_meta( $post->ID, '_my_meta_value_key', true );
+ 
+        // Display the form, using the current value.
+        ?>
+        <label for="myplugin_new_field">
+            <?php _e( 'Description for this field', 'textdomain' ); ?>
+        </label>
+        <input type="text" id="myplugin_new_field" name="myplugin_new_field" value="<?php echo esc_attr( $value ); ?>" size="25" />
+        <?php
+    }
 
 }
 

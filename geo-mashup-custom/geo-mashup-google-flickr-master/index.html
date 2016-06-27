@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title></title>
+		<!-- Slimbox CSS -->
+		<style type="text/css" media="all"> @import url("css/slimbox2.css");</style>
+
+		<!-- Inline CSS -->
+		<style type="text/css" media="screen">
+			#innerWrap { width: 900px; margin: 0 auto; padding-top: 10px; }
+
+			#colLeft{ float: left; }
+			#gmap{ width: 500px; height: 450px; }
+
+			#colRight{ margin-left: 10px; width: 375px; float: left; }
+
+			#photos { width: inherit; }
+			#photos li, #photos img{ display: block; border: none; float: left; width: 75px; height: 75px; }
+
+			.infoBox{ font-family: Verdana, Arial; width: 240px; border: 0px solid blue; }
+			.infoBox img { float: left; margin-right: 5px; }
+			.infoBox h4 { font-size: 14px; margin-right: 5px; }
+			.infoBox a {  }
+			.infoBox .moreInfo { clear: both; font-size: 10px; }
+		</style>
+		
+		<!-- jQuery 1.3.2 -->
+		<script type="text/javascript" charset="utf-8" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+		
+		<!-- Slimbox 2 http://code.google.com/p/slimbox/source/browse/trunk/js/slimbox2.js -->
+		<script type="text/javascript" charset="utf-8" src="http://slimbox.googlecode.com/svn/trunk/js/slimbox2.js"></script>
+
+		<!-- Google maps -->
+		<script type="text/javascript" charset="utf-8" src="http://google.com/jsapi?key=YOUR_GOOGLE_API_KEY_GOES_HERE"></script>
+		<script type="text/javascript" charset="utf-8">	
+			//Load Version 2 of the Maps
+			google.load('maps', '2');
+
+			$(document).ready(function() {		
+				var flickrUserID = "44546808@N02";
+													
+				//If Javascript is turned off, provide an alternative link
+				$("#photos").attr("alt", $("#photos li a").attr("href") );
+
+				$.getScript("js/flickrmaps.js", getScriptCompleteHandler);
+				function getScriptCompleteHandler(){
+					loadJSON("http://api.flickr.com/services/feeds/geo/?id=" + flickrUserID + "&format=json");
+				}		
+			});
+		</script>		
+	</head>
+	<body>
+		<div id="innerWrap">						
+			<!-- Google Maps -->
+			<div id="colLeft">
+				<div id="gmap"></div>  	
+			</div>
+
+			<!-- Flickr Thumbnails -->
+			<div id="colRight">
+				<ul id="photos">
+					<!-- Flickr User Handle in case Javascript is not available -->
+					<li><a class="" href="http://www.flickr.com/photos/44546808@N02">My Flickr photos</a></li>
+				</ul>	
+			</div>
+			
+		</div>
+	</body>
+</html>

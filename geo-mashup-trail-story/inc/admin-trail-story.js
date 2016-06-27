@@ -2,7 +2,7 @@
 * Function that parses input fields
 */
 jQuery(document).ready(function($) {
-
+    
     $('#trail-story-post').submit(function($) {
 
         /*if ( document.trail_story_post.quick_post_title.value == null ||

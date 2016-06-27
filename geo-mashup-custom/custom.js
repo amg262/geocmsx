@@ -1,3 +1,90 @@
+
+jQuery(document).ready(function($) {
+    //console.log(kmls);
+    var k = objects.custom_kml_layers;
+    console.log(objects);
+    //get_kmls_obj(kmls);
+    $('#trail-story-post').submit(function($) {
+
+        /*if ( document.trail_story_post.quick_post_title.value == null ||
+                 document.trail_story_post.quick_post_title.value == "" ) {
+            alert('All fields are required!');
+            return false;
+
+        } else if ( document.trail_story_post.quick_post_content.value == null ||
+                         document.trail_story_post.quick_post_title.value == "" ) {
+            alert('All fields are required!');
+            return false;
+        } else if ( document.trail_story_post.geo_mashup_location.value == null ||
+                         document.trail_story_post.geo_mashup_location.value == "" )
+            alert('Map location is required for submission!');
+            return false;*/
+
+    });
+    
+});
+/**
+* 
+*/
+
+function process_options(objects) {
+    if (objects.custom_kml_layers != null && objects.custom_kml_layers != undefined) {
+        var k = objects.custom_kml_layers;
+        console.log(k);
+
+        var arr = [];
+
+        arr = k.split(',');
+        //console.log(arr);
+        console.log('Kml Layers: ' + arr.length);
+        //console.log(arr);
+
+        if (arr.length > 0) {
+            return arr;
+        } else {
+            return k;
+        }
+    }
+}
+
+function set_kmls(objects) {
+
+     if (objects.custom_kml_layers != null && objects.custom_kml_layers != undefined) {
+        var k = objects.custom_kml_layers;
+        console.log(k);
+
+        var arr = [];
+
+        arr = k.split(',');
+        //console.log(arr);
+        console.log('Kml Layers: ' + arr.length);
+        //console.log(arr);
+
+        if (arr.length > 0) {
+            return arr;
+        } else {
+            return k;
+        }
+    }
+}
+
+function set_custom_styles(objects) {
+
+    if (objects.custom_styles != null && objects.custom_styles != undefined) {
+        var k = objects.custom_styles;
+        console.log(k);
+        return k;
+    }
+}
+function set_geo_json(objects) {
+
+    if (objects.geo_json != null && objects.geo_json != undefined) {
+        var k = objects.geo_json;
+        console.log(k);
+        return k;
+    }
+}
+
 GeoMashup.addAction( 'objectIcon', function( properties, object ) {
 
     // Use a special icon in case the custom 'complete' var is set to 1
@@ -16,11 +103,6 @@ GeoMashup.addAction( 'termIcon', function( icon, taxonomy, term_id ){
 
 });
 
-GeoMashup.addAction( 'loadedMap', function( properties, object ) {
-    //var a = andy;
-   // console.log(a);
-    console.log(object);
-});
 /*
 
  */
@@ -30,9 +112,48 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
     // Load some KML only into global maps - for instance pictures of squirrels
     //alert('sfdfsf');d
+    //jQuery(function($){
+    var kml_arr = set_kmls(objects);
+    var geo = set_geo_json(objects);
+        //console.log(k);
+    //});
     var google_map = mxn.getMap();
     //alert('s');
+    console.log(google_map);
     if (properties.map_content == 'global') {
+        //alert(b);
+
+        for (var i = 0; i < kml_arr.length; i++) {
+            //console.log(kml_arr[i]);
+            var kml_layer = kml_arr[i];
+            //var kml_no = 'kml_'+i;
+            var kml = new google.maps.KmlLayer( kml_layer, {
+                map: google_map
+            } );
+
+        }
+        var geo = new google.maps.KmlLayer( geo, {
+            map: google_map
+        } );
+
+        
+        console.log(geo);
+
+      
+
+        var v = [{
+        icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 1,
+              fillColor: '#f00',
+              fillOpacity: 0.35,
+              strokeWeight: 0
+            }
+        }];
+      var map_type = new google.maps.StyledMapType( v, { name: 'trail-map' } );
+
+        google_map.mapTypes.set( 'custom_styles', map_type );
+        google_map.setMapTypeId( 'custom_styles', map_type );
         //alert('sdfdsf');
         //WE NEED TO BASICALLY CALL THE ADD AND REMOVE
         
@@ -42,7 +163,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
             map: google_map
         } );*/
         //SPLIT IAT KML INTO 2 PARTS TO PREVENT IT FROM BEING TO LARGE
-        var kml_iat1 = new google.maps.KmlLayer( 'http://www.iceagetrail.org/wp-content/iat_2016-1.kml', {
+        /**var kml_iat1 = new google.maps.KmlLayer( 'http://www.iceagetrail.org/wp-content/iat_2016-1.kml', {
             map: google_map
         } );
         var kml_iat2 = new google.maps.KmlLayer( 'http://www.iceagetrail.org/wp-content/iat_2016-2.kml', {
@@ -76,8 +197,20 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
  */
 GeoMashup.addAction( 'loadedMap', function( properties, map ) {
     //alert('loaded');
-    var google_map = map.getMap();
+    var styles = set_custom_styles(objects);
 
+    var google_map = map.getMap();
+    console.log(google_map);
+
+    var v = [{
+        icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 1,
+              fillColor: '#f00',
+              fillOpacity: 0.35,
+              strokeWeight: 0
+            }
+        }];
     var custom_styles = [{
         featureType: "all",
         elementType: "all",
@@ -186,7 +319,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
         ]
     }];
 
-    var map_type = new google.maps.StyledMapType( custom_styles, { name: 'trail-map' } );
+    var map_type = new google.maps.StyledMapType( v, { name: 'trail-map' } );
 
     google_map.mapTypes.set( 'custom_styles', map_type );
     google_map.setMapTypeId( 'custom_styles', map_type );
@@ -194,3 +327,139 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
     
 
 }); 
+
+GeoMashup.addAction( 'multiObjectMarker', function( properties, marker ) {
+ 
+        // When there is more than one marker assigned to the same location - mm_20_plus.png
+        marker.setIcon( properties.custom_url_path + '/images/icon-20x20.png' );
+ 
+    } );
+ 
+    GeoMashup.addAction( 'singleMarkerOptions', function ( properties, marker_opts ) {
+ 
+        // When the map is a single object map with just one marker
+        marker_opts.image = properties.custom_url_path + '/images/icon-20x20.png';
+        marker_opts.iconShadow = '';
+        marker_opts.iconSize = [ 24, 24 ];
+        marker_opts.iconAnchor = [ 12, 24 ];
+        marker_opts.iconInfoWindowAnchor = [ 12, 1 ];
+ 
+    } );
+ 
+    GeoMashup.addAction( 'glowMarkerIcon', function( properties, glow_options ) {
+        glow_options.icon = properties.custom_url_path + '/images/icon-20x20.png';
+        glow_options.iconSize = [ 22, 30 ];
+        glow_options.iconAnchor = [ 11, 27 ];
+    } );
+
+
+
+// console.log(allImageOverlays);
+
+
+// this lambda function is loaded by the main geomashup plugin.  It has access to the
+// mapstraction map object ("map"), and to a properties object which stores all of the shortcode
+// attributes along with a bunch of other data. But we're only interested in the new attrributes we've added:
+// imageoverlay, imageopacity, geojson, and kml.   
+GeoMashup.addAction( 'loadedMap', function ( properties, map ) {
+    // console.log(properties.imageoverlay);
+    // get direct access to the google map object. Should do a check to ensure that we're actually
+    // using google map.  A proper implementation will likely rewrite some of this code to be more
+    // portable
+        // placeholder to be used in the lampda function below
+var historicalOverlay;
+// list of all the image overlays. The unique name of each overlay is an attribute of the main variable, and has as a value
+// with two parts, "url" and "imageBounds". Add your image overlays here. It is probably a good idea to use relative URL's
+// in case your site name changes.  
+var allImageOverlays = {
+    newtonbrook: {
+        url: 'http://flynnhouse.hackinghistory.ca/wp-content/uploads/2016/03/Newtonbrook-Tremaine-Map-r-neg21.png',
+        imageBounds: {
+            north : 43.8073086158169,
+            south : 43.76891864109982,
+            west : -79.45731331229433,
+            east : -79.38658034742863
+        }
+    }
+}
+
+// similar to the above, but stores sets of geoJSON data, if you have any.
+var geoJsonFiles = {
+    newtonbrook: ''
+}
+    var google_map = map.getMap();
+    // we'll use these later
+    var thisOverlay, thisOpacity;
+
+    // prepare to insert image; set thisOpacity to 0.7 by default
+    if (properties.imageopacity || properties.imageopacity <= 1|| properties.imageopacity >= 0 ) {
+        thisOpacity = properties.imageopacity;
+    } else {
+        thisOpacity = 0.7;
+    }
+
+    // if shortcode specifies an image overlay, retrieve its information from the 
+    // variable 'imageOverlays' and add it to the map.
+    if (properties.imageoverlay) {
+        // just make it easier to reference the overlay object
+        var o = allImageOverlays[properties.imageoverlay];
+        // this line defines the overlay
+        thisOverlay = new google.maps.GroundOverlay(o.url, o.imageBounds, {opacity:thisOpacity});
+        // now make it appear on the map
+        thisOverlay.setMap(google_map);
+    }
+
+    // if shortcode specifies a kml, retrieve it and add to map.
+    if (properties.kml) {
+        var kml = new google.maps.KmlLayer(properties.kml, {
+            map:google_map});
+    }
+
+    // goeJSON hasn't been implemented yet!! Ooops
+    
+
+} );
+GeoMashup.addAction( 'loadedMap', function( properties, map ) { 
+    var google_map = map.getMap(); 
+     var custom_styles = [ 
+    { 
+    featureType: "administrative", 
+     elementType: "all", 
+    stylers: [ { visibility: "off" }, { saturation: -100 } ] 
+    },{ 
+
+     featureType: "landscape", 
+    elementType: "all", 
+    stylers: [ { visibility: "off" }, { saturation: -100 } ] 
+     },{ 
+    featureType: "poi", 
+    elementType: "all", 
+     stylers: [ { visibility: "off" }, { saturation: -100 } ] 
+    },{ 
+
+    featureType: "road", 
+     elementType: "all", 
+    stylers: [ { visibility: "simplified" }, { saturation: -100 } ] 
+    },{ 
+
+    featureType: "road", 
+     elementType: "labels", 
+    stylers: [ {visibility: "on" }, { hue: "#00ffe6" } ] 
+    },{ 
+    
+     featureType: "transit", 
+    elementType: "all", 
+    stylers: [ { visibility: "on" }, { saturation: -100 } ] 
+     },{ 
+    featureType: "water", 
+    elementType: "all", 
+     stylers: [ { visibility: "simplified" }, { hue: "#00ffe6" } ] 
+    } 
+
+    ]; 
+     var map_type = new google.maps.StyledMapType( custom_styles, { name: 'rsf' 
+    } ); 
+
+    google_map.mapTypes.set( 'grey', map_type ); 
+     google_map.setMapTypeId( 'grey' ); 
+    } ); 
