@@ -583,7 +583,7 @@ class TrailStorySettings {
                 <div class="icon-content">
                     <div class="<?php echo $post_type; ?>">
                         <div class="icon-post-type">
-                            <h5><?php _e( esc_html( $post_type ) ); ?></h5>
+                            <h4><?php _e( esc_html( $post_type ) ); ?></h4>
                         </div>
                         <div class="icon-image-buttons">
 
@@ -687,7 +687,7 @@ class TrailStorySettings {
         <p><hr></p>
         <?php $include_taxonomies = $geo_mashup_options->get( 'overall', 'include_taxonomies' ); ?>
 
-        <h1><?php _e('Categories','geo-mashup-trail-story-add-on'); ?></h1>
+        <h1><strong><?php _e('Categories','geo-mashup-trail-story-add-on'); ?></strong></h1>
 
         <?php if ( !empty( $include_taxonomies ) and !defined( 'GEO_MASHUP_DISABLE_CATEGORIES' ) ) : ?>
             <?php foreach( $include_taxonomies as $include_taxonomy ) : ?>
