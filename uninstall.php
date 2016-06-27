@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
 
 
 if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-    exit();
+    //exit();
 }
 
 interface i_GsxDataRemoval() {
@@ -18,18 +18,19 @@ class GsxDataRemoval() {
 
 	public function __construct() {
 
-		$trail_story_options = (array) get_option('trail_story_options');
+		$this->$trail_story_options = (array) get_option('trail_story_options');
 
+	}
+
+	public function run() {
 		$this->delete_posts();
 		$this->delete_options();
 		$this->delete_data();
-		
-
 	}
 
 	public function delete_posts() {
 
-		if ($trail_story_options['delete_posts']):
+		if ($this->$trail_story_options['delete_posts']):
 
 			$posts = array();
 			$count = 0;
@@ -81,7 +82,7 @@ class GsxDataRemoval() {
 
 		global $wpdb;
 
-		if ($trail_story_options['delete_data']):
+		if ($this->$trail_story_options['delete_data']):
 
 			$tables = array( 'geo_mashup_administrative_names', 'geo_mashup_location_relationships', 'geo_mashup_locations' );
 
@@ -107,7 +108,7 @@ class GsxDataRemoval() {
 
 	public function delete_options() {
 
-		if ($trail_story_options['delete_options']):
+		if ($this->$trail_story_options['delete_options']):
 
 			delete_option( 'trail_story_options' );
 
@@ -140,5 +141,6 @@ class GsxDataRemoval() {
 }
 
 $exe = new GsxDataRemoval();
+//$exe->run();
 
 

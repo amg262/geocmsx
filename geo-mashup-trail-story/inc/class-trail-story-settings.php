@@ -1,5 +1,6 @@
 <?php
 defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
+require_once('uninstall.php', dirname(__FILE__));
 
 interface iTrailStorySettings {
     public function __construct();
@@ -156,46 +157,6 @@ class TrailStorySettings {
     /**
      * Print the Section text
      */
-    public function print_option_info() { ?>
-        <div id="plugin-info-header" class="plugin-info header">
-            <div class="plugin-info content">
-                
-                <p><h3>Plugin developed by <a target="_blank" href="http://andrewgunn.xyz/">Andrew Gunn</a>. For Support please <a href="http://andrewgunn.xyz/support/" target="_blank">follow this link.</a></h3>
-                </p>
-                <p><h3>You can also <a href="mailto:andrewmgunn26@gmail.com" target="_blank">email me</a> to to in touch faster, any feedback is welcomed!</h3>
-                </p>
-                <br>
-                 <p><h3>Want to go pro? Get it <a href="http://www.cloud-3d.com/product/geocmsx-map-maker-pro/" target="_blank">right here!</a> Licenses are a 1 time fee and free support for life!</h3>
-                </p>
-                <br>
-                <p>
-                 <h3><a target="_blank" href="<?php echo 'http://andrewgunn.xyz/geocmsx/assets.zip' ?>">Download</a> plugin How-To Guide and Documentation</h3>
-                <h3><div class="mapsmarker">Find more Map icons at <a href="https://mapicons.mapsmarker.com/" target="_blank">Maps Marker's</a> website</div></h3>
-                        </p>
-                <br>
-                <fieldset><?php $key = 'setup'; ?>
-                    
-                <input class="button button-primary" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Plugin Setup"  />
-            
-
-                <?php $key = 'restore'; ?>
-                &nbsp;
-                <input class="button-secondary delete" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Factory Restore"  />
-            
-                    </fieldset>
-                </td>
-
-                   
-            </div>
-
-            <hr>
-
-            <div>
-            <td>
-            
-            </div>
-        </div>
-    <?php }
 
       /**
      * Print the Section text
@@ -225,7 +186,10 @@ class TrailStorySettings {
                 <?php $key = 'restore'; ?>
                 &nbsp;
                 <input class="button-secondary delete" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Factory Restore"  />
-            
+                
+                <?php $key = 'delete'; ?>
+                    
+                <input class="button button-primary" id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="submit" value="Plugin Setup"  />
                     </fieldset>
                 </td>
 
