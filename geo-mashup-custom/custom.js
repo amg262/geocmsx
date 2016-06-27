@@ -129,7 +129,17 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
         });
 
         layer.setMap(google_map);
-        
+
+
+
+       // google_map.data.addGeoJson('https://storage.googleapis.com/maps-devrel/quakes.geo.json');
+          
+       
+
+      
+
+      
+      
         for (var i = 0; i < kml_arr.length; i++) {
             //console.log(kml_arr[i]);
             var kml_layer = kml_arr[i];
@@ -139,9 +149,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
             } );
 
         }
-        var geo = new google.maps.KmlLayer( geo, {
-            map: google_map
-        } );
+        
 
         
         console.log(geo);
