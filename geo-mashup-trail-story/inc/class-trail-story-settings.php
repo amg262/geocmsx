@@ -278,11 +278,11 @@ class TrailStorySettings {
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Marker Animatinos
+                                Location Elevation
                             </th>
                             <td>
        
-                                <fieldset><?php $key = 'marker_animatinos'; 
+                                <fieldset><?php $key = 'elevation'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
@@ -294,11 +294,11 @@ class TrailStorySettings {
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Marker Animatinos
+                                Transit Layer
                             </th>
                             <td>
        
-                                <fieldset><?php $key = 'marker_animatinos'; 
+                                <fieldset><?php $key = 'transit_layer'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
@@ -310,11 +310,11 @@ class TrailStorySettings {
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Marker Animatinos
+                                Bike Layer
                             </th>
                             <td>
        
-                                <fieldset><?php $key = 'marker_animatinos'; 
+                                <fieldset><?php $key = 'bike_layer'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
@@ -323,6 +323,39 @@ class TrailStorySettings {
                                 
                             </td>
                         </tr>
+                          <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                               Fusion Heat Layer
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'fusion_heat_layer'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description">.</p>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Max Zoom
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'max_zoom'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description">.</p>
+                                
+                            </td>
+                        </tr>
+                        
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
