@@ -26,24 +26,16 @@ jQuery(document).ready(function($) {
 /**
 * 
 */
+function csv_to_array(str) {
 
-function process_options(objects) {
-    if (objects.custom_kml_layers != null && objects.custom_kml_layers != undefined) {
-        var k = objects.custom_kml_layers;
-        console.log(k);
-
+    if (str != null && str != undefined) {
         var arr = [];
 
-        arr = k.split(',');
-        //console.log(arr);
-        console.log('Kml Layers: ' + arr.length);
-        //console.log(arr);
+        arr = str.split(',');
 
-        if (arr.length > 0) {
-            return arr;
-        } else {
-            return k;
-        }
+        return arr;
+    } else {
+        return false;
     }
 }
 
@@ -51,19 +43,13 @@ function set_kmls(objects) {
 
      if (objects.custom_kml_layers != null && objects.custom_kml_layers != undefined) {
         var k = objects.custom_kml_layers;
-        console.log(k);
+        //console.log(k);
+        var objs = csv_to_array(k);
 
-        var arr = [];
-
-        arr = k.split(',');
-        //console.log(arr);
-        console.log('Kml Layers: ' + arr.length);
-        //console.log(arr);
-
-        if (arr.length > 0) {
-            return arr;
+        if (objs.length > 0) {
+            return objs;
         } else {
-            return k;
+            return false;
         }
     }
 }

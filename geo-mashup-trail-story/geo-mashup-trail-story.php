@@ -94,7 +94,7 @@ function save_geopost_meta( $post_id, $post, $update ) {
     //var_dump($term);
     if ( isset( $_REQUEST['post_ID'] ) ) {
        // wp_set_post_terms( $post_id, $term, $tax);
-        wp_set_object_terms( $_REQUEST['post_ID'], $term->name, $tax);
+        //wp_set_object_terms( $_REQUEST['post_ID'], $term->name, $tax);
     }
 
 

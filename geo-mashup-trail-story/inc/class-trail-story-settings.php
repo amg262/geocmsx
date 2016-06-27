@@ -142,11 +142,9 @@ class TrailStorySettings {
      */
     public function sanitize( $input ) {
         $new_input = array();
-        /*if( isset( $input['trail_story_option'] ) )
-            $new_input['trail_story_option'] = absint( $input['trail_story_option'] );
-        if( isset( $input['trail_story_setting'] ) )
-            $new_input['trail_story_setting'] = absint( $input['trail_story_setting'] );
-        */
+        if( isset( $input['trail_story_options'] ) )
+            $new_input['trail_story_options'] = absint( $input['trail_story_options'] );
+        
         return $input;
     }
     /**
@@ -156,19 +154,7 @@ class TrailStorySettings {
         <div id="plugin-info-header" class="plugin-info header">
             <div class="plugin-info content">
                 
-                    <!--<div>
-                        <h4>Testing and Development</h4>
-                        <a target="_blank" href="https://profiles.wordpress.org/jvalcq/">Jon Valcq</a>
-                        &nbsp;â€¡&nbsp;
-                        <a target="_blank" href="#">Josh Selk</a>
-                    </div>
-                    <hr>
-                    <div>
-                        <h4>Project Manager</h4>
-                        <a target="_blank" href="http://kevinabarnes.com">Kevin Barnes</a>
-                    </div>
-                    <hr> -->
-                    <br>
+                   
                 </div>
             </div>
     <?php }
@@ -247,14 +233,7 @@ class TrailStorySettings {
                     </tbody>
                 </table>
                     
-                </p>
-                <!--<p>
-                    <?php //$key = 'text'; ?>
-                    <label for="trail_story_options[text]">Text</label>
-                    <input id='trail_story_options[text]' name="trail_story_options[text]" type="text"
-                     value="<?php //echo $trail_story_options[$key]; ?>" />
-                    
-                </p>-->
+      
                 <?php submit_button('Save All Options'); ?>
             </div>
             <p><hr></p>
@@ -263,7 +242,38 @@ class TrailStorySettings {
                 <p>
                 <table class="form-table">
                     <tbody>
-                        
+                         <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Marker Animatinos
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'marker_animatinos'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description">.</p>
+                                
+                            </td>
+                        </tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Multi Object Marker
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'gsx_license'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
+                                        Delete all posts, attachments, and plugin settings when uninstalled.
+                                    </label>
+                                <p class="description">Use this as a factory restore.</p>
+                                
+                            </td>
+                        </tr>
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
@@ -311,9 +321,18 @@ class TrailStorySettings {
                                     Sepearte URLs by commma
                                     </label>
                                     <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+
+                                    <?php $key = 'earthqauke_styles'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <br>
+                                    
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                    Earthquake Styles</label>
                                 <!--<p class="description">Use this as a factory restore.</p>-->
                                 
                             </td>
+                        
                         </tr>
                     </tbody>
                 </table></p>
