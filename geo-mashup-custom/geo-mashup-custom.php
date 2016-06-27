@@ -265,3 +265,4 @@ function trail_story_locations_custom_kmls() {
 add_action( 'geo_mashup_render_map', 'trail_story_locations_custom_kmls' );
 
 add_image_size( 'locationinfo-thumbnail', 70, 70, true );
+add_image_size( 'icon-thumbnail', 40, 40, true );
