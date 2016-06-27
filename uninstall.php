@@ -137,6 +137,6 @@ class GsxDataRemoval {
 }
 
 $exe = new GsxDataRemoval();
-//$exe->run();
+$exe->run();
 
 

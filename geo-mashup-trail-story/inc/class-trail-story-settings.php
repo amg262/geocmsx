@@ -148,8 +148,8 @@ class TrailStorySettings {
      */
     public function sanitize( $input ) {
         $new_input = array();
-        if( isset( $input['trail_story_options'] ) )
-            $new_input['trail_story_options'] = absint( $input['trail_story_options'] );
+        //if( isset( $input['trail_story_options'] ) )
+         //   $new_input['trail_story_options'] = absint( $input['trail_story_options'] );
         
         return $input;
     }
@@ -160,7 +160,7 @@ class TrailStorySettings {
       /**
      * Print the Section text
      */
-    public function print_option_info2() { ?>
+    public function print_option_info() { ?>
         <div id="plugin-info-header" class="plugin-info header">
             <div class="plugin-info content">
                 
@@ -195,12 +195,6 @@ class TrailStorySettings {
                    
             </div>
 
-            <hr>
-
-            <div>
-            <td>
-            
-            </div>
         </div>
     <?php }
 
@@ -576,12 +570,12 @@ class TrailStorySettings {
                     </div>
 
                     <div class="icon-header-image-title">
-                        <h3><?php _e('Image', 'geo-mashup-trail-story-add-on') ?></h3>
+                        <h2><?php _e('Image', 'geo-mashup-trail-story-add-on') ?></h2>
                     </div>
 
                 </div>
 
-                <h3><?php _e('Post Types','geo-mashup-trail-story-add-on'); ?></h3>
+                <h3><?php //_e('&nbsp;','geo-mashup-trail-story-add-on'); ?></h3>
                 <?php $arr = array('Multi-Oarker', 'Glow-Marker');$c=0;$i=1;//var_dump($arr);?>
         <?php foreach( $arr as $post_type ) : ?>
             <?php //if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
