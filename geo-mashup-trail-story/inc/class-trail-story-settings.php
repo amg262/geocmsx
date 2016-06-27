@@ -276,6 +276,25 @@ class TrailStorySettings {
                             
                             </td>
                         </tr>
+
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Delete Posts
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'delete_posts'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                        Delete all posts, attachments, and plugin settings when uninstalled.
+                                    </label>
+                               
+                                
+                            </td>
+                        </tr>
+
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
@@ -287,9 +306,9 @@ class TrailStorySettings {
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                        Delete all posts, attachments, and plugin settings when uninstalled.
+                                        Delete all plugin options.
                                     </label>
-                                <p class="description">ON UNINSTALL. Use this as a factory restore.</p>
+                                
                                 
                             </td>
                         </tr>
