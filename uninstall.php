@@ -137,8 +137,8 @@ class GsxDataRemoval() {
 
 	}
 
-
-
 }
+
+$exe = new GsxDataRemoval();
 
 
