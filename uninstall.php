@@ -41,14 +41,14 @@ class TrailMapUninstaller {
 		$i = 0;
 		if (isset($trail_story_options["delete_posts"])) {
 
-			if (is_array($posts)) {
+			//if (is_array($posts)) {
 
 			   foreach ($posts as $post) {
 
-			       wp_delete_post( $post->ID, true);
+			       wp_delete_post( $post );
 			       $i++;
 			   }
-			}
+			//}
 		} else {
 		}
 
@@ -125,14 +125,15 @@ class TrailMapUninstaller {
 	public function delete_plugin_options() {
 
 		delete_option( $trail_story_options );
-		delete_site_option( $option_name );
+		delete_site_option( $trail_story_options );
 
 		delete_option( $geo_mashup_options );
 		delete_site_option( $geo_mashup_options );
 	}
 
 	public function execute_uninstallion() {
-		$this->delete_posts;
+		$this->delete_posts();
+		$this->geo_mashup_uninstall_options();
 	}
 
 
