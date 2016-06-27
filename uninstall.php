@@ -11,7 +11,7 @@ if ( !defined( 'WP_UNINSTALL_PLUGIN' ) )
     exit();
 
 
-if( is_admin() ) {
+if( is_admin() )
 
 
 
@@ -20,6 +20,7 @@ if( is_admin() ) {
     	$geo_mashup_options = get_option( 'geo_mashup_options' );
 
 
+execute_uninstallion();
 	 function delete_posts() {
 
 
