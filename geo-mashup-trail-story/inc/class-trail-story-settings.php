@@ -1,6 +1,5 @@
 <?php
 defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
-require_once('uninstall.php', dirname(__FILE__));
 
 interface iTrailStorySettings {
     public function __construct();
