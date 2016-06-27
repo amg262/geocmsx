@@ -29,7 +29,7 @@ class GeoMashupOptions {
 			'category_link_text' => 'map',
 			'category_zoom' => 'auto',
 			'add_category_links' => 'false',
-			'copy_geodata' => 'false',
+			'copy_geodata' => 'true',
 			'theme_stylesheet_with_maps' => 'false',
 			'located_post_types' => array( 'geopost' ),
 			'include_taxonomies' => array( 'geopost-category' ),
@@ -41,7 +41,7 @@ class GeoMashupOptions {
 			'adsense_code' => 'partner-pub-5088093001880917',
 			'geonames_username' => 'geomashup',
 	 		'map_api' => 'googlev3',
-			'import_custom_field' => '',
+			'import_custom_field' => '_geopost_location',
 			'enable_geo_search' => 'false' ),
 		'global_map' => array (
 			'width' => '100%',

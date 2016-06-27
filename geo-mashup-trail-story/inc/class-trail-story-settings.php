@@ -339,6 +339,30 @@ class TrailStorySettings {
                             </td>
                         
                         </tr>
+                        <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Map Skin
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'msp_skin';
+                                                                            //var_dump($trail_story_options[$key]); ?>
+
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                    </label>
+                                    <select name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <option >One</option>
+                                    <option >2</option>
+                                    <option >3</option>
+                                    <option >4</option>
+
+                                    2</select>
+                                   
+                                <!--<p class="description">Use this as a factory restore.</p>-->
+                                
+                            </td>
+                        
+                        </tr>
                         Marker glow cb, Overlay text box,  preloaded map styles select, Plugin map/frontend page set up button, add image size icons, Json data,  json post import export, Json settings import export,  
                     </tbody>
                 </table></p>

@@ -124,8 +124,8 @@ public function register_txn_geocms_pro() {
  
         if ( in_array( $post_type, $post_types ) ) {
             add_meta_box(
-                'some_meta_box_name',
-                __( 'Some Meta Box Headline', 'textdomain' ),
+                'geopost_location',
+                __( 'Location', 'textdomain' ),
                 array( $this, 'render_meta_box_content' ),
                 $post_type,
                 'advanced',
@@ -147,14 +147,14 @@ public function register_txn_geocms_pro() {
          */
  
         // Check if our nonce is set.
-        if ( ! isset( $_POST['myplugin_inner_custom_box_nonce'] ) ) {
+        if ( ! isset( $_POST['geopost_location_cb_nonce'] ) ) {
             return $post_id;
         }
  
-        $nonce = $_POST['myplugin_inner_custom_box_nonce'];
+        $nonce = $_POST['geopost_location_cb_nonce'];
  
         // Verify that the nonce is valid.
-        if ( ! wp_verify_nonce( $nonce, 'myplugin_inner_custom_box' ) ) {
+        if ( ! wp_verify_nonce( $nonce, 'geopost_location_cb' ) ) {
             return $post_id;
         }
  
@@ -180,10 +180,10 @@ public function register_txn_geocms_pro() {
         /* OK, it's safe for us to save the data now. */
  
         // Sanitize the user input.
-        $mydata = sanitize_text_field( $_POST['myplugin_new_field'] );
+        $mydata = sanitize_text_field( $_POST['new_geopost_location'] );
  
         // Update the meta field.
-        update_post_meta( $post_id, '_my_meta_value_key', $mydata );
+        update_post_meta( $post_id, '_geopost_location', $mydata );
     }
  
  
@@ -195,17 +195,17 @@ public function register_txn_geocms_pro() {
     public function render_meta_box_content( $post ) {
  
         // Add an nonce field so we can check for it later.
-        wp_nonce_field( 'myplugin_inner_custom_box', 'myplugin_inner_custom_box_nonce' );
+        wp_nonce_field( 'geopost_location_cb', 'geopost_location_cb_nonce' );
  
         // Use get_post_meta to retrieve an existing value from the database.
-        $value = get_post_meta( $post->ID, '_my_meta_value_key', true );
+        $value = get_post_meta( $post->ID, '_geopost_location', true );
  
         // Display the form, using the current value.
         ?>
-        <label for="myplugin_new_field">
+        <label for="new_geopost_location">
             <?php _e( 'Description for this field', 'textdomain' ); ?>
         </label>
-        <input type="text" id="myplugin_new_field" name="myplugin_new_field" value="<?php echo esc_attr( $value ); ?>" size="25" />
+        <input type="text" id="new_geopost_location" name="new_geopost_location" value="<?php echo esc_attr( $value ); ?>" size="25" />
         <?php
     }
 
