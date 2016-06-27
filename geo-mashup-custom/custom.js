@@ -645,7 +645,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
         setupClickListener('changetype-establishment', ['establishment']);
         setupClickListener('changetype-geocode', ['geocode']);
       }*/
-
+/*
        panorama = new google.maps.StreetViewPanorama(
             document.getElementById('street-view'),
             {
