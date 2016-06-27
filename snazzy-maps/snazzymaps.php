@@ -81,14 +81,14 @@ add_action( 'wp_enqueue_scripts', 'enqueue_script');
 add_action( 'admin_enqueue_scripts', 'admin_enqueue_script');
 
 function admin_add_custom_menu(){    
-    //add_theme_page('Snazzy Maps', 'Snazzy Maps', 'manage_options', 'snazzy_maps', 'admin_add_custom_content');
+    add_theme_page('Snazzy Maps', 'Snazzy Maps', 'manage_options', 'snazzy_maps', 'admin_add_custom_content');
 
-    add_submenu_page('edit.php?post_type=geopost',
+    /*add_submenu_page('edit.php?post_type=geopost',
             'Snazzy Maps',
             'Snazzy Maps',
             'manage_options',
             'snazzy-maps',
-            'admin_add_custom_content');
+            'admin_add_custom_content');*/
 }
 add_action( 'admin_menu', 'admin_add_custom_menu');
 
