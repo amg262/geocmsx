@@ -1,16 +1,7 @@
 <?php /*
 
-**************************************************************************
 
-Plugin Name:  Regenerate Thumbnails
-Plugin URI:   http://www.viper007bond.com/wordpress-plugins/regenerate-thumbnails/
-Description:  Allows you to regenerate all thumbnails after changing the thumbnail sizes.
-Version:      2.2.6
-Author:       Alex Mills (Viper007Bond)
-Author URI:   http://www.viper007bond.com/
-Text Domain:  regenerate-thumbnails
-
-**************************************************************************
+*************************************************************************
 
 Copyright (C) 2008-2016 Alex Mills (Viper007Bond)
 
@@ -53,7 +44,14 @@ class RegenerateThumbnails {
 
 	// Register the management page
 	public function add_admin_menu() {
-		$this->menu_id = add_management_page( __( 'Regenerate Thumbnails', 'regenerate-thumbnails' ), __( 'Regen. Thumbnails', 'regenerate-thumbnails' ), $this->capability, 'regenerate-thumbnails', array($this, 'regenerate_interface') );
+		//$this->menu_id = add_management_page( __( 'Regenerate Thumbnails', 'regenerate-thumbnails' ), __( 'Regen. Thumbnails', 'regenerate-thumbnails' ), $this->capability, 'regenerate-thumbnails', array($this, 'regenerate_interface') );
+
+		$this->menu_id = add_submenu_page('edit.php?post_type=geopost',
+            'Tools',
+            'Tools',
+            'manage_options',
+            'tools',
+            array($this, 'regenerate_interface'));
 	}
 
 
