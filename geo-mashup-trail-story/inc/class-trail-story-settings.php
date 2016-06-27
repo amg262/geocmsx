@@ -356,7 +356,7 @@ class TrailStorySettings {
                 </div>
 
                 <h3><?php _e('Post Types','geo-mashup-trail-story-add-on'); ?></h3>
-                <?php $arr = array('multi-marker', 'glow-marker');$c=0;$i=1;var_dump($arr);?>
+                <?php $arr = array('Multi-Oarker', 'Glow-Marker');$c=0;$i=1;//var_dump($arr);?>
         <?php foreach( $arr as $post_type ) : ?>
             <?php //if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
 
