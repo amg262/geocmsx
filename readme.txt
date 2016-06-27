@@ -2,7 +2,7 @@
 Contributors: amg26, amgxyz, ryanvaness, jvalcq, Orion Group LLC
 Tags: trail map, interactive map, geo trail map, interactive trail map, geo mashup, geo map, map maker, trail story
 Donate link: andrewgunn.xyz/donate
-Tested up to: 4.3.1
+Tested up to: 4.5.3
 Requires at least: 3.5
 Stable tag: 1.0.0
 License: GPLv2
