@@ -44,7 +44,12 @@
     display: inline;
     float: right;
 }
-
+.dropcap {
+    float: left;
+    font-size: 80px;
+    padding-right: 7px;
+    line-height: 72px;
+}
 #trail-story-post #geo_mashup_location_editor label,
 #trail-story-post #geo_mashup_location_editor #geo_mashup_search {
     /*display: none !important;*/
