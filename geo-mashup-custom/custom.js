@@ -4,8 +4,7 @@ jQuery(document).ready(function($) {
     var k = objects.custom_kml_layers;
 
 
-    console.log(options.custom_icons);
-    //console.log(options);
+    console.log(options);
     //get_kmls_obj(kmls);
     $('#trail-story-post').submit(function($) {
 
@@ -97,6 +96,37 @@ GeoMashup.addAction( 'termIcon', function( icon, taxonomy, term_id ){
     }
 });
 
+GeoMashup.addAction( 'multiObjectMarker', function( properties, object ) {
+        var multi = 'trail-story-add-icon-text-box-Multi-Marker';
+
+        // When there is more than one marker assigned to the same location - mm_20_plus.png
+        //console.log(options[multi]);
+        //console.log(object);
+        if (options.custom_icons != 'false') {
+            if (options[multi] != null && options[multi] != undefined && options[multi] != "") {
+                console.log('hi0');
+                object.setIcon( options[multi] );
+            } else {
+                console.log('noah');
+            }
+        }
+    } );
+
+GeoMashup.addAction( 'glowMarkerIcon', function( properties, object ) {
+        var multi = 'trail-story-add-icon-text-box-Glow-Marker';
+
+        // When there is more than one marker assigned to the same location - mm_20_plus.png
+        //console.log(options[multi]);
+        //console.log(object);
+        if (options.custom_icons != 'false') {
+            if (options[multi] != null && options[multi] != undefined && options[multi] != "") {
+                console.log('hi0');
+                object.setIcon( options[multi] );
+            } else {
+                console.log('noah');
+            }
+        }
+    } );
 /*
 
  */
@@ -355,13 +385,8 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
 
 }); 
 
-/*GeoMashup.addAction( 'multiObjectMarker', function( properties, marker ) {
- 
-        // When there is more than one marker assigned to the same location - mm_20_plus.png
-        marker.setIcon( properties.custom_url_path + '/images/icon-20x20.png' );
- 
-    } );
- 
+
+ /*
     GeoMashup.addAction( 'singleMarkerOptions', function ( properties, marker_opts ) {
  
         // When the map is a single object map with just one marker
