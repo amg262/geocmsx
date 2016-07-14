@@ -28,10 +28,7 @@ define( 'PHP', '.php' );
 require_once( 'geo-mashup-trail-story/geo-mashup-trail-story.php' );
 require_once( 'geo-mashup-custom/geo-mashup-custom.php' );
 require_once( 'geo-mashup/geo-mashup.php' );
-require_once( 'snazzy-maps/snazzymaps.php' );
-
-
-
+//require_once( 'snazzy-maps/snazzymaps.php' );
 
 
 

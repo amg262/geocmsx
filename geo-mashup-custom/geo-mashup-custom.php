@@ -252,7 +252,7 @@ function trail_story_locations_custom_kmls() {
     $option = $trail_story_options[$key];
     $arr[$key] = $option;
 
-    var_dump($objects);
+    //var_dump($objects);
     wp_localize_script( 'geo-mashup-custom', $objects, $arr );
 
     wp_localize_script( 'geo-mashup-custom', 'options' , $trail_story_options );

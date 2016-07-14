@@ -169,18 +169,9 @@ class TrailStorySettings {
                 <p><h3>You can also <a href="mailto:andrewmgunn26@gmail.com" target="_blank">email me</a> to to in touch faster, any feedback is welcomed!</h3>
                 </p>
                 <br>
-                 <p><h3>Want to go pro? Get it <a href="http://www.cloud-3d.com/product/geocmsx-map-maker-pro/" target="_blank">right here!</a> Licenses are a 1 time fee and free support for life!</h3>
-                </p>
-                <br>
-                <p>
-                 <h3><a target="_blank" href="<?php echo 'http://andrewgunn.xyz/geocmsx/assets.zip' ?>">Download</a> plugin How-To Guide and Documentation</h3>
                 <h3><div class="mapsmarker">Find more Map icons at <a href="https://mapicons.mapsmarker.com/" target="_blank">Maps Marker's</a> website</div></h3>
                         </p>
                 <br>
-
-              
-
-                   
             </div>
 
         </div>
@@ -215,7 +206,7 @@ class TrailStorySettings {
                                 <fieldset><?php $key = 'gsx_license'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input style="width:60%;"id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
+                                        <input style="width:320px;"id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
                                     
                                     </label>
                             
@@ -302,7 +293,7 @@ class TrailStorySettings {
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
                                     </label>
-                                <p class="description">.</p>
+                                <p class="description"></p>
                                 
                             </td>
                         </tr>
@@ -318,7 +309,7 @@ class TrailStorySettings {
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
                                     </label>
-                                <p class="description">.</p>
+                                <p class="description"></p>
                                 
                             </td>
                         </tr>
@@ -334,38 +325,14 @@ class TrailStorySettings {
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                         <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
                                     </label>
-                                <p class="description">.</p>
+                                <p class="description"></p>
                                 
                             </td>
                         </tr>
                         
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Global Delimiter
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'delimiter';
-
-                                if ($trail_story_options[$key] == null) {
-                                    $trail_story_options[$key] = ',';
-                                } elseif (strlen($trail_story_options[$key]) > 1) {
-                                    $trail_story_options[$key] = ',';
-                                }
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    
-                                    <input type="text"  style="width:50px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" placeholder="," />
-                                    <br>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    Override Delimiter
-                                    </label>
-                                <p class="description">You can enter a character to delimit by, otherwise it will use commas.</p>
-                                
-                            </td>
-                        </tr>
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
+                        
+                        <!--<tr>
+                            <?php /* //$key = 'delete_data'; ?>
                             <th scope="row">
                                 # of Data Layers
                             </th>
@@ -384,16 +351,16 @@ class TrailStorySettings {
                                     Override Delimiter
                                     </label>
                                 <p class="description">You can enter a character to delimit by, otherwise it will use commas.</p>
-                                
-                            </td>
-                        </tr>
+                                <?php */ ?>
+                            <!--</td>
+                        </tr>-->
 
-                        <?php if ($trail_story_options['count_data_layers']) {
-                            $count = intval($trail_story_options['count_data_layers']);
+                        <?php //if ($trail_story_options['count_data_layers']) {
+                            //$count = intval($trail_story_options['count_data_layers']);
                            // var_dump($count);
 
 
-                            for ($i=1;$i<=$count;$i++) { ?>
+                            /*for ($i=1;$i<=$count;$i++) { ?>
 
                                 <tr>
                                     <?php //$key = 'delete_data'; ?>
@@ -462,12 +429,12 @@ class TrailStorySettings {
                                     </td>
                                 </tr>
                                 <?php }
-                            } ?>
-                            <hr>
+                            }*/ ?>
+                            
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                KML URLs
+                                Data Layer URLs
                             </th>
                             <td>
                                 <fieldset><?php $key = 'custom_kml_layers';
@@ -564,7 +531,7 @@ class TrailStorySettings {
                 </div>
 
                 <h3><?php //_e('&nbsp;','geo-mashup-trail-story-add-on'); ?></h3>
-                <?php $arr = array('Multi-Oarker', 'Glow-Marker');$c=0;$i=1;//var_dump($arr);?>
+                <?php $arr = array(); //array('Multi-Marker', 'Glow-Marker');$c=0;$i=1;//var_dump($arr);?>
         <?php foreach( $arr as $post_type ) : ?>
             <?php //if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
 
