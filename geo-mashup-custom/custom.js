@@ -2,8 +2,10 @@
 jQuery(document).ready(function($) {
     //console.log(kmls);
     var k = objects.custom_kml_layers;
-    console.log(objects);
-    console.log(options);
+
+
+    console.log(options.custom_icons);
+    //console.log(options);
     //get_kmls_obj(kmls);
     $('#trail-story-post').submit(function($) {
 
@@ -59,7 +61,7 @@ function set_custom_styles(objects) {
 
     if (objects.custom_styles != null && objects.custom_styles != undefined) {
         var k = objects.custom_styles;
-        console.log(k);
+        //console.log(k);
         return k;
     }
 }
@@ -67,27 +69,32 @@ function set_geo_json(objects) {
 
     if (objects.geo_json != null && objects.geo_json != undefined) {
         var k = objects.geo_json;
-        console.log(k);
+        //console.log(k);
         return k;
     }
 }
 
+
 GeoMashup.addAction( 'objectIcon', function( properties, object ) {
 
-    // Use a special icon in case the custom 'complete' var is set to 1
-    if ( object.link_to_image_icon != null && typeof object.link_to_image_icon !== 'undefined' ) {
+    if (options.custom_icons != 'false') {
+        // Use a special icon in case the custom 'complete' var is set to 1
+        if ( object.link_to_image_icon != null && typeof object.link_to_image_icon !== 'undefined' ) {
 
-        object.icon.image = object.link_to_image_icon;
-        object.icon.iconSize = [ 32, 37 ];
+            object.icon.image = object.link_to_image_icon;
+            object.icon.iconSize = [ 32, 37 ];
 
-    } 
+        } 
+    }
     
 });
 
 GeoMashup.addAction( 'termIcon', function( icon, taxonomy, term_id ){
-    
-    icon.image = icons[taxonomy][term_id];
-
+    if (options.custom_icons != 'false') {
+        if (icons[taxonomy] != null) {
+            icon.image = icons[taxonomy][term_id];
+        }
+    }
 });
 
 /*
@@ -106,7 +113,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
     //});
     var google_map = mxn.getMap();
     //alert('s');
-    console.log(google_map);
+    //console.log(google_map);
 
 
     if (properties.map_content == 'global') {
@@ -157,7 +164,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
         
 
         
-        console.log(geo);
+        //console.log(geo);
 
       
 
@@ -348,7 +355,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
 
 }); 
 
-GeoMashup.addAction( 'multiObjectMarker', function( properties, marker ) {
+/*GeoMashup.addAction( 'multiObjectMarker', function( properties, marker ) {
  
         // When there is more than one marker assigned to the same location - mm_20_plus.png
         marker.setIcon( properties.custom_url_path + '/images/icon-20x20.png' );
@@ -371,7 +378,7 @@ GeoMashup.addAction( 'multiObjectMarker', function( properties, marker ) {
         glow_options.iconSize = [ 22, 30 ];
         glow_options.iconAnchor = [ 11, 27 ];
     } );
-
+*/
 
 
 // console.log(allImageOverlays);

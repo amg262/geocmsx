@@ -574,6 +574,7 @@ class TrailStorySettings {
                             <?php if( $trail_story_options[ $key ] ){ ?>
 
                                 <img src="<?php echo esc_attr( $trail_story_options[ $key ] ); ?>" alt="" style="max-width:100%;" />
+                                <?php $trail_story_options['custom_icons'] = 'true'; ?>
 
                             <?php } ?>
 

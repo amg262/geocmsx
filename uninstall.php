@@ -1,33 +1,18 @@
  <?php // Get out!
 
-defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
-
-
 
 if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) {
     exit();
 }
 
 
-class GsxDataRemoval {
+		delete_posts();
+		delete_options();
+		delete_data();
 
-	public $trail_story_options;
+	function delete_posts() {
 
-	public function __construct() {
-
-		$trail_story_options =  get_option('trail_story_options');
-
-	}
-
-	public function run() {
-		$this->delete_posts();
-		$this->delete_options();
-		$this->delete_data();
-	}
-
-	public function delete_posts() {
-
-		if ($this->$trail_story_options['delete_posts']):
+		if ($trail_story_options['delete_posts']):
 
 			$posts = array();
 			$count = 0;
@@ -54,7 +39,7 @@ class GsxDataRemoval {
 			   wp_delete_post( $post->ID, true );
 
 			}
-			reset_postdata();
+			//reset_postdata();
 			return $count;
 		endif;
 	}
@@ -75,11 +60,11 @@ class GsxDataRemoval {
 
 	 */
 
-	 public function delete_data() {
+	 function delete_data() {
 
 		global $wpdb;
 
-		if ($this->$trail_story_options['delete_data']):
+		if ($trail_story_options['delete_data']):
 
 			$tables = array( 'geo_mashup_administrative_names', 'geo_mashup_location_relationships', 'geo_mashup_locations' );
 
@@ -102,9 +87,9 @@ class GsxDataRemoval {
 
 	*/
 
-	public function delete_options() {
+	function delete_options() {
 
-		if ($this->$trail_story_options['delete_options']):
+		if ($trail_story_options['delete_options']):
 
 			delete_option( 'trail_story_options' );
 
@@ -118,7 +103,7 @@ class GsxDataRemoval {
 
 			delete_option( 'geo_locations' );
 
-			delete_site_option( 'geo_mashup_temp_kml_url' );
+			/*delete_site_option( 'geo_mashup_temp_kml_url' );
 
 			delete_site_option( 'geo_mashup_db_version' );
 
@@ -128,15 +113,9 @@ class GsxDataRemoval {
 
 			delete_site_option( 'geo_locations' );
 			
-			delete_site_option( 'trail_story_options' );
+			delete_site_option( 'trail_story_options' );*/
 
 		endif;
 
 	}
-
-}
-
-$exe = new GsxDataRemoval();
-$exe->run();
-
 

@@ -203,12 +203,19 @@ function trail_story_locations_custom_kmls() {
 
                                     // push the option into the array
                                     $translation_array[$include_taxonomy][$term->term_id] = $trail_story_options[$term_key];
+                                    $trail_story_options['custom_icons'] = 'true';
 
                                 // if the option is empty or is null
                                 } elseif( $trail_story_options[$post_type_key] !== '' && !is_null( $trail_story_options[$post_type_key] ) ) {
 
                                     // push the option into the array
                                     $translation_array[$include_taxonomy][$term->term_id] = $trail_story_options[$post_type_key];
+
+                                    $trail_story_options['custom_icons'] = 'true';
+
+
+                                } else {
+                                    $trail_story_options['custom_icons'] = 'false';
 
                                 }
 
@@ -253,6 +260,8 @@ function trail_story_locations_custom_kmls() {
     $arr[$key] = $option;
 
     //var_dump($objects);
+
+
     wp_localize_script( 'geo-mashup-custom', $objects, $arr );
 
     wp_localize_script( 'geo-mashup-custom', 'options' , $trail_story_options );
