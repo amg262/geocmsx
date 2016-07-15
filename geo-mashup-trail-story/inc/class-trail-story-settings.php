@@ -446,22 +446,7 @@ class TrailStorySettings {
                                 
                             </td>
                         </tr>
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Custom Styles
-                            </th>
-                            <td>
-                                <fieldset><?php $key = 'custom_styles';
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    </label>
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-                                <!--<p class="description">Use this as a factory restore.</p>-->
-                                
-                            </td>
-                        </tr>
+                      
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">

@@ -200,10 +200,10 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 		};
 
 		function error(err) {
-		  console.warn('ERROR(' + err.code + '): ' + err.message);
+		  //console.warn('ERROR(' + err.code + '): ' + err.message);
 		};
 
-		navigator.geolocation.getCurrentPosition(success, error, options);
+		//navigator.geolocation.getCurrentPosition(success, error, options);
 
 	</script>
 	<input id="geo_mashup_ui_manager" name="geo_mashup_ui_manager" type="hidden" value="<?php echo $ui_manager; ?>" />
