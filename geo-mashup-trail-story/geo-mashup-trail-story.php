@@ -86,15 +86,16 @@ function save_geopost_meta( $post_id, $post, $update ) {
     $geoposts = 'geoposts';
     $term = get_term_by('slug', $geoposts, $tax);
 
+    $obj_terms = wp_get_object_terms( $post_id, $tax );
     //var_dump($post);
     //var_dump($term);
     //wp_set_post_categories( $post_ID, $post_categories, $append );
     //wp_set_object_terms( $post_id, $term, $tax);
     // - Update the post's metadata.
     //var_dump($term);
-    if ( isset( $_REQUEST['post_ID'] ) ) {
-       // wp_set_post_terms( $post_id, $term, $tax);
-        //wp_set_object_terms( $_REQUEST['post_ID'], $term->name, $tax);
+    if ( isset( $_REQUEST['post_ID'] ) && ($obj_terms == null) ) {
+       //wp_set_post_terms( $post_id, $term, $tax);
+        wp_set_object_terms( $_REQUEST['post_ID'], $term->name, $tax);
     }
 
 

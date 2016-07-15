@@ -376,10 +376,10 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
         ]
     }];
 
-    var map_type = new google.maps.StyledMapType( v, { name: 'trail-map' } );
+    //var map_type = new google.maps.StyledMapType( v, { name: 'trail-map' } );
 
-    google_map.mapTypes.set( 'custom_styles', map_type );
-    google_map.setMapTypeId( 'custom_styles', map_type );
+    //google_map.mapTypes.set( 'custom_styles', map_type );
+    //google_map.setMapTypeId( 'custom_styles', map_type );
 
     
 
@@ -512,6 +512,6 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
      var map_type = new google.maps.StyledMapType( custom_styles, { name: 'rsf' 
     } ); 
 
-    google_map.mapTypes.set( 'grey', map_type ); 
-     google_map.setMapTypeId( 'grey' ); 
+    //google_map.mapTypes.set( 'grey', map_type ); 
+     //google_map.setMapTypeId( 'grey' ); 
     } ); 

@@ -24,7 +24,7 @@ class GeoMashupOptions {
 			'version' => '',
 			'google_key' => '',
 			'googlev3_key' => '',
-			'mashup_page' => '',
+			'mashup_page' => 'GeoCMSx Map',
 			'category_link_separator' => '::',
 			'category_link_text' => 'map',
 			'category_zoom' => 'auto',

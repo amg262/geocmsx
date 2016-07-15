@@ -32,23 +32,6 @@ require_once( 'geo-mashup/geo-mashup.php' );
 
 
 
-//define( 'IGTM_PDF_URL', 'http://andrewgunn.xyz/wp-content/uploads/2015/10/Interactive-Geo-Trail-Map.pdf' ); 
-/**
-* Flushing permalinks for CPTs on DEACTIVATE
-*/
-//register_deactivation_hook( __FILE__, 'flush_permalinks' );
-
-/**
-* Flushing permalinks for CPTs ON ACTIVATE
-*/
-//register_activation_hook( __FILE__, 'setup_plugin_data' );
-//register_activation_hook( __FILE__, 'create_misc_pages' );
-//add_action( 'admin_init', 'flush_permalinks' );
-/*
-* Adding Settings link to plugin page
-*/
-
-
 interface iGsxInit {
 
 }
@@ -70,13 +53,15 @@ class GsxInit {
         //add_action( 'admin_menu', array( $this, 'add_trail_story_menu_page' ) );
         //add_action( 'admin_init', array( $this, 'gsx_map_page' ) );
         //add_filter( 'plugin_action_links', array( $this, 'gsx_plugin_links'), 10, 5 );
-        //register_activation_hook( __FILE__, array($this, 'gsx_map_page') );
+        register_activation_hook( __FILE__, array($this, 'gsx_setup') );
     }
     public function gsx_setup() {
       //create map page
       //create fe page
-
+      gsx_map_page();
+      gsx_fe_page();
       flush_rewrite_rules();
+      
     }
     public function gsx_post_type() {
 
@@ -103,7 +88,6 @@ class GsxInit {
         // Insert the post into the database
         $id = wp_insert_post( $post );
         wp_set_post_terms( $id );
-      
     }
 
     public function gsx_fe_page() {

@@ -148,10 +148,7 @@ class TrailStorySettings {
      */
     public function sanitize( $input ) {
         $new_input = array();
-        var_dump($input['trail_story_options']);
-        //if( isset( $input['trail_story_options'] ) )
-         //   $new_input['trail_story_options'] = absint( $input['trail_story_options'] );
-        
+    
         return $input;
     }
     /**
