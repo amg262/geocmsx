@@ -61,13 +61,13 @@ public function register_cpt_geocms_pro() {
         'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
-        //'rewrite' => true,
-        'rewrite' => array('slug'=>'geopost'),
+        'rewrite' => true,
+        //'rewrite' => array('slug'=>'geopost'),
         'capability_type' => 'post'
     );
 
     register_post_type( 'geopost', $args );
-    
+    flush_rewrite_rules();
 }
 
 

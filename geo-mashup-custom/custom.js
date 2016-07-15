@@ -209,8 +209,8 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
         }];
       var map_type = new google.maps.StyledMapType( v, { name: 'trail-map' } );
 
-        google_map.mapTypes.set( 'custom_styles', map_type );
-        google_map.setMapTypeId( 'custom_styles', map_type );
+        //google_map.mapTypes.set( 'custom_styles', map_type );
+       // google_map.setMapTypeId( 'custom_styles', map_type );
         //alert('sdfdsf');
         //WE NEED TO BASICALLY CALL THE ADD AND REMOVE
         
@@ -512,6 +512,6 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
      var map_type = new google.maps.StyledMapType( custom_styles, { name: 'rsf' 
     } ); 
 
-    //google_map.mapTypes.set( 'grey', map_type ); 
-     //google_map.setMapTypeId( 'grey' ); 
+    google_map.mapTypes.set( 'grey', map_type ); 
+     google_map.setMapTypeId( 'grey' ); 
     } ); 

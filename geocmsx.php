@@ -59,7 +59,7 @@ class GsxInit {
       //create map page
       //create fe page
       $this->gsx_map_page();
-      $this->gsx_fe_page();
+     // $this->gsx_fe_page();
       flush_rewrite_rules();
       
     }
@@ -97,7 +97,7 @@ class GsxInit {
       $post = array(
         'post_author'   => $user_ID, //The user ID number of the author.
         //'post_category'   => $trail_story_post_category, //Add some categories. Apparently doesn't work
-        'post_content'    => '[frontend_geocmsx_map]', //The full text of the post.
+        'post_content'    => '[frontend_trail_story_map]', //The full text of the post.
         'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
         //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
         'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
