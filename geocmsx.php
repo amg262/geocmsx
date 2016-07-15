@@ -28,7 +28,7 @@ define( 'PHP', '.php' );
 require_once( 'geo-mashup-trail-story/geo-mashup-trail-story.php' );
 require_once( 'geo-mashup-custom/geo-mashup-custom.php' );
 require_once( 'geo-mashup/geo-mashup.php' );
-//require_once( 'snazzy-maps/snazzymaps.php' );
+require_once( 'snazzy-maps/snazzymaps.php' );
 
 
 
@@ -58,8 +58,8 @@ class GsxInit {
     public function gsx_setup() {
       //create map page
       //create fe page
-      gsx_map_page();
-      gsx_fe_page();
+      $this->gsx_map_page();
+      $this->gsx_fe_page();
       flush_rewrite_rules();
       
     }
