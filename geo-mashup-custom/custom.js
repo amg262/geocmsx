@@ -119,10 +119,8 @@ GeoMashup.addAction( 'multiObjectMarker', function( properties, object ) {
         //console.log(object);
         if (options.custom_icons != 'false') {
             if (options[multi] != null && options[multi] != undefined && options[multi] != "") {
-                console.log('hi0');
                 object.setIcon( options[multi] );
             } else {
-                console.log('noah');
             }
         }
     } );
@@ -223,12 +221,12 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
       
        //google_map.data.addGeoJson('https://storage.googleapis.com/maps-devrel/quakes.geo.json');
           
-        if (options.geo_rss != null) {
+        if (options.eq_geo_rss != null) {
 
        //var georssLayer = new google.maps.KmlLayer({
           //url: options.geo_rss
         //});
-       var georssLayer = new google.maps.KmlLayer( options.geo_rss, {
+       var georssLayer = new google.maps.KmlLayer( options.eq_geo_rss, {
                 map: google_map
         });
         //georssLayer.setMap(google_map);
@@ -246,7 +244,24 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
       //  }
 
 
-      
+      if (options.count_data_layers != null) {
+       // trail-story-add-icon-text-box-data-layer-1trail_story_add_icon_text_box_data_layer_1
+var kml = new google.maps.KmlLayer( options.trail_story_add_icon_text_box_data_layer_1, {
+               map: google_map
+            } );
+
+        /*for (var i =1; i <= j; i++) {
+            var k = i.toString();
+            var q = options['trail_story_add_icon_text_box_data_layer_'+k];
+            var kml = new google.maps.KmlLayer( q, {
+               map: google_map
+            } );
+
+            console.log(q);
+        }*/
+
+        //console.log(j);
+      }
       
         for (var i = 0; i < kml_arr.length; i++) {
             //console.log(kml_arr[i]);

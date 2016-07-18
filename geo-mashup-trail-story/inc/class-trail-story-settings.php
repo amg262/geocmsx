@@ -385,7 +385,7 @@ class TrailStorySettings {
                                         <?php 
                                         $local_layers = array();
                                         $var = 'data_layer_'.$i;
-                                        $post_type = $str;?>
+                                        $post_type = $var;?>
                            <div class="icon-wrapper">
                              <div class="icon-header">
                                         <div class="icon-content">
@@ -395,19 +395,19 @@ class TrailStorySettings {
                                             </div>
                                             <div class="icon-image-buttons">
 
-                                                <?php $key = 'trail-story-add-icon-text-box-' . $post_type; ?>
+                                                <?php $key = 'trail_story_add_icon_text_box_' . $post_type; ?>
 
                                                 <div class="trail-story-icon-button-container">
                                                     <?php // Holster for Image url (Hidden) ?>
                                                     <label for="trail-story-add-icon-button-<?php echo $post_type; ?>">
-                                                    <?php _e(esc_html($trail_story_options['trail-story-add-icon-text-box-'. $post_type ]), 'geocmsx'); ?>
+                                                    <?php _e(esc_html($trail_story_options['trail_story_add_icon_text_box_'. $post_type ]), 'geocmsx'); ?>
                                                     <input type="hidden" 
-                                                           id="trail-story-add-icon-text-box-<?php echo $post_type; ?>" 
+                                                           id="trail_story_add_icon_text_box_<?php echo $post_type; ?>" 
                                                            class="trail-story-icon-url" 
-                                                           name="trail_story_options[trail-story-add-icon-text-box-<?php echo $post_type; ?>]" 
-                                                           value="<?php echo $trail_story_options['trail-story-add-icon-text-box-'. $post_type ]; ?>"/>
+                                                           name="trail_story_options[trail_story_add_icon_text_box_<?php echo $post_type; ?>]" 
+                                                           value="<?php echo $trail_story_options['trail_story_add_icon_text_box_'. $post_type ]; ?>"/>
 
-                                                           <?php if ($trail_story_options['trail-story-add-icon-text-box-'. $post_type ]) {
+                                                           <?php if ($trail_story_options['trail_story_add_icon_text_box_'. $post_type ]) {
 
                                                            }?>
 
