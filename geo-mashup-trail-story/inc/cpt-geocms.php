@@ -42,7 +42,7 @@ public function register_cpt_geocms_pro() {
     $args = array( 
         'labels' => $labels,
         'hierarchical' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail' , 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' ),// 'excerpt' 
+        'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions', 'page-attributes', 'post-formats' ),// 'excerpt' 
         'taxonomies' => array(  'geopost-category' ), //, 'post_tag' ),
         'public' => true,
         'show_ui' => true,

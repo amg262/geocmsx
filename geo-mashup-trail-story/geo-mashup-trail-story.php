@@ -14,6 +14,7 @@ define('TRAIL_STORY_URL_PATH', trim( plugin_dir_url( __FILE__ ), '/' ) );
 include_once('inc/class-trail-story-settings.php');
 include_once('inc/trail-story-frontend-form.php');
 include_once('inc/cpt-geocms.php');
+include_once('inc/class-gsx-helper.php');
 //include_once('inc/cpt-trail-story.php');
 //include_once('inc/cpt-trail-condition.php');
 //include_once('inc/cpt-trail-segment.php');
