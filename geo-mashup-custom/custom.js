@@ -246,9 +246,10 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
       if (options.count_data_layers != null) {
        // trail-story-add-icon-text-box-data-layer-1trail_story_add_icon_text_box_data_layer_1
-var kml = new google.maps.KmlLayer( options.trail_story_add_icon_text_box_data_layer_1, {
+var laya = new google.maps.KmlLayer( options.trail_story_add_icon_text_box_data_layer_1, {
                map: google_map
             } );
+console.log(laya);
 
         /*for (var i =1; i <= j; i++) {
             var k = i.toString();
@@ -270,6 +271,7 @@ var kml = new google.maps.KmlLayer( options.trail_story_add_icon_text_box_data_l
             var kml = new google.maps.KmlLayer( kml_layer, {
                 map: google_map
             } );
+console.log(kml);
 
         }
         
