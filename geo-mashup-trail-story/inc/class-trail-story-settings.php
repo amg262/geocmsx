@@ -313,7 +313,7 @@ class TrailStorySettings {
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Bike Layer
+                                Bicicyle Layer
                             </th>
                             <td>
        
@@ -343,108 +343,34 @@ class TrailStorySettings {
                             </td>
                         </tr>
                         <hr>
-                        
-                        <tr>
-                            <?php  //$key = 'delete_data'; ?>
+                         <tr>
+                            <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                # of Data Layers
+                               Map Type
                             </th>
                             <td>
-                                <fieldset><?php $key = 'count_data_layers';
-                                if ($trail_story_options[$key]==null):
-                                    $trail_story_options[$key]='1';
-                                endif;
-                                                                            //var_dump($trail_story_options[$key]); ?>
+       
+                                <fieldset><?php $key = 'map_type'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
 
-                                    
-                                    <input type="text"  style="width:50px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" placeholder="1" value="<?php if ($trail_story_options[$key] == null) { echo '1';$trail_story_options[$key]='1'; } else { echo $trail_story_options[$key]; } ?>" />
-                                    <input type="submit" value="Add Layer" />
-                                    <br>
-                                                                    <?php  ?>
+                                        <select id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="trail_story_options[<?php echo $key; ?>]" >
+                                            <option value="Subtle Grayscale" <?php selected( $trail_story_options[$key], 'Subtle Grayscale' ); ?>>Subtle Grayscale</option>
+                                            <option value="Unsaturated Browns" <?php selected( $trail_story_options[$key], 'Unsaturated Browns' ); ?>>Unsaturated Browns</option>
+                                            <option value="Paper" <?php selected( $trail_story_options[$key], 'Paper' ); ?>>Paper</option>
+                                            <option value="Pale Dawn" <?php selected( $trail_story_options[$key], 'Pale Dawn' ); ?>>Pale Dawn</option>
+                                            <option value="Midnight Commander" <?php selected( $trail_story_options[$key], 'Midnight Commander' ); ?>>Midnight Commander</option>
+                                            <option value="Retro" <?php selected( $trail_story_options[$key], 'Retro' ); ?>>Retro</option>
+                                            <option value="Bright" <?php selected( $trail_story_options[$key], 'Bright' ); ?>>Retro</option>
+                                            <option value="Avocado" <?php selected( $trail_story_options[$key], 'Avocado' ); ?>>Retro</option>
+                                            <option value="Hopper" <?php selected( $trail_story_options[$key], 'Hopper' ); ?>>Retro</option>
+                                            </select>
+                                    </label>
+                                <p class="description"></p>
+                                
                             </td>
                         </tr>
-
-                        <?php if ($trail_story_options['count_data_layers']) {
-                            $count = intval($trail_story_options['count_data_layers']);
-                           // var_dump($count);
-
-
-                            for ($i=1;$i<=$count;$i++) { ?>
-
-                                <tr>
-                                    <?php //$key = 'delete_data'; ?>
-                                    <th scope="row">
-                                        Layer <?php echo '<strong>'.$i.'</strong>'; ?>
-                                    </th>
-                                    <td>
-                                    <?php $str = 'data-layer-'.$i; ?>
-                                        <fieldset><?php $key = 'trail-story-add-icon-text-box-'.$str?>
-
-                                            
-                                           
-                                        <?php 
-                                        $local_layers = array();
-                                        $var = 'data_layer_'.$i;
-                                        $post_type = $var;?>
-                           <div class="icon-wrapper">
-                             <div class="icon-header">
-                                        <div class="icon-content">
-                                        <div class="<?php echo $post_type; ?>">
-                                            <div class="icon-post-type">
-                                                <h4><?php// _e( esc_html( $post_type ) ); ?></h4>
-                                            </div>
-                                            <div class="icon-image-buttons">
-
-                                                <?php $key = 'trail_story_add_icon_text_box_' . $post_type; ?>
-
-                                                <div class="trail-story-icon-button-container">
-                                                    <?php // Holster for Image url (Hidden) ?>
-                                                    <label for="trail-story-add-icon-button-<?php echo $post_type; ?>">
-                                                    <?php _e(esc_html($trail_story_options['trail_story_add_icon_text_box_'. $post_type ]), 'geocmsx'); ?>
-                                                    <input type="hidden" 
-                                                           id="trail_story_add_icon_text_box_<?php echo $post_type; ?>" 
-                                                           class="trail-story-icon-url" 
-                                                           name="trail_story_options[trail_story_add_icon_text_box_<?php echo $post_type; ?>]" 
-                                                           value="<?php echo $trail_story_options['trail_story_add_icon_text_box_'. $post_type ]; ?>"/>
-
-                                                           <?php if ($trail_story_options['trail_story_add_icon_text_box_'. $post_type ]) {
-
-                                                           }?>
-
-                                                    <?php // Button to add Image icon ?>
-                                                    <input type="button" 
-                                                           id="trail-story-add-icon-button-<?php echo $post_type; ?>" 
-                                                           class="button trail-story-add-icon-button <?php echo $trail_story_options[$key] ? 'hidden' : ''; ?>" 
-                                                           name="trail-story-add-icon-button" 
-                                                           value="<?php _e( 'Add File', 'geo-mashup-trail-story-add-on' ); ?>"/>
-
-                                                    <?php // Button to remove Image icon ?>
-                                                    <input type="button" 
-                                                           id="trail-story-remove-icon-button-<?php echo $post_type; ?>" 
-                                                           class="button trail-story-remove-icon-button <?php echo !$trail_story_options[$key] ? 'hidden' : ''; ?>" 
-                                                           name="trail-story-add-icon-button" 
-                                                           value="<?php _e( 'Remove File', 'geo-mashup-trail-story-add-on' ); ?>"/>
-
-                                                           <div style="clear:both;height:0;"></div>
-                                                </div>
-
-                                                <div class="trail-story-icon-image-container">
-
-                                                <?php if( $trail_story_options[ $key ] ){ ?>
-
-                                                    <img src="<?php echo esc_attr( $trail_story_options[ $key ] ); ?>" alt="" style="max-width:100%;" />
-
-                                                <?php } ?>
-
-                                                </div>
-                                                </label>
-                                            </div>
-                                            <div style="clear:both;height:0;"></div>
-                                        </div></div></div>
-                                    </td>
-                                </tr>
-                                <?php }
-                            } ?>
+                        <?php var_dump($trail_story_options); ?>
                             <hr>
                         <tr>
                             <?php //$key = 'delete_data'; ?>
