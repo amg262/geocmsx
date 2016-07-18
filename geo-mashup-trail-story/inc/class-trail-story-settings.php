@@ -447,7 +447,7 @@ class TrailStorySettings {
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Data Layer URLs
+                                GeoRSS Layer URLs
                             </th>
                             <td>
                                 <fieldset><?php $key = 'custom_kml_layers';
@@ -461,7 +461,23 @@ class TrailStorySettings {
                                 
                             </td>
                         </tr>
-                      
+                      <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Data Layer URLs
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'geo_rss';
+                                                                            //var_dump($trail_story_options[$key]); ?>
+
+                                    
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <br>
+                                    
+                                <p class="description">DEFAULT IS COMMA DELIMITED</p>
+                                
+                            </td>
+                        </tr>
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">

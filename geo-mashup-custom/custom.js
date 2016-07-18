@@ -55,6 +55,20 @@ function set_kmls(objects) {
         }
     }
 }
+function set_georss(objects) {
+
+     if (objects.geo_rss != null && objects.geo_rss != undefined) {
+        var k = objects.geo_rss;
+        //console.log(k);
+        var objs = csv_to_array(k);
+
+        if (objs.length > 0) {
+            return objs;
+        } else {
+            return false;
+        }
+    }
+}
 
 function set_custom_styles(objects) {
 
@@ -138,6 +152,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
     //alert('sfdfsf');d
     //jQuery(function($){
     var kml_arr = set_kmls(objects);
+    var geo_arr = set_georss(objects);
     var geo = set_geo_json(objects);
         //console.log(k);
     //});
@@ -181,10 +196,23 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
         }
        // google_map.data.addGeoJson('https://storage.googleapis.com/maps-devrel/quakes.geo.json');
           
-       
+        if (options.geo_rss != null) {
 
-      
+       var georssLayer = new google.maps.KmlLayer({
+          url: options.geo_rss
+        });
+        georssLayer.setMap(google_map);
+      }
+      for (var i = 0; i < geo_arr.length; i++) {
+            //console.log(kml_arr[i]);
+            var geo_rss = geo_arr[i];
+            //var kml_no = 'kml_'+i;
+           var georssLayer = new google.maps.KmlLayer({
+          url: geo_arr[i]//options.geo_rss
+        });
+        georssLayer.setMap(google_map);
 
+        }
       
       
         for (var i = 0; i < kml_arr.length; i++) {
