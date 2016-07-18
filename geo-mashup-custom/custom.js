@@ -277,7 +277,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
         if (options.map_type != null) {
 
-            if (options.map_type == 'Grayscale') {
+            if (options.map_type == 'Subtle Grayscale') {
                 var map_type = new google.maps.StyledMapType( grayscale, { name: 'rsf' } ); 
                 google_map.mapTypes.set( 'Grayscale', map_type ); 
                 google_map.setMapTypeId( 'Grayscale' ); 
@@ -289,7 +289,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
                 var map_type = new google.maps.StyledMapType( pale, { name: 'rsf' } ); 
                 google_map.mapTypes.set( 'Pale', map_type ); 
                 google_map.setMapTypeId( 'Pale' ); 
-            } else if ( options.map_type == 'Midnight Commando' ) {
+            } else if ( options.map_type == 'Midnight Commander' ) {
                 var map_type = new google.maps.StyledMapType( midnight, { name: 'rsf' } ); 
                 google_map.mapTypes.set( 'Midnight', map_type ); 
                 google_map.setMapTypeId( 'Midnight' ); 
@@ -318,7 +318,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
         }
        
 
-    
+
 
 } );
 
