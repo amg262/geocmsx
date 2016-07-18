@@ -234,14 +234,6 @@ function trail_story_locations_custom_kmls() {
     endforeach;
 
 
-    // Localize the script with new data
-    // TODO: Make KMLs/KMZs pull from database
-    /*$translation_array = array(
-        'kml_layer_1' => 'http://dev.cloudground.net/wp-content/uploads/2015/11/iat_full.kmz',
-        'kml_layer_2' => 'http://dev.cloudground.net/wp-content/uploads/2015/11/parking.kml',
-        'kml_layer_3' => 'http://dev.cloudground.net/wp-content/uploads/2015/11/iat.kml',
-        'image_icon'  => 'http://plugins.dev/wp-content/uploads/2015/10/conversation-map-icon.png',
-    );*/
     
     // Localize the array to custom.js
     $objects = 'objects';
@@ -273,5 +265,5 @@ function trail_story_locations_custom_kmls() {
 
 add_action( 'geo_mashup_render_map', 'trail_story_locations_custom_kmls' );
 
-add_image_size( 'locationinfo-thumbnail', 70, 70, true );
+//add_image_size( 'locationinfo-thumbnail', 70, 70, true );
 add_image_size( 'icon-thumbnail', 40, 40, true );
