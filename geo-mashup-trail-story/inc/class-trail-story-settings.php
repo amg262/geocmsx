@@ -447,7 +447,7 @@ class TrailStorySettings {
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                GeoRSS Layer URLs
+                                Data Layer URLs
                             </th>
                             <td>
                                 <fieldset><?php $key = 'custom_kml_layers';
@@ -464,7 +464,7 @@ class TrailStorySettings {
                       <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                Data Layer URLs
+                                Earthquake GeoRSS
                             </th>
                             <td>
                                 <fieldset><?php $key = 'geo_rss';

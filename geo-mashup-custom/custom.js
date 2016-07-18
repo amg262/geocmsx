@@ -194,7 +194,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
 
         }
-       // google_map.data.addGeoJson('https://storage.googleapis.com/maps-devrel/quakes.geo.json');
+       //google_map.data.addGeoJson('https://storage.googleapis.com/maps-devrel/quakes.geo.json');
           
         if (options.geo_rss != null) {
 
@@ -211,7 +211,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
           url: geo_arr[i]//options.geo_rss
         });
         georssLayer.setMap(google_map);
-
+        
         }
       
       
