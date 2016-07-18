@@ -518,32 +518,7 @@ class TrailStorySettings {
                                 
                             </td>
                         </tr>
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Custom Overlay
-                            </th>
-                            <td>
-                                <fieldset>
-
-                                <?php $key = 'enable_co'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                        <label for="trail_story_options[<?php echo $key; ?>]">Enable</label>
-
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                <?php $key = 'custom_overlay';
-                                                                            //var_dump($trail_story_options[$key]); ?>
-
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                    </label>
-                                    <input type="text" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
-
-                                   
-                                <p class="description">DEFAULT IS COMMA DELIMITED</p>
-                                
-                            </td>
                         
-                        </tr>
                         <tr>
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
@@ -592,7 +567,7 @@ class TrailStorySettings {
                 </div>
 
                 <h3><?php //_e('&nbsp;','geo-mashup-trail-story-add-on'); ?></h3>
-                <?php $arr = array('Multi-Marker');/*array('Multi-Marker', 'Glow-Marker');*/$c=0;$i=1;//var_dump($arr);?>
+                <?php $arr = array('Multi-Marker');$c=0;$i=1;//var_dump($arr);?>
         <?php foreach( $arr as $post_type ) : ?>
             <?php //if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
 
