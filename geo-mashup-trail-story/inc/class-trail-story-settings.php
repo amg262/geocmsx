@@ -350,7 +350,12 @@ class TrailStorySettings {
                             </th>
                             <td>
        
-                                <fieldset><?php $key = 'map_type'; 
+                                <fieldset>
+                                <?php $key = 'enable_maptype'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                        <label for="trail_story_options[<?php echo $key; ?>]">Enable</label>
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                <?php $key = 'map_type'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
 
