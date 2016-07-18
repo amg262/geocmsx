@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
 /**
 * Shortcode for display frontend user trail story input
 */
-//add_shortcode( 'frontend_geocmsx_map', 'trail_story_post_form_handler' );
+add_shortcode( 'geocmsx_frontend_map', 'trail_story_post_form_handler' );
 add_shortcode( 'frontend_trail_story_map', 'trail_story_post_form_handler' );
 //add_action( 'wp_footer', 'trail_story_post_g_form_handler', 10 );
 
