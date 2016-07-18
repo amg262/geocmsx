@@ -154,6 +154,11 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
             bikeLayer.setMap(google_map);
         }
         if (options.transit_layer == '1') {
+            var transitLayer = new google.maps.TransitLayer();
+            transitLayer.setMap(google_map);
+
+        }
+        if (options.traffic_layer == '1') {
             var trafficLayer = new google.maps.TrafficLayer();
             trafficLayer.setMap(google_map);
 

@@ -277,7 +277,22 @@ class TrailStorySettings {
                 <p>
                 <table class="form-table">
                     <tbody>
-                         
+                         <tr>
+                            <?php //$key = 'delete_data'; ?>
+                            <th scope="row">
+                                Traffic Layer
+                            </th>
+                            <td>
+       
+                                <fieldset><?php $key = 'traffic_layer'; 
+                                    //var_dump($trail_story_options[$key]);?>
+                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                                    </label>
+                                <p class="description"></p>
+                                
+                            </td>
+                        </tr>
                        
                         <tr>
                             <?php //$key = 'delete_data'; ?>
