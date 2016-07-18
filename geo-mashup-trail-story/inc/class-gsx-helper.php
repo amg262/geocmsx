@@ -101,7 +101,7 @@ function gsx_fa() {
 function add_sc_select(){
     //global $shortcode_tags;
 	$shortcode_tags = array('geo_mashup_map', 'geo_mashup_category_legend', 
-		'geo_mashup_term_legend', 'geocmsx_frontend_map');
+		'geo_mashup_term_legend', 'frontend_trail_story_map');
      /* ------------------------------------- */
      /* enter names of shortcode to exclude bellow */
      /* ------------------------------------- */
