@@ -275,8 +275,8 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
         }];
       var map_type = new google.maps.StyledMapType( v, { name: 'trail-map' } );
 
-        //google_map.mapTypes.set( 'custom_styles', map_type );
-       // google_map.setMapTypeId( 'custom_styles', map_type );
+        google_map.mapTypes.set( 'custom_styles', map_type );
+       google_map.setMapTypeId( 'custom_styles', map_type );
         //alert('sdfdsf');
         //WE NEED TO BASICALLY CALL THE ADD AND REMOVE
         
