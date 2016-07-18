@@ -149,16 +149,12 @@ GeoMashup.addAction( 'multiObjectMarker', function( properties, object ) {
 GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
     // Load some KML only into global maps - for instance pictures of squirrels
-    //alert('sfdfsf');d
-    //jQuery(function($){
+
     var kml_arr = set_kmls(objects);
     var geo_arr = set_georss(objects);
     var geo = set_geo_json(objects);
-        //console.log(k);
-    //});
     var google_map = mxn.getMap();
-    //alert('s');
-    //console.log(google_map);
+\
 
 
     if (properties.map_content == 'global') {
@@ -191,8 +187,6 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
             });
 
             layer.setMap(google_map);
-
-
         }
         /*var layer = new google.maps.FusionTablesLayer({
           query: {
@@ -223,46 +217,27 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
           
         if (options.eq_geo_rss != null) {
 
-       //var georssLayer = new google.maps.KmlLayer({
-          //url: options.geo_rss
-        //});
-       var georssLayer = new google.maps.KmlLayer( options.eq_geo_rss, {
-                map: google_map
-        });
-        //georssLayer.setMap(google_map);
+           
+           var georssLayer = new google.maps.KmlLayer( options.eq_geo_rss, {
+                    map: google_map
+            });
+            
+        }
+        if (options.geo_json != null) {
+
+           var geo_json = new google.maps.KmlLayer( options.geo_json, {
+                    map: google_map
+            });
         
-      }
-      if (options.geo_json != null) {
+        }
 
-       //var georssLayer = new google.maps.KmlLayer({
-          //url: options.geo_rss
-        //});
-       var geo_json = new google.maps.KmlLayer( options.geo_json, {
-                map: google_map
-        });
-        //georssLayer.setMap(google_map);
-        
-      }
-      //for (var i = 0; i < geo_arr.length; i++) {
-            //console.log(kml_arr[i]);
-            //var geo_rss = geo_arr[i];
-            //var kml_no = 'kml_'+i;
-           //var georssLayer = new google.maps.KmlLayer({
-          //url: geo_arr[i]//options.geo_rss
-        //});
-        //georssLayer.setMap(google_map);
-
-      //  }
-
-
-      if (options.count_data_layers != null) {
+        /*if (options.count_data_layers != null) {
        // trail-story-add-icon-text-box-data-layer-1trail_story_add_icon_text_box_data_layer_1
-var laya = new google.maps.KmlLayer( options.trail_story_add_icon_text_box_data_layer_1, {
+            var laya = new google.maps.KmlLayer( options.trail_story_add_icon_text_box_data_layer_1, {
                map: google_map
             } );
-console.log(laya);
 
-        /*for (var i =1; i <= j; i++) {
+        for (var i =1; i <= j; i++) {
             var k = i.toString();
             var q = options['trail_story_add_icon_text_box_data_layer_'+k];
             var kml = new google.maps.KmlLayer( q, {
@@ -270,10 +245,10 @@ console.log(laya);
             } );
 
             console.log(q);
-        }*/
+        }
 
         //console.log(j);
-      }
+        }*/
       
         for (var i = 0; i < kml_arr.length; i++) {
             //console.log(kml_arr[i]);
@@ -282,8 +257,6 @@ console.log(laya);
             var kml = new google.maps.KmlLayer( kml_layer, {
                 map: google_map
             } );
-console.log(kml);
-
         }
         
 
@@ -301,81 +274,53 @@ console.log(kml);
         var avocado = [{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#aee2e0"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#abce83"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#769E72"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#7B8758"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#EBF4A4"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#8dab68"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5B5B3F"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ABCE83"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#A4C67D"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#9BBF72"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#EBF4A4"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#87ae79"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#7f2200"},{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"visibility":"on"},{"weight":4.1}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#495421"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]}];
         var hopper = [{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#165c64"},{"saturation":34},{"lightness":-69},{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"hue":"#b7caaa"},{"saturation":-14},{"lightness":-18},{"visibility":"on"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"hue":"#cbdac1"},{"saturation":-6},{"lightness":-9},{"visibility":"on"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#8d9b83"},{"saturation":-89},{"lightness":-12},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#d4dad0"},{"saturation":-88},{"lightness":54},{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#bdc5b6"},{"saturation":-89},{"lightness":-3},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#bdc5b6"},{"saturation":-89},{"lightness":-26},{"visibility":"on"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"hue":"#c17118"},{"saturation":61},{"lightness":-45},{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"hue":"#8ba975"},{"saturation":-46},{"lightness":-28},{"visibility":"on"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"hue":"#a43218"},{"saturation":74},{"lightness":-51},{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":0},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":0},{"lightness":100},{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels","stylers":[{"hue":"#ffffff"},{"saturation":0},{"lightness":100},{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":0},{"lightness":100},{"visibility":"off"}]},{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#3a3935"},{"saturation":5},{"lightness":-57},{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"hue":"#cba923"},{"saturation":50},{"lightness":-46},{"visibility":"on"}]}];
 
+        if (options.map_type != null) {
 
-        var map_type = new google.maps.StyledMapType( bright, { name: 'rsf' 
-        } ); 
-
-        google_map.mapTypes.set( 'retro', map_type ); 
-         google_map.setMapTypeId( 'retro' ); 
-      
-        //alert('sdfdsf');
-        //WE NEED TO BASICALLY CALL THE ADD AND REMOVE
-        
-        // Make the Google v3 call to add a Flickr KML layer
-
-        /*var kml = new google.maps.KmlLayer( 'http://www.iceagetrail.org/wp-content/uploads/2015/12/iat-connector.kml', {
-            map: google_map
-        } );*/
-        //SPLIT IAT KML INTO 2 PARTS TO PREVENT IT FROM BEING TO LARGE
-        /**var kml_iat1 = new google.maps.KmlLayer( 'http://www.iceagetrail.org/wp-content/iat_2016-1.kml', {
-            map: google_map
-        } );
-        var kml_iat2 = new google.maps.KmlLayer( 'http://www.iceagetrail.org/wp-content/iat_2016-2.kml', {
-            map: google_map
-        } );
-        var kml2 = new google.maps.KmlLayer( 'http://www.iceagetrail.org/wp-content/uploads/2016/01/iat_conn_2016.kml', {
-            map: google_map
-        } );
-        //http://www.iceagetrail.org/wp-content/uploads/2016/01/iat_2016.kml
-        //http://www.iceagetrail.org/wp-content/uploads/2016/01/iat_conn_2016.kml
-
-        /*var kml = new google.maps.KmlLayer( kml_layer.kml_layer_1, {
-            map: google_map
-        } );*/
-
-       /* var kml2 = new google.maps.KmlLayer( kml_layer.kml_layer_2, {
-            map: google_map
-        } );*/
-
-
-        /*var kml3 = new google.maps.KmlLayer( kml_layer.kml_layer_3, {
-            map: google_map
-        } );*/
+            if (options.map_type == 'Grayscale') {
+                var map_type = new google.maps.StyledMapType( grayscale, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Grayscale', map_type ); 
+                google_map.setMapTypeId( 'Grayscale' ); 
+            } else if ( options.map_type == 'Unsaturated Browns' ) {
+                var map_type = new google.maps.StyledMapType( browns, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Browns', map_type ); 
+                google_map.setMapTypeId( 'Browns' ); 
+            } else if ( options.map_type == 'Pale Dawn' ) {
+                var map_type = new google.maps.StyledMapType( pale, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Pale', map_type ); 
+                google_map.setMapTypeId( 'Pale' ); 
+            } else if ( options.map_type == 'Midnight Commando' ) {
+                var map_type = new google.maps.StyledMapType( midnight, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Midnight', map_type ); 
+                google_map.setMapTypeId( 'Midnight' ); 
+            } else if ( options.map_type == 'Paper' ) {
+                var map_type = new google.maps.StyledMapType( paper, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Paper', map_type ); 
+                google_map.setMapTypeId( 'Paper' ); 
+            } else if ( options.map_type == 'Retro' ) {
+                var map_type = new google.maps.StyledMapType( retro, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Retro', map_type ); 
+                google_map.setMapTypeId( 'Retro' ); 
+            } else if ( options.map_type == 'Bright' ) {
+                var map_type = new google.maps.StyledMapType( bright, { name: 'rsf' } );
+                google_map.mapTypes.set( 'Bright', map_type ); 
+                google_map.setMapTypeId( 'Bright' ); 
+            } else if ( options.map_type == 'Avocado' ) {
+                var map_type = new google.maps.StyledMapType( avocado, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Avocado', map_type ); 
+                google_map.setMapTypeId( 'Avocado' ); 
+            } else if ( options.map_type == 'Hopper' ) {
+                var map_type = new google.maps.StyledMapType( hopper, { name: 'rsf' } ); 
+                google_map.mapTypes.set( 'Hopper', map_type ); 
+                google_map.setMapTypeId( 'Hopper' ); 
+            } 
+            
+        }
+       
 
     }
 
 } );
 
-/*
-** Customizes the look of map
- */
-GeoMashup.addAction( 'loadedMap', function( properties, map ) {
-    //alert('loaded');
-    var styles = set_custom_styles(objects);
-
-    var google_map = map.getMap();
-
-    
-
-}); 
-
-
  
-    GeoMashup.addAction( 'singleMarkerOptions', function ( properties, marker_opts ) {
- 
-        // When the map is a single object map with just one marker
-        marker_opts.image = properties.custom_url_path + '/assets/icon-20x20.png';
-        marker_opts.iconShadow = '';
-        marker_opts.iconSize = [ 24, 24 ];
-        marker_opts.iconAnchor = [ 12, 24 ];
-        marker_opts.iconInfoWindowAnchor = [ 12, 1 ];
- 
-    } );
- /*
-    GeoMashup.addAction( 'glowMarkerIcon', function( properties, glow_options ) {
-        glow_options.icon = properties.custom_url_path + '/images/icon-20x20.png';
-        glow_options.iconSize = [ 22, 30 ];
-        glow_options.iconAnchor = [ 11, 27 ];
-    } );
-*/
+
 

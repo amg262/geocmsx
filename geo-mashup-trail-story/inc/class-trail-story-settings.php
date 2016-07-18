@@ -361,9 +361,9 @@ class TrailStorySettings {
                                             <option value="Pale Dawn" <?php selected( $trail_story_options[$key], 'Pale Dawn' ); ?>>Pale Dawn</option>
                                             <option value="Midnight Commander" <?php selected( $trail_story_options[$key], 'Midnight Commander' ); ?>>Midnight Commander</option>
                                             <option value="Retro" <?php selected( $trail_story_options[$key], 'Retro' ); ?>>Retro</option>
-                                            <option value="Bright" <?php selected( $trail_story_options[$key], 'Bright' ); ?>>Retro</option>
-                                            <option value="Avocado" <?php selected( $trail_story_options[$key], 'Avocado' ); ?>>Retro</option>
-                                            <option value="Hopper" <?php selected( $trail_story_options[$key], 'Hopper' ); ?>>Retro</option>
+                                            <option value="Bright" <?php selected( $trail_story_options[$key], 'Bright' ); ?>>Bright</option>
+                                            <option value="Avocado" <?php selected( $trail_story_options[$key], 'Avocado' ); ?>>Avocado</option>
+                                            <option value="Hopper" <?php selected( $trail_story_options[$key], 'Hopper' ); ?>>Hopper</option>
                                             </select>
                                     </label>
                                 <p class="description"></p>

@@ -60,7 +60,6 @@ function trail_story_filter_geo_mashup_load_user_editor( $enabled ) {
     $post_thing = get_post($id);
     
     $enabled = has_shortcode( $post_thing->post_content, 'frontend_trail_story_map') ? true : false;
-    $enabled = has_shortcode( $post_thing->post_content, 'geocmsx_frontend_map') ? true : false;
     return $enabled;
     
 }
