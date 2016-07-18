@@ -124,7 +124,7 @@ public function register_txn_geocms_pro() {
  
         if ( in_array( $post_type, $post_types ) ) {
             add_meta_box(
-                'geopost_location',
+                '_geopost_location',
                 __( 'Location', 'textdomain' ),
                 array( $this, 'render_meta_box_content' ),
                 $post_type,
