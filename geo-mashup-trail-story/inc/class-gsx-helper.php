@@ -99,16 +99,18 @@ function gsx_fa() {
     wp_enqueue_style( 'gsx_fa' );
 }
 function add_sc_select(){
-    global $shortcode_tags;
+    //global $shortcode_tags;
+	$shortcode_tags = array('geo_mashup_map', 'geo_mashup_category_legend', 
+		'geo_mashup_term_legend', 'frontend_trail_story_map');
      /* ------------------------------------- */
      /* enter names of shortcode to exclude bellow */
      /* ------------------------------------- */
     $exclude = array("wp_caption", "embed");
-    echo '&nbsp;<a href="#" class="button delete-secondary"><i class="fa fa-map-o" aria-hidden="true">&nbsp;</i>
+    echo '&nbsp;<a href="#" class="button delete-secondary" id="add_map_btn"><i class="fa fa-map-o" aria-hidden="true">&nbsp;</i>
 Add Map</a><select id="sc_select"><option>Shortcode</option>';
-    foreach ($shortcode_tags as $key => $val){
+    foreach ($shortcode_tags as $key ){
             if(!in_array($key,$exclude)){
-            $shortcodes_list .= '<option value="['.$key.'][/'.$key.']">'.$key.'</option>';
+            $shortcodes_list .= '<option value="['.$key.']">'.$key.'</option>';
             }
         }
      echo $shortcodes_list;
@@ -118,6 +120,7 @@ add_action('admin_head', 'button_js');
 function button_js() {
         echo '<script type="text/javascript">
         jQuery(document).ready(function(){
+        	jQuery("#")
            jQuery("#sc_select").change(function() {
                           send_to_editor(jQuery("#sc_select :selected").val());
                           return false;
