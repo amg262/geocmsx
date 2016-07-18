@@ -97,6 +97,7 @@ GeoMashup.addAction( 'objectIcon', function( properties, object ) {
             object.icon.image = object.link_to_image_icon;
             object.icon.iconSize = [ 32, 37 ];
 
+
         } 
     }
     
@@ -194,25 +195,57 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
 
         }
+        var layer = new google.maps.FusionTablesLayer({
+          query: {
+            select: 'geometry',
+            from: '1ertEwm-1bMBhpEwHhtNYT47HQ9k2ki_6sRa-UQ'
+                       //from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'
+
+          },
+          styles: [{
+            polygonOptions: {
+              fillColor: '#00FF00',
+              fillOpacity: 0.3
+            }
+          }, {
+            where: 'birds > 300',
+            polygonOptions: {
+              fillColor: '#0000FF'
+            }
+          }, {
+            where: 'population > 5',
+            polygonOptions: {
+              fillOpacity: 1.0
+            }
+          }]
+        });
+        //layer.setMap(google_map);
+      
        //google_map.data.addGeoJson('https://storage.googleapis.com/maps-devrel/quakes.geo.json');
           
         if (options.geo_rss != null) {
 
-       var georssLayer = new google.maps.KmlLayer({
-          url: options.geo_rss
+       //var georssLayer = new google.maps.KmlLayer({
+          //url: options.geo_rss
+        //});
+       var georssLayer = new google.maps.KmlLayer( options.geo_rss, {
+                map: google_map
         });
-        georssLayer.setMap(google_map);
-      }
-      for (var i = 0; i < geo_arr.length; i++) {
-            //console.log(kml_arr[i]);
-            var geo_rss = geo_arr[i];
-            //var kml_no = 'kml_'+i;
-           var georssLayer = new google.maps.KmlLayer({
-          url: geo_arr[i]//options.geo_rss
-        });
-        georssLayer.setMap(google_map);
+        //georssLayer.setMap(google_map);
         
-        }
+      }
+      //for (var i = 0; i < geo_arr.length; i++) {
+            //console.log(kml_arr[i]);
+            //var geo_rss = geo_arr[i];
+            //var kml_no = 'kml_'+i;
+           //var georssLayer = new google.maps.KmlLayer({
+          //url: geo_arr[i]//options.geo_rss
+        //});
+        //georssLayer.setMap(google_map);
+
+      //  }
+
+
       
       
         for (var i = 0; i < kml_arr.length; i++) {
@@ -419,18 +452,18 @@ GeoMashup.addAction( 'loadedMap', function( properties, map ) {
 }); 
 
 
- /*
+ 
     GeoMashup.addAction( 'singleMarkerOptions', function ( properties, marker_opts ) {
  
         // When the map is a single object map with just one marker
-        marker_opts.image = properties.custom_url_path + '/images/icon-20x20.png';
+        marker_opts.image = properties.custom_url_path + '/assets/icon-20x20.png';
         marker_opts.iconShadow = '';
         marker_opts.iconSize = [ 24, 24 ];
         marker_opts.iconAnchor = [ 12, 24 ];
         marker_opts.iconInfoWindowAnchor = [ 12, 1 ];
  
     } );
- 
+ /*
     GeoMashup.addAction( 'glowMarkerIcon', function( properties, glow_options ) {
         glow_options.icon = properties.custom_url_path + '/images/icon-20x20.png';
         glow_options.iconSize = [ 22, 30 ];
