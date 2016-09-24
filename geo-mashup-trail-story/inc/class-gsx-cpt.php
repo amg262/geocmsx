@@ -54,7 +54,9 @@ public function register_cpt_geocms_pro() {
         //'menu_position' => 5001,
         //'menu_icon' => 'dashicons-format-status',//'dashicons-controls-volumeon', //'dashicons-media-audio',
        // 'menu_icon' => 'dashicons-format-status',//'dashicons-controls-volumeon', //'dashicons-media-audio',
-        'menu_icon' => plugins_url( 'assets/icon-20x20.png', dirname( __FILE__)  ),
+        //'menu_icon' => plugins_url( 'assets/icon-20x20.png', dirname( __FILE__)  ),dashicons-location-alt
+        'menu_icon' => 'dashicons-location-alt',
+
         'has_archive' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,

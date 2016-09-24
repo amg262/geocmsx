@@ -1,6 +1,6 @@
 <?php 
 /*
-* Plugin Name: GEO TimeMap Pro
+* Plugin Name: Geo TimeMap Pro
 * Plugin URI:  http://andrewgunn.org/geo-timemap-pro
 * Version:     1.0.0
 * Description: A fully loaded interactive geo map maker with functionality to allow users to submit geo located trail story and condition posts, require email to download trail itinerary documents, and custom pins and features tailored interactive trail maps.
@@ -78,7 +78,7 @@ class GsxInit {
         'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
         //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
         'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
-        'post_title'    => 'Geo TimeMap', //The title of your post.
+        'post_title'    => 'TimeMap', //The title of your post.
         'post_type'     => 'page' //Sometimes you want to post a page.
         //'tags_input'    => [  ], //For tags.
        // 'tax_input'       => array( 'trail-story-category' => 'trail-stories' ) //For taxonomies.
@@ -101,7 +101,7 @@ class GsxInit {
         'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
         //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
         'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
-        'post_title'    => 'TimeMap Post', //The title of your post.
+        'post_title'    => 'Map Post', //The title of your post.
         'post_type'     => 'page' //Sometimes you want to post a page.
         //'tags_input'    => [  ], //For tags.
        // 'tax_input'       => array( 'trail-story-category' => 'trail-stories' ) //For taxonomies.

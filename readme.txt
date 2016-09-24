@@ -1,6 +1,6 @@
 
 
-=== GEO TimeMap Pro ===
+=== Geo TimeMap Pro ===
 Contributors: amg26, amgxyz
 Tags: trail map, interactive map, geo trail map, interactive trail map, geo mashup, geo map, map maker, trail story
 Donate link: andrewgunn.org/donate
