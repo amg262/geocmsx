@@ -1,9 +1,9 @@
 
 
-=== GeoCMSx Map Maker ===
+=== GEO TimeMap Pro ===
 Contributors: amg26, amgxyz
 Tags: trail map, interactive map, geo trail map, interactive trail map, geo mashup, geo map, map maker, trail story
-Donate link: andrewgunn.xyz/donate
+Donate link: andrewgunn.org/donate
 Tested up to: 4.3.1
 Requires at least: 3.5
 Stable tag: 1.0.0
