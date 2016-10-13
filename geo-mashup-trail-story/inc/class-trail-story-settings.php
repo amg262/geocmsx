@@ -197,7 +197,7 @@ class TrailStorySettings {
 
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                GeoCMSx License Key
+                                GeoCMS License Key
                             </th>
                             <td>
        
@@ -208,42 +208,6 @@ class TrailStorySettings {
                                     
                                     </label>
                             
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Delete Posts
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'delete_posts'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                        Delete all posts, attachments, and plugin settings when uninstalled.
-                                    </label>
-                               
-                                
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                                Delete Options
-                            </th>
-                            <td>
-       
-                                <fieldset><?php $key = 'delete_options'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                        Delete all plugin options.
-                                    </label>
-                                
-                                
                             </td>
                         </tr>
                        
@@ -351,11 +315,7 @@ class TrailStorySettings {
                             <td>
        
                                 <fieldset>
-                                <?php $key = 'enable_maptype'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                        <label for="trail_story_options[<?php echo $key; ?>]">Enable</label>
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                <?php $key = 'map_type'; 
+                                <?php $key = 'map_type';
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
 
@@ -483,13 +443,7 @@ class TrailStorySettings {
                             </th>
                             <td>
                                 <fieldset>
-
-                                    <?php $key = 'enable_kml'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                        <label for="trail_story_options[<?php echo $key; ?>]">Enable</label>
-
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                <?php $key = 'custom_kml_layers';
+                                    <?php $key = 'custom_kml_layers';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
                                     
@@ -507,11 +461,6 @@ class TrailStorySettings {
                             </th>
                             <td>
                                 <fieldset>
-                                <?php $key = 'enable_eq'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                        <label for="trail_story_options[<?php echo $key; ?>]">Enable</label>
-
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
                                 <?php $key = 'eq_geo_rss';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
@@ -531,11 +480,6 @@ class TrailStorySettings {
                             </th>
                             <td>
                                 <fieldset>
-                                <?php $key = 'enable_geoson'; 
-                                    //var_dump($trail_story_options[$key]);?>
-                                        <label for="trail_story_options[<?php echo $key; ?>]">Enable</label>
-
-                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
                                 <?php $key = 'geo_json';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
