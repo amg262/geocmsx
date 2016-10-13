@@ -1,11 +1,11 @@
 <?php 
 /*
-* Plugin Name: Geo TimeMap Pro
-* Plugin URI:  http://andrewgunn.org/geo-timemap-pro
+* Plugin Name: GeoCMS 3D
+* Plugin URI:  http://cloud3dweb.com
 * Version:     1.0.0
 * Description: A fully loaded interactive geo map maker with functionality to allow users to submit geo located trail story and condition posts, require email to download trail itinerary documents, and custom pins and features tailored interactive trail maps.
-* Author:      Andrew M. Gunn
-* Author URI:  http://andrewgunn.org/
+* Author:      Andrew M. Gunn, Cloud3D
+* Author URI:  http://cloud3dweb.com
 * License:     GNU General Public License (Version 2 - GPLv2)
 * Text Domain: geocmsx
 */
@@ -32,11 +32,6 @@ require_once( 'geo-mashup/geo-mashup.php' );
 
 
 
-interface iGsxInit {
-
-}
-
-
 /**
 * PLUGIN SETTINGS PAGE
 */
@@ -52,7 +47,7 @@ class GsxInit {
     {
         //add_action( 'admin_menu', array( $this, 'add_trail_story_menu_page' ) );
         //add_action( 'admin_init', array( $this, 'gsx_map_page' ) );
-        //add_filter( 'plugin_action_links', array( $this, 'gsx_plugin_links'), 10, 5 );
+        add_filter( 'plugin_action_links', array( $this, 'gsx_plugin_links'), 10, 5 );
         register_activation_hook( __FILE__, array($this, 'gsx_setup') );
     }
     public function gsx_setup() {
@@ -122,12 +117,15 @@ class GsxInit {
 
         if ($plugin == $plugin_file) {
 
+
           $settings = array(
 
                     //'map' => '<a href="admin.php?page=interactive-geo-trail-map%2Fgeo-mashup%2Fgeo-mashup.php">' . __('Map', 'General') . '</a>',
-                    'settings' => '<a href="admin.php?page=geo-trail-map">' . __('Settings', 'General') . '</a>',
+              'options' => '<a target="_blank" href="/wp-admin/edit.php?post_type=geopost&page=geocmsx%2Fgeo-mashup%2Fgeo-mashup.php">' . __('Map', 'General') . '</a>',
 
-                    'support' => '<a target="_blank" href="http://andrewgunn.xyz/support?id=geocmsx">' . __('Support', 'General') . '</a>'
+              'settings' => '<a target="_blank" href="/wp-admin/edit.php?post_type=geopost&page=map-settings">' . __('Options', 'General') . '</a>',
+
+                    'support' => '<a target="_blank" href="http://andrewgunn.org/">' . __('Help', 'General') . '</a>'
 
                     );
 
