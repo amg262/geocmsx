@@ -167,18 +167,11 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 	<?php endif; ?>
 	<?php $map_html = ob_get_clean(); ?>
 
-		<?php //find me start
-
-		//$db = new GsxDatabase();
-
-		var_dump($_GET['gps_location_f']);
-
-		?>
 
 	<?php ob_start(); ?>
-	<a href="#" id="gps_find_me" class="button gps_find_me">Find Me</a><br>
-	<label for="geo_mashup_search"><?php _e('Find a new location:', 'GeoMashup'); ?>
-	<input	id="geo_mashup_search" name="geo_mashup_search" type="text" size="35" />
+		<input	id="gps_location" name="gps_location" type="hidden" />
+	<h4><label for="geo_mashup_search"><?php _e('Hit Enter to search and set location (Default is current location):', 'GeoMashup'); ?></h4>
+	<input	id="geo_mashup_search" name="geo_mashup_search" type="text" style="width:100%;" />
 	</label>
 
 	<?php _e( 'or select from', 'GeoMashup' ); ?> 
@@ -189,59 +182,9 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 	<?php $search_html = ob_get_clean(); ?>
 
 	<?php echo empty( $location->id ) ? $search_html . $map_html . $location_table_html : $location_table_html . $map_html . $search_html; ?>
-		<input id="gps_location_1" name="gps_location_1" type="hidden" value="" />
-	<script>
 
-		var options = {
-		  enableHighAccuracy: true,
-		  timeout: 5000,
-		  maximumAge: 0
-		};
 
-		function success(pos) {
-		  var crd = pos.coords;
-		  var lat = crd.latitude;
-		  var long = crd.longitude;
-		  var loc = lat + ',' + long;
 
-		  console.log('Your current position is:');
-		  console.log('Latitude : ' + crd.latitude);
-		  console.log('Longitude: ' + crd.longitude);
-		  console.log('More or less ' + crd.accuracy + ' meters.');
-
-			var gps_location = [];
-			//var a =
-			gps_location['latitude'] = crd.latitude;
-			gps_location['longitude'] = crd.longitude;
-			gps_location['altitude'] = crd.altitude;
-			gps_location['altitude_ft'] = (crd.altitude * 3.28084);
-			gps_location['accuarcy'] = crd.accuracy;
-			gps_location['accuarcy_ft'] = crd.accuracy * 3.28084;
-			gps_location['altitudeAccuracy'] = crd.altitudeAccuracy;
-			gps_location['altitudeAccuracy_ft'] = crd.altitudeAccuracy * 3.28084;
-			gps_location['heading'] = crd.heading;
-			gps_location['speed'] = crd.speed;
-			gps_location['speed_mph'] = crd.speed * 2.23694;
-			//gps_location['json'] = crd.toJSON();
-			var v = document.getElementById('gps_location_1');
-			v.value = gps_location;
-
-			console.log(v);
-		};
-
-		function error(err) {
-		  console.warn('ERROR(' + err.code + '): ' + err.message);
-		};
-
-		navigator.geolocation.getCurrentPosition(success, error, options);
-	</script>
-		<?php //find me start
-
-		//$db = new GsxDatabase();
-
-		var_dump($_GET['gps_location_1']);
-
-		?>
 
 
 	<input id="geo_mashup_ui_manager" name="geo_mashup_ui_manager" type="hidden" value="<?php echo $ui_manager; ?>" />
@@ -294,7 +237,52 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 				<p><?php _e( 'When you save or update, the closest match available will be saved as the location.', 'GeoMashup' ); ?></p>
 			</div>
 		</noscript>
+		<script>
 
+			var options = {
+				enableHighAccuracy: true,
+				timeout: 30000,
+				maximumAge: 0
+			};
+
+			function success(pos) {
+				var crd = pos.coords;
+
+
+
+				var gps_location = [];
+				//var a =
+				gps_location['latitude'] = crd.latitude;
+				gps_location['longitude'] = crd.longitude;
+				gps_location['altitude'] = crd.altitude;
+				gps_location['altitude_ft'] = (crd.altitude * 3.28084);
+				gps_location['accuarcy'] = crd.accuracy;
+				gps_location['accuarcy_ft'] = crd.accuracy * 3.28084;
+				gps_location['altitudeAccuracy'] = crd.altitudeAccuracy;
+				gps_location['altitudeAccuracy_ft'] = crd.altitudeAccuracy * 3.28084;
+				gps_location['heading'] = crd.heading;
+				gps_location['speed'] = crd.speed;
+				gps_location['speed_mph'] = crd.speed * 2.23694;
+				gps_location['location'] = crd.latitude + ',' + crd.longitude;
+				//gps_location['json'] = crd.toJSON();
+				console.log(gps_location);
+
+				var n = gps_location.location;
+
+				var el = document.getElementById('gps_location');
+				var el3 = document.getElementById('geo_mashup_search');
+				el.value = n; el3.value = n;
+
+
+				console.log(el);
+			};
+
+			function error(err) {
+				console.warn('ERROR(' + err.code + '): ' + err.message);
+			};
+
+			navigator.geolocation.getCurrentPosition(success, error, options);
+		</script>
 	</div>
 	</div><!-- id="geo_mashup_location_editor" -->
 <?php
