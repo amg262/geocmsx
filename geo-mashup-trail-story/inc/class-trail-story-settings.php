@@ -148,6 +148,11 @@ class TrailStorySettings {
      */
     public function sanitize( $input ) {
         $new_input = array();
+
+        ///foreach ($input as $var) {
+            echo($input);
+        //}
+
     
         return $input;
     }
@@ -165,7 +170,7 @@ class TrailStorySettings {
                 <p><h3>Plugin developed by <a target="_blank" href="http://andrewgunn.xyz/">Andrew Gunn</a>. For Support please <a href="http://andrewgunn.xyz/support/" target="_blank">follow this link.</a></h3>
                 </p>
                 <p><h3>You can also <a href="mailto:andrewmgunn26@gmail.com" target="_blank">email me</a> to to in touch faster, any feedback is welcomed!</h3>
-                </p>
+                </p>http://fileground.net/wp-content/uploads/2016/10/mapiconscollection-markers.zip
                 <br>
                 <h3><div class="mapsmarker">Find more Map icons at <a href="https://mapicons.mapsmarker.com/" target="_blank">Maps Marker's</a> website</div></h3>
                         </p>
@@ -197,7 +202,7 @@ class TrailStorySettings {
 
                             <?php //$key = 'delete_data'; ?>
                             <th scope="row">
-                                GeoCMS License Key
+                                GeoCMS License
                             </th>
                             <td>
        
@@ -502,6 +507,13 @@ class TrailStorySettings {
             <p><hr></p>
             <div>
                 <h1><strong>Map Marker Images</strong></h1>
+        <div>
+            <p>
+                <h4><a href="http://fileground.net/wp-content/uploads/2016/10/mapiconscollection-markers.zip" target="_blank" >
+                    Download</a> the full map icon pack to upload custom maps icons
+                </a></h4>
+            </p>
+        </div>
             <div class="icon-wrapper">
                 <div class="icon-header">
 
