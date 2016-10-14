@@ -215,7 +215,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
         layer.setMap(google_map);*/
       
           
-        if (options.eq_geo_rss != null && options.enable_eq == '1') {
+        if (options.eq_geo_rss != null ) {
 
            
            var georssLayer = new google.maps.KmlLayer( options.eq_geo_rss, {
@@ -223,7 +223,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
             });
             
         }
-        if (options.geo_json != null && options.enable_geojson == '1') {
+        if (options.geo_json != null ) {
 
            var geo_json = new google.maps.KmlLayer( options.geo_json, {
                     map: google_map
@@ -249,7 +249,7 @@ GeoMashup.addAction( 'loadedMap', function( properties, mxn ) {
 
         //console.log(j);
         }*/
-        if (options.custom_kml_layers != null && options.enable_kml == '1')
+        if (options.custom_kml_layers != null )
             for (var i = 0; i < kml_arr.length; i++) {
                 //console.log(kml_arr[i]);
                 var kml_layer = kml_arr[i];

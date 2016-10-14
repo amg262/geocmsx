@@ -166,7 +166,7 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 	<?php endif; ?>
 	<?php $map_html = ob_get_clean(); ?>
 	<?php ob_start(); ?>
-	<a href="#">Find Me</a><br>
+	<a href="#" id="gps_find_me" class="button gps_find_me">Find Me</a><br>
 	<label for="geo_mashup_search"><?php _e('Find a new location:', 'GeoMashup'); ?>
 	<input	id="geo_mashup_search" name="geo_mashup_search" type="text" size="35" />
 	</label>
@@ -197,15 +197,55 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 		  console.log('Latitude : ' + crd.latitude);
 		  console.log('Longitude: ' + crd.longitude);
 		  console.log('More or less ' + crd.accuracy + ' meters.');
+
+			var gps_location = [];
+			var meters = 0;
+			var feet = 0;
+			var mps = 0;
+			var mi = 0;
+			//var a =
+			gps_location['latitude'] = crd.latitude;
+			gps_location['longitude'] = crd.longitude;
+			gps_location['altitude'] = crd.altitude;
+			gps_location['altitude_ft'] = (crd.altitude * 3.28084);
+			gps_location['accuarcy'] = crd.accuracy;
+			gps_location['accuarcy_ft'] = crd.accuracy * 3.28084;
+			gps_location['altitudeAccuracy'] = crd.altitudeAccuracy;
+			gps_location['altitudeAccuracy_ft'] = crd.altitudeAccuracy * 3.28084;
+			gps_location['heading'] = crd.heading;
+			gps_location['speed'] = crd.speed;
+			gps_location['speed_mph'] = crd.speed * 2.23694;
+			gps_location['json'] = crd.toJSON();
+
+
+
+
+			//gps_location['latitude'] = crd.latitude;
+
+			var gps_long = crd.longitude;
+			var gps_acc = crd.accuracy;
+			var gps_meters = parseFloat(gps_acc);
+			var gps_feet = (gps_meters * 3.28084);
+			var gps_alt = crd.altitude;
+			var gps_alt_acc = crd.altitudeAccuracy;
+			var gps_heading = crd.heading;
+			var gps_speed = crd.speed;
+
+			var gps_str_lat = gps_lat + ',' + gps_long;
+			var gps_str_long = gps_long + ',' + gps_lat;
+
+
+
+			console.log(field);
 		};
 
 		function error(err) {
-		  //console.warn('ERROR(' + err.code + '): ' + err.message);
+		  console.warn('ERROR(' + err.code + '): ' + err.message);
 		};
 
-		//navigator.geolocation.getCurrentPosition(success, error, options);
-
+		navigator.geolocation.getCurrentPosition(success, error, options);
 	</script>
+
 	<input id="geo_mashup_ui_manager" name="geo_mashup_ui_manager" type="hidden" value="<?php echo $ui_manager; ?>" />
 	<input id="geo_mashup_object_id" name="geo_mashup_object_id" type="hidden" value="<?php echo $object_id; ?>" />
 	<input id="geo_mashup_no_js" name="geo_mashup_no_js" type="hidden" value="true" />

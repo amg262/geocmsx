@@ -441,7 +441,7 @@ class GeoMashupPostUIFrontend extends GeoMashupUIFrontend {
 		if ( $enabled ) { 
 			
 			
-			//CARREGA DEPENDÊNCIAS (CSS E JS)
+			//CARREGA DEPENDï¿½NCIAS (CSS E JS)
 			include_once( GEO_MASHUP_DIR_PATH . '/edit-form.php');
 			$this->enqueue_jquery_styles();
 			$this->enqueue_form_client_items();
@@ -595,14 +595,14 @@ class GeoMashupPostUIFrontend extends GeoMashupUIFrontend {
 					//$term = get_category_by_slug('trail-stories'); 
 		  			//$id = $term->term_id;
 				//if ($post_ID > 0) { wp_redirect(home_url()); }
-			//wp_set_post_categories( $post_ID, $id );
+			wp_set_post_categories( $post_ID, $id );
 			set_post_thumbnail( $post_ID, $attachment_id );
 		}
 
 		// Check that the nonce is valid, and the user can edit this post.
 		//if (isset($_POST['submit'])) { wp_redirect( home_url().'/story-submitted' ); exit; }
 			//var_dump($post62);
-		//--- IF FORM - Ou algo que permita maior customização
+		//--- IF FORM - Ou algo que permita maior customizaï¿½ï¿½o
 		$filename[0] = TEMPLATEPATH . '/geo_mashup_ui_frontend_form.php';
 		$filename[1] = GEO_MASHUP_DIR_PATH . '/geo_mashup_ui_frontend_form.php';
 		
