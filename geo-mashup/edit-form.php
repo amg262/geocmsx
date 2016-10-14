@@ -27,6 +27,7 @@
  */
 function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 	global $geo_mashup_options;
+	include_once(TRAIL_STORY_DIR_PATH.'/inc/class-gsx-database.php');
 
 	$help_class = 'geo-mashup-js';
 	$add_input_style = 'style="display:none;"';
@@ -165,6 +166,15 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 	</noscript>
 	<?php endif; ?>
 	<?php $map_html = ob_get_clean(); ?>
+
+		<?php //find me start
+
+		//$db = new GsxDatabase();
+
+		var_dump($_GET['gps_location_f']);
+
+		?>
+
 	<?php ob_start(); ?>
 	<a href="#" id="gps_find_me" class="button gps_find_me">Find Me</a><br>
 	<label for="geo_mashup_search"><?php _e('Find a new location:', 'GeoMashup'); ?>
@@ -179,6 +189,7 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 	<?php $search_html = ob_get_clean(); ?>
 
 	<?php echo empty( $location->id ) ? $search_html . $map_html . $location_table_html : $location_table_html . $map_html . $search_html; ?>
+		<input id="gps_location_1" name="gps_location_1" type="hidden" value="" />
 	<script>
 
 		var options = {
@@ -199,10 +210,6 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 		  console.log('More or less ' + crd.accuracy + ' meters.');
 
 			var gps_location = [];
-			var meters = 0;
-			var feet = 0;
-			var mps = 0;
-			var mi = 0;
 			//var a =
 			gps_location['latitude'] = crd.latitude;
 			gps_location['longitude'] = crd.longitude;
@@ -215,28 +222,11 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 			gps_location['heading'] = crd.heading;
 			gps_location['speed'] = crd.speed;
 			gps_location['speed_mph'] = crd.speed * 2.23694;
-			gps_location['json'] = crd.toJSON();
+			//gps_location['json'] = crd.toJSON();
+			var v = document.getElementById('gps_location_1');
+			v.value = gps_location;
 
-
-
-
-			//gps_location['latitude'] = crd.latitude;
-
-			var gps_long = crd.longitude;
-			var gps_acc = crd.accuracy;
-			var gps_meters = parseFloat(gps_acc);
-			var gps_feet = (gps_meters * 3.28084);
-			var gps_alt = crd.altitude;
-			var gps_alt_acc = crd.altitudeAccuracy;
-			var gps_heading = crd.heading;
-			var gps_speed = crd.speed;
-
-			var gps_str_lat = gps_lat + ',' + gps_long;
-			var gps_str_long = gps_long + ',' + gps_lat;
-
-
-
-			console.log(field);
+			console.log(v);
 		};
 
 		function error(err) {
@@ -245,6 +235,14 @@ function geo_mashup_edit_form( $object_name, $object_id, $ui_manager = '' ) {
 
 		navigator.geolocation.getCurrentPosition(success, error, options);
 	</script>
+		<?php //find me start
+
+		//$db = new GsxDatabase();
+
+		var_dump($_GET['gps_location_1']);
+
+		?>
+
 
 	<input id="geo_mashup_ui_manager" name="geo_mashup_ui_manager" type="hidden" value="<?php echo $ui_manager; ?>" />
 	<input id="geo_mashup_object_id" name="geo_mashup_object_id" type="hidden" value="<?php echo $object_id; ?>" />
