@@ -10,7 +10,8 @@
 * Text Domain: geocmsx
 */
 if ( ! defined( 'ABSPATH' ) ) die( 'No way, jose!' );
-
+//http://cdn.cloudground.net/files/data/public/geocms
+//
 /**
  * Defining constants
  */
