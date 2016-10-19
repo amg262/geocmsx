@@ -11,11 +11,11 @@ define('TRAIL_STORY_URL_PATH', trim( plugin_dir_url( __FILE__ ), '/' ) );
 /**
 * Including files in other directories
 */
-include_once('inc/class-gsx-settings.php');
+include_once('classes/class-trail-story-settings.php');
 include_once('inc/trail-story-frontend-form.php');
-include_once('inc/class-gsx-cpt.php');
-include_once('inc/class-gsx-helper.php');
-include_once('inc/class-gsx-database.php');
+include_once('classes/class-gsx-cpt.php');
+include_once('classes/class-gsx-helper.php');
+include_once('classes/class-gsx-database.php');
 //include_once('inc/cpt-trail-story.php');
 //include_once('inc/cpt-trail-condition.php');
 //include_once('inc/cpt-trail-segment.php');
@@ -25,29 +25,6 @@ include_once('inc/class-gsx-database.php');
 */
 
 
-
-/**
- * Shortcode for display frontend user trail story input
- */
-add_shortcode( 'frontend_trail_story_map', 'trail_story_post_form_handler' );
-//add_action( 'wp_footer', 'trail_story_post_g_form_handler', 10 );
-
-
-function trail_story_post_form_handler(){
-
-    GeoMashupPostUIFrontend::get_instance()->GeoMashupPostUIFrontend();
-
-    trail_story_post_form();
-
-}
-/**
- * Function to print the front end user post form
- */
-function trail_story_post_form() {
-    // Create form
-    GeoMashupPostUIFrontend::get_instance()->print_form();
-
-}
 
 
 /**

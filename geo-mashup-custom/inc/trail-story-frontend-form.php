@@ -8,6 +8,29 @@
 defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
 
 /**
+* Shortcode for display frontend user trail story input
+*/
+add_shortcode( 'frontend_trail_story_map', 'trail_story_post_form_handler' );
+add_action( 'wp_footer', 'trail_story_post_g_form_handler', 10 );
+
+
+function trail_story_post_form_handler(){
+
+    GeoMashupPostUIFrontend::get_instance()->GeoMashupPostUIFrontend();
+
+    trail_story_post_form();
+
+}
+/**
+* Function to print the front end user post form
+*/
+function trail_story_post_form() {
+    // Create form 
+    GeoMashupPostUIFrontend::get_instance()->print_form();
+
+}
+
+/**
  * A base class for managing user interfaces for collecting and storing location.
  *
  * This could be extended to make the existing editor work for new objects in a separate plugin.

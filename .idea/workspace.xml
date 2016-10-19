@@ -2,11 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4afda2e-69a2-4db8-9d2a-eb71d279ec15" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/assets/icon-128x128.png" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/assets/icon-128x128.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/assets/icon-20x20.png" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/assets/icon-20x20.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-cpt.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-cpt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocmsx.php" afterPath="$PROJECT_DIR$/geocmsx.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-frontend.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-meta.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-cpt.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-cpt.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-database.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-database.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-helper.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-helper.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-trail-story-settings.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-settings.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-wm-db.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/classes/class-wm-db.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/css/font-awesome.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/fonts/fontawesome-webfont.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/animated.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/animated.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/bordered-pulled.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/core.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/core.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/fixed-width.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/font-awesome.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/icons.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/icons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/larger.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/larger.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/list.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/list.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/mixins.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/path.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/path.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/rotated-flipped.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/stacked.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/stacked.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/less/variables.less" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/less/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_animated.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_animated.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_bordered-pulled.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_core.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_core.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_fixed-width.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_icons.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_larger.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_list.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_list.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_mixins.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_path.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_path.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_rotated-flipped.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_stacked.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/_variables.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/font-awesome-4.4.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/lib/font-awesome-4.4.0/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo-mashup-trail-story/inc/trail-story-frontend-form.php" afterPath="$PROJECT_DIR$/geo-mashup-trail-story/inc/trail-story-frontend-form.php" />
     </list>
     <ignored path="geocmsx.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +68,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="geocmsx.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="geocmsx.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geocmsx.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="42">
               <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
@@ -40,6 +81,60 @@
       <file leaf-file-name="geo-mashup-trail-story.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="818">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class-gsx-frontend.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-frontend.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1476856017650" expanded="true" signature="23846:23964" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1476855537889" expanded="true" signature="3020:3035" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.min.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.min.css">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -48,37 +143,11 @@
         </entry>
       </file>
       <file leaf-file-name="class-gsx-cpt.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-cpt.php">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-cpt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
+            <state relative-caret-position="1092">
               <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class-trail-story-settings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/class-trail-story-settings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1469727675891" expanded="true" signature="1965:1971" ph=" " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class-gsx-helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-288">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1469727675659" expanded="true" signature="3485:3771" ph="..." />
-                <marker date="1469727675659" expanded="true" signature="3528:3752" ph="{...}" />
-                <marker date="1469727675659" expanded="true" signature="3601:3740" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,10 +155,10 @@
       <file leaf-file-name="trail-story-frontend-form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/trail-story-frontend-form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="32" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="-14175">
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding>
-                <marker date="1469727676025" expanded="true" signature="24381:24499" ph="..." />
+                <marker date="1476856017650" expanded="true" signature="23846:23964" ph="..." />
               </folding>
             </state>
           </provider>
@@ -98,7 +167,7 @@
       <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
+            <state relative-caret-position="42">
               <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
@@ -116,6 +185,8 @@
         <option value="$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-cpt.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/geocmsx.php" />
+        <option value="$PROJECT_DIR$/geo-mashup-trail-story/inc/trail-story-frontend-form.php" />
+        <option value="$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php" />
       </list>
     </option>
   </component>
@@ -130,10 +201,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5 (1)" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="-7" />
+    <option name="width" value="1692" />
+    <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -142,7 +212,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -160,7 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,7 +276,47 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font-awesome-4.4.0" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geocmsx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geocmsx" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo-mashup-trail-story" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geocmsx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geocmsx" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo-mashup-trail-story" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -228,15 +337,25 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/geo-mashup-trail-story/inc" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\dev\wp-content\plugins\geocmsx\geo-mashup-trail-story\inc" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\dev\wp-content\plugins\geocmsx\geo-mashup-trail-story\classes" />
+      <recent name="C:\MAMP\htdocs\dev\wp-content\plugins\geocmsx\geo-mashup-trail-story\lib" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -303,34 +422,35 @@
       <workItem from="1470100702323" duration="119000" />
       <workItem from="1470100837533" duration="13000" />
       <workItem from="1474696311090" duration="2440000" />
+      <workItem from="1476855772125" duration="507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3063000" />
+    <option name="totallyTimeSpent" value="3570000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1692" height="1017" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25059667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="ReST Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="ReST Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -362,7 +482,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geocmsx.php">
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -370,7 +490,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geocmsx.php">
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-cpt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -380,55 +516,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/trail-story-frontend-form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="168">
           <caret line="12" column="32" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="40" />
           <folding>
-            <marker date="1469727676025" expanded="true" signature="24381:24499" ph="..." />
+            <marker date="1476856017650" expanded="true" signature="23846:23964" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1469727675659" expanded="true" signature="3485:3771" ph="..." />
-            <marker date="1469727675659" expanded="true" signature="3528:3752" ph="{...}" />
-            <marker date="1469727675659" expanded="true" signature="3601:3740" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/class-trail-story-settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1469727675891" expanded="true" signature="1965:1971" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/class-gsx-cpt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
+        <state relative-caret-position="42">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding />
         </state>
@@ -436,8 +534,126 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/geocmsx.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geocmsx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geocmsx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-cpt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geocmsx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/trail-story-frontend-form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14175">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <marker date="1476856017650" expanded="true" signature="23846:23964" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/classes/class-gsx-frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1476856017650" expanded="true" signature="23846:23964" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1476855537889" expanded="true" signature="3020:3035" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-trail-story/inc/geocms.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
