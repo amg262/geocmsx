@@ -20,12 +20,12 @@ define( 'IGTM_DIR', dirname( __FILE__ ) );
 define( 'IGTM_URL', plugins_url( __FILE__ ) );
 define( 'GEO_MASHUP', 'geo-mashup' );
 define( 'GEO_MASHUP_CUSTOM', 'geo-mashup-custom' );
-define( 'GEO_MASHUP_ADDON', 'geo-mashup-trail-story' );
+define( 'GEO_MASHUP_ADDON', 'geo-mashup-cms' );
 define( 'PHP', '.php' );
 
 
 //require_once( 'inc/class-ui-pagecreator.php' );
-require_once( 'geo-mashup-trail-story/geo-mashup-trail-story.php' );
+require_once('geo-mashup-cms/geo-mashup-cms.php');
 require_once( 'geo-mashup-custom/geo-mashup-custom.php' );
 require_once( 'geo-mashup/geo-mashup.php' );
 //require_once( 'snazzy-maps/snazzymaps.php' );

@@ -417,14 +417,14 @@ class TrailStorySettings {
                                                            id="trail-story-add-icon-button-<?php echo $post_type; ?>" 
                                                            class="button trail-story-add-icon-button <?php echo $trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                                            name="trail-story-add-icon-button" 
-                                                           value="<?php _e( 'Add File', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                                           value="<?php _e( 'Add File', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                                     <?php // Button to remove Image icon ?>
                                                     <input type="button" 
                                                            id="trail-story-remove-icon-button-<?php echo $post_type; ?>" 
                                                            class="button trail-story-remove-icon-button <?php echo !$trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                                            name="trail-story-add-icon-button" 
-                                                           value="<?php _e( 'Remove File', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                                           value="<?php _e( 'Remove File', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                                            <div style="clear:both;height:0;"></div>
                                                 </div>
@@ -526,16 +526,16 @@ class TrailStorySettings {
                 <div class="icon-header">
 
                     <div class="icon-header-post-type-title">
-                        <h2><?php _e( 'Post Types', 'geo-mashup-trail-story-add-on' ); ?></h2>
+                        <h2><?php _e( 'Post Types', 'geo-mashup-cms-add-on' ); ?></h2>
                     </div>
 
                     <div class="icon-header-image-title">
-                        <h2><?php _e('Image', 'geo-mashup-trail-story-add-on') ?></h2>
+                        <h2><?php _e('Image', 'geo-mashup-cms-add-on') ?></h2>
                     </div>
 
                 </div>
 
-                <h3><?php //_e('&nbsp;','geo-mashup-trail-story-add-on'); ?></h3>
+                <h3><?php //_e('&nbsp;','geo-mashup-cms-add-on'); ?></h3>
                 <?php $arr = array('Multi-Marker');$c=0;$i=1;//var_dump($arr);?>
         <?php foreach( $arr as $post_type ) : ?>
             <?php //if ( in_array( $post_type->name, $geo_mashup_options->get( 'overall', 'located_post_types' ) ) ) { ?>
@@ -562,14 +562,14 @@ class TrailStorySettings {
                                        id="trail-story-add-icon-button-<?php echo $post_type; ?>" 
                                        class="button trail-story-add-icon-button <?php echo $trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                        name="trail-story-add-icon-button" 
-                                       value="<?php _e( 'Add Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                       value="<?php _e( 'Add Image', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                 <?php // Button to remove Image icon ?>
                                 <input type="button" 
                                        id="trail-story-remove-icon-button-<?php echo $post_type; ?>" 
                                        class="button trail-story-remove-icon-button <?php echo !$trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                        name="trail-story-add-icon-button" 
-                                       value="<?php _e( 'Remove Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                       value="<?php _e( 'Remove Image', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                        <div style="clear:both;height:0;"></div>
                             </div>
@@ -617,14 +617,14 @@ class TrailStorySettings {
                                        id="trail-story-add-icon-button-<?php echo $post_type->name; ?>" 
                                        class="button trail-story-add-icon-button <?php echo $trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                        name="trail-story-add-icon-button" 
-                                       value="<?php _e( 'Add Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                       value="<?php _e( 'Add Image', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                 <?php // Button to remove Image icon ?>
                                 <input type="button" 
                                        id="trail-story-remove-icon-button-<?php echo $post_type->name; ?>" 
                                        class="button trail-story-remove-icon-button <?php echo !$trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                        name="trail-story-add-icon-button" 
-                                       value="<?php _e( 'Remove Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                       value="<?php _e( 'Remove Image', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                        <div style="clear:both;height:0;"></div>
                             </div>
@@ -648,7 +648,7 @@ class TrailStorySettings {
         <p><hr></p>
         <?php $include_taxonomies = $geo_mashup_options->get( 'overall', 'include_taxonomies' ); ?>
 
-        <h1><strong><?php _e('Categories','geo-mashup-trail-story-add-on'); ?></strong></h1>
+        <h1><strong><?php _e('Categories','geo-mashup-cms-add-on'); ?></strong></h1>
 
         <?php if ( !empty( $include_taxonomies ) and !defined( 'GEO_MASHUP_DISABLE_CATEGORIES' ) ) : ?>
             <?php foreach( $include_taxonomies as $include_taxonomy ) : ?>
@@ -683,14 +683,14 @@ class TrailStorySettings {
                                                id="trail-story-add-icon-button-<?php echo $term->slug; ?>" 
                                                class="button trail-story-add-icon-button <?php echo $trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                                name="trail-story-add-icon-button" 
-                                               value="<?php _e( 'Add Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                               value="<?php _e( 'Add Image', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                         <?php // Button to remove Image icon ?>
                                         <input type="button" 
                                                id="trail-story-remove-icon-button-<?php echo $term->slug; ?>" 
                                                class="button trail-story-remove-icon-button <?php echo !$trail_story_options[$key] ? 'hidden' : ''; ?>" 
                                                name="trail-story-add-icon-button" 
-                                               value="<?php _e( 'Remove Image', 'geo-mashup-trail-story-add-on' ); ?>"/>
+                                               value="<?php _e( 'Remove Image', 'geo-mashup-cms-add-on' ); ?>"/>
 
                                                <div style="clear:both;height:0;"></div>
                                     </div>
