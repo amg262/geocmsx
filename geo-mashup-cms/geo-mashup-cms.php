@@ -65,8 +65,8 @@ function register_admin_trail_story_scripts() {
     wp_register_script( 'gsx_adm_min_js', plugins_url( 'inc/js/geocms.admin.min.js', __FILE__ ), array('jquery'));
 
 
-    wp_register_script( 'gsx_js', plugins_url( 's/geocms.js', __FILE__ ), array('jquery'));
-    wp_register_script( 'gsx_min_js', plugins_url( 'inc/js/geocms.min.js', __FILE__ ), array('jquery'));
+    wp_register_style( 'gsx_css', plugins_url( 'inc/css/geocms.css', __FILE__ ));
+    wp_register_style( _css', plugins_url( 'inc/css/geocms.css', __FILE__ ));
     wp_register_script( 'gsx_adm_js', plugins_url( 'inc/js/geocms.admin.js', __FILE__ ), array('jquery'));
     wp_register_script( 'gsx_adm_min_js', plugins_url( 'inc/js/geocms.admin.min.js', __FILE__ ), array('jquery'));
     wp_register_style( 'geocms_js', plugins_url( 'inc/js/geocms.js', __FILE__ ), array('jquery'));

@@ -26,8 +26,8 @@
       <file leaf-file-name="geo-mashup-cms.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/geo-mashup-cms/geo-mashup-cms.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+            <state relative-caret-position="536">
+              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -296,12 +296,12 @@
       <workItem from="1470100702323" duration="119000" />
       <workItem from="1470100837533" duration="13000" />
       <workItem from="1474696311090" duration="2440000" />
-      <workItem from="1476855772125" duration="2894000" />
+      <workItem from="1476855772125" duration="3286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5957000" />
+    <option name="totallyTimeSpent" value="6349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1692" height="1017" extended-state="0" />
@@ -564,8 +564,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/geo-mashup-cms/geo-mashup-cms.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+        <state relative-caret-position="536">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
           <folding />
         </state>
       </provider>
