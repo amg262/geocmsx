@@ -54,7 +54,7 @@ class GsxInit {
       //create map page
       //create fe page
       $this->gsx_map_page();
-     // $this->gsx_fe_page();
+      $this->gsx_fe_page();
       flush_rewrite_rules();
       
     }
