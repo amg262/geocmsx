@@ -199,7 +199,7 @@ class TrailStorySettings {
                                 <fieldset><?php $key = 'gsx_license'; 
                                     //var_dump($trail_story_options[$key]);?>
                                     <label for="trail_story_options[<?php echo $key; ?>]">
-                                        <input style="width:320px;"id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
+                                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo sanitize_text_field( $trail_story_options[$key]); ?>" />
                                     
                                     </label>
                             
@@ -442,7 +442,7 @@ class TrailStorySettings {
                                                                             //var_dump($trail_story_options[$key]); ?>
 
                                     
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo sanitize_text_field($trail_story_options[$key]); ?>" />
                                     <br>
                                     
                                 <p class="description">DEFAULT IS COMMA DELIMITED</p>
@@ -459,8 +459,8 @@ class TrailStorySettings {
                                 <?php $key = 'eq_geo_rss';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
-                                    
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo sanitize_text_field($trail_story_options[$key]); ?>" />
                                     <br>
                                     
                                 <p class="description">DEFAULT IS COMMA DELIMITED</p>
@@ -480,7 +480,7 @@ class TrailStorySettings {
 
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                     </label>
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo sanitize_text_field($trail_story_options[$key]); ?>" />
 
                                     </fieldset>                                   
                                 <p class="description">DEFAULT IS COMMA DELIMITED</p>
