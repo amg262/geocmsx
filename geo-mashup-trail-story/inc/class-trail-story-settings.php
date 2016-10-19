@@ -205,7 +205,25 @@ class TrailStorySettings {
                             
                             </td>
                         </tr>
-                       
+                        <tr>
+                            <th scope="row">
+                                Database
+                            </th>
+                            <td>
+                                <fieldset><?php $key = 'update'; ?>
+
+                                    <input class="button button-primary" id='sit_settings[<?php echo $key; ?>]' name="sit_settings[<?php echo $key; ?>]" type="submit" value="Update Tags"  />
+
+
+                                    <?php $key = 'delete'; ?>
+                                    &nbsp;
+                                    <input class="button-secondary delete" id='sit_settings[<?php echo $key; ?>]' name="sit_settings[<?php echo $key; ?>]" type="submit" value="Delete Tags"  />
+
+                                </fieldset>
+                            </td>
+
+                        </tr>
+
                         <tr>
                             <th scope="row">
                                 Delete All Data
@@ -442,7 +460,7 @@ class TrailStorySettings {
                                                                             //var_dump($trail_story_options[$key]); ?>
 
                                     
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo sanitize_text_field($trail_story_options[$key]); ?>" />
+                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo ($trail_story_options[$key]); ?>" />
                                     <br>
                                     
                                 <p class="description">DEFAULT IS COMMA DELIMITED</p>

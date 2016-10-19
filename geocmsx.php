@@ -65,6 +65,11 @@ class GsxInit {
 
       global $post_ID;
       global $user_ID;
+
+        if (get_page_by_title('GeoCMS')) {
+            return false;
+        }
+
       //if ( $_POST['geo_mashup_add_location'] ) {
       $post = array(
         'post_author'   => $user_ID, //The user ID number of the author.
@@ -88,6 +93,10 @@ class GsxInit {
     public function gsx_fe_page() {
       global $post_ID;
       global $user_ID;
+
+        if (get_page_by_title('GeoPost')) {
+            return false;
+        }
       //if ( $_POST['geo_mashup_add_location'] ) {
       $post = array(
         'post_author'   => $user_ID, //The user ID number of the author.
