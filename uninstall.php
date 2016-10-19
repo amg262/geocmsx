@@ -6,11 +6,9 @@ if( ! defined( 'ABSPATH') or ! defined('WP_UNINSTALL_PLUGIN') or ! current_user_
     exit();
 
 
-
+/**
 class GeoCmsUninstall {
-    /**
-     * GeoCmsUninstall constructor.
-     */
+    /
     public function __construct()
     {
         global $trail_story_settings;
@@ -55,12 +53,6 @@ class GeoCmsUninstall {
     }
 
 
-    /**
-     * Drop Geo Mashup database tables.
-     *
-     * @since 1.3
-     * @access public
-     */
     public function delete_database() {
 
         global $wpdb;
@@ -85,17 +77,10 @@ class GeoCmsUninstall {
 
 
 
-//note in multisite looping through blogs to delete options on each blog does not scale. You'll just have to leave them.
-
-    /*
-
-    * Getting options groups
-
-    */
 
     public function delete_options() {
 
-        delete_option( 'trail_story_options' );
+        delete_option( 'trail_story_option' );
         delete_option( 'geocms_options' );
         delete_option( 'geo_mashup_temp_kml_url' );
         delete_option( 'geo_mashup_db_version' );
@@ -113,15 +98,8 @@ class GeoCmsUninstall {
 
         delete_site_option( 'geo_locations' );
 
-        delete_site_option( 'geocms_options' );*/
+        delete_site_option( 'geocms_options' );
     }
 }
 
 
-
-$uninstall = new GeoCmsUninstall();
-$uninstall->delete_posts();
-$uninstall->delete_terms();
-$uninstall->delete_options();
-$uninstall->delete_database();
-var_dump($uninstall);
