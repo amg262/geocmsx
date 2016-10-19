@@ -1,121 +1,127 @@
- <?php // Get out!
+<?php // Get out!
 
 
-if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+// Make sure this is a legitimate uninstall request
+if( ! defined( 'ABSPATH') or ! defined('WP_UNINSTALL_PLUGIN') or ! current_user_can( 'delete_plugins' ) )
     exit();
+
+
+
+class GeoCmsUninstall {
+    /**
+     * GeoCmsUninstall constructor.
+     */
+    public function __construct()
+    {
+        global $trail_story_settings;
+        $trail_story_settings = get_option('trail_story_option');
+    }
+
+    public function delete_posts() {
+
+        $posts = array();
+        $count = 0;
+
+        $args = array(
+            'numberposts' => -1,
+            'post_type' => 'geopost'
+        );
+
+        $posts = get_posts( $args );
+
+        foreach ($posts as $post) {
+            print $count++;
+            //wp_delete_post( $post->ID, true );
+        }
+        //reset_postdata();
+        wp_reset_query();
+
+        return $count;
+
+    }
+
+    public function delete_terms() {
+
+        $tax = 'geopost-category';
+        $terms = get_terms( array(
+            'taxonomy' => $tax,
+            'hide_empty' => false,
+        ) );
+
+        foreach ($terms as $term) {
+            echo $term->term_id;
+        }
+        //wp_delete_term( $term_id, $taxonomy, $args )
+    }
+
+
+    /**
+     * Drop Geo Mashup database tables.
+     *
+     * @since 1.3
+     * @access public
+     */
+    public function delete_database() {
+
+        global $wpdb;
+        global $trail_story_settings;
+        global $geocms_options;
+
+        if ($trail_story_settings['delete_data']) {
+
+            $tables = array(
+                'geo_mashup_administrative_names',
+                'geo_mashup_location_relationships',
+                'geo_mashup_locations', 'geocms');
+
+            foreach ($tables as $table) {
+
+                $wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . $table);
+
+            }
+        }
+    }
+
+
+
+
+//note in multisite looping through blogs to delete options on each blog does not scale. You'll just have to leave them.
+
+    /*
+
+    * Getting options groups
+
+    */
+
+    public function delete_options() {
+
+        delete_option( 'trail_story_options' );
+        delete_option( 'geocms_options' );
+        delete_option( 'geo_mashup_temp_kml_url' );
+        delete_option( 'geo_mashup_db_version' );
+        delete_option( 'geo_mashup_activation_log' );
+        delete_option( 'geo_mashup_options' );
+        delete_option( 'geo_locations' );
+
+        /*delete_site_option( 'geo_mashup_temp_kml_url' );
+
+        delete_site_option( 'geo_mashup_db_version' );
+
+        delete_site_option( 'geo_mashup_activation_log' );
+
+        delete_site_option( 'geo_mashup_options' );
+
+        delete_site_option( 'geo_locations' );
+
+        delete_site_option( 'geocms_options' );*/
+    }
 }
 
 
-		delete_posts();
-		delete_options();
-		delete_data();
 
-	function delete_posts() {
-
-		if ($trail_story_options['delete_posts']):
-
-			$posts = array();
-			$count = 0;
-
-			$args = array(
-
-				'numberposts' => -1,
-
-				'post_type' => 'geopost',
-
-				'post_status' => 'any'
-
-			);
-
-
-			$posts = query_posts( $args );
-
-
-				//if (is_array($posts)) {
-			setup_postdata($posts);
-
-			foreach ($posts as $post) {
-				$count++;
-			   wp_delete_post( $post->ID, true );
-
-			}
-			//reset_postdata();
-			return $count;
-		endif;
-	}
-
-
-
-
-
-	/**
-
-	 * Drop Geo Mashup database tables.
-
-	 * 
-
-	 * @since 1.3
-
-	 * @access public
-
-	 */
-
-	 function delete_data() {
-
-		global $wpdb;
-
-		if ($trail_story_options['delete_data']):
-
-			$tables = array( 'geo_mashup_administrative_names', 'geo_mashup_location_relationships', 'geo_mashup_locations' );
-
-			foreach( $tables as $table ) {
-
-				$wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . $table );
-
-			}
-			endif;
-		}
-
-
-
-
-	//note in multisite looping through blogs to delete options on each blog does not scale. You'll just have to leave them.
-
-	/*
-
-	* Getting options groups
-
-	*/
-
-	function delete_options() {
-
-		if ($trail_story_options['delete_options']):
-
-			delete_option( 'trail_story_options' );
-
-			delete_option( 'geo_mashup_temp_kml_url' );
-
-			delete_option( 'geo_mashup_db_version' );
-
-			delete_option( 'geo_mashup_activation_log' );
-
-			delete_option( 'geo_mashup_options' );
-
-			delete_option( 'geo_locations' );
-
-			/*delete_site_option( 'geo_mashup_temp_kml_url' );
-
-			delete_site_option( 'geo_mashup_db_version' );
-
-			delete_site_option( 'geo_mashup_activation_log' );
-
-			delete_site_option( 'geo_mashup_options' );
-
-			delete_site_option( 'geo_locations' );
-			
-			delete_site_option( 'trail_story_options' );*/
-
-		endif;
-
-	}
-
+$uninstall = new GeoCmsUninstall();
+$uninstall->delete_posts();
+$uninstall->delete_terms();
+$uninstall->delete_options();
+$uninstall->delete_database();
+var_dump($uninstall);
