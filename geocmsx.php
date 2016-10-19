@@ -21,7 +21,7 @@ define( 'IGTM_URL', plugins_url( __FILE__ ) );
 define( 'GEO_MASHUP', 'geo-mashup' );
 define( 'GEO_MASHUP_CUSTOM', 'geo-mashup-custom' );
 define( 'GEO_MASHUP_ADDON', 'geo-mashup-trail-story' );
-define( 'PHP', '.php' );
+
 
 
 //require_once( 'inc/class-ui-pagecreator.php' );
@@ -63,7 +63,7 @@ class GsxInit {
     }
     public function gsx_map_page() {
 
-      global $post_ID;
+      global $post;
       global $user_ID;
       //if ( $_POST['geo_mashup_add_location'] ) {
       $post = array(
