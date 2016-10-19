@@ -2,6 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4afda2e-69a2-4db8-9d2a-eb71d279ec15" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/Interactive-Geo-Trail-Map.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/Interactive-Geo-Trail-Map.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/Trail-Segment-Export - 2015 November 20 19_00.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/connector.kml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/geo.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/geofinal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/iat-connector.kml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/iat.kml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/iat_segments.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/icon-128x128.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/icon-20x20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/icon-256x256.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/icon-32x32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/icon-512x512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/mapiconscollection-markers.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/parking.kml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/parking_list.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/star.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/timemap23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/timemap24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geo-mashup-cms/assets/warn.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo-mashup-cms/geo-mashup-cms.php" afterPath="$PROJECT_DIR$/geo-mashup-cms/geo-mashup-cms.php" />
     </list>
     <ignored path="geocmsx.iws" />
@@ -26,45 +53,72 @@
       <file leaf-file-name="geo-mashup-cms.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/geo-mashup-cms/geo-mashup-cms.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+            <state relative-caret-position="662">
+              <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1476859588058" expanded="true" signature="2953:2968" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1476859588058" expanded="true" signature="2953:2968" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocms.admin.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.admin.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-trail-story.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/admin-trail-story.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1476859588058" expanded="true" signature="2953:2968" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="class-gsx-init.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo-mashup-cms/classes/class-gsx-init.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geocms.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/css/geocms.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geocms.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/css/geocms.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adm.geocms.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/css/adm.geocms.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -85,6 +139,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -96,6 +157,7 @@
         <option value="$PROJECT_DIR$/geocmsx.php" />
         <option value="$PROJECT_DIR$/geo-mashup-trail-story/inc/trail-story-frontend-form.php" />
         <option value="$PROJECT_DIR$/geo-mashup-trail-story/geo-mashup-trail-story.php" />
+        <option value="$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.js" />
         <option value="$PROJECT_DIR$/geo-mashup-cms/geo-mashup-cms.php" />
       </list>
     </option>
@@ -168,7 +230,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="geo-mashup-custom" />
+              <option name="myItemId" value="geo-mashup-cms" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -183,6 +245,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="geo-mashup-cms" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,6 +286,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\dev\wp-content\plugins\geocmsx\geo-mashup-cms\inc\js" />
       <recent name="C:\MAMP\htdocs\dev\wp-content\plugins\geocmsx\geo-mashup-trail-story\classes" />
       <recent name="C:\MAMP\htdocs\dev\wp-content\plugins\geocmsx\geo-mashup-trail-story\inc" />
     </key>
@@ -296,12 +363,12 @@
       <workItem from="1470100702323" duration="119000" />
       <workItem from="1470100837533" duration="13000" />
       <workItem from="1474696311090" duration="2440000" />
-      <workItem from="1476855772125" duration="3286000" />
+      <workItem from="1476855772125" duration="7239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6349000" />
+    <option name="totallyTimeSpent" value="10302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1692" height="1017" extended-state="0" />
@@ -562,10 +629,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1476859588058" expanded="true" signature="2953:2968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/adm.geocms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1476859588058" expanded="true" signature="2953:2968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.admin.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/admin-trail-story.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1476859588058" expanded="true" signature="2953:2968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo-mashup-cms/inc/js/geocms.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/geo-mashup-cms/geo-mashup-cms.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+        <state relative-caret-position="662">
+          <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
           <folding />
         </state>
       </provider>
