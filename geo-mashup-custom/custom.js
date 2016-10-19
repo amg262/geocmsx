@@ -33,7 +33,11 @@ function csv_to_array(str) {
     if (str != null && str != undefined) {
         var arr = [];
 
+        var chars = [',','|','\\t','\\n','\\r'];
+
         arr = str.split(',');
+        //arr += str.split('|');
+
 
         return arr;
     } else {
