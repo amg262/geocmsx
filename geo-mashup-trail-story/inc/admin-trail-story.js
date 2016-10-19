@@ -20,6 +20,12 @@ jQuery(document).ready(function($) {
             return false;*/
 
     });
+    $('#trail_story_options[update]').change(function($){
+        alert ('hi');
+    });
+    var e = document.getElementById('geo_mashup_search');
+
+    $('#geo_mashup_search').val()
     
 });
 

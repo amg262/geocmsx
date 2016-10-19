@@ -78,24 +78,6 @@
     float:right !important;
 }
 
-#trail-story-post fieldset {
-    margin:0;
-    padding:0;
-    border:none !important;
-}
-#trail-story-post {
-    max-width: 100%;
-    width:100%;
-}
-#trail-story-post input[type="text"] {
-    max-width:500px;
-    width: 100%;
-}
-@media only screen and (max-width: 1024px) {
-    #ui-datepicker-div {
-        /*display: none !important;*/
-    }
-}
 /*.ml-responsive-table.ml-responsive-table-0 {
 
 .locationinfo.post-location-info .gm-style img {

@@ -50,7 +50,7 @@ class WooMultiDB {
 
         if ((!isset($woo_multi[$this->key])) || ($woo_multi[$this->key] === null)) {
             $charset_collate = $this->_db->get_charset_collate();
-            require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta( $this->sql );
 
             update_option('woo_multi', array($this->key => 'true'));
