@@ -11,14 +11,12 @@ define('TRAIL_STORY_URL_PATH', trim( plugin_dir_url( __FILE__ ), '/' ) );
 /**
 * Including files in other directories
 */
-include_once('inc/class-gsx-settings.php');
-include_once('inc/trail-story-frontend-form.php');
-include_once('inc/class-gsx-cpt.php');
-include_once('inc/class-gsx-helper.php');
-include_once('inc/class-gsx-database.php');
-//include_once('inc/cpt-trail-story.php');
-//include_once('inc/cpt-trail-condition.php');
-//include_once('inc/cpt-trail-segment.php');
+include_once('classes/class-gsx-settings.php');
+include_once('classes/class-gsx-cpt.php');
+include_once('classes/class-gsx-database.php');
+include_once('classes/class-gsx-helper.php');
+include_once('classes/class-gsx-init.php');
+include_once('classes/class-gsx-frontend.php');
 
 /**
 * Flushing permalinks for CPTs on DEACTIVATE
@@ -60,6 +58,42 @@ function register_admin_trail_story_scripts() {
     wp_register_style( 'admin_trail_story_css', plugins_url( 'inc/admin-trail-story.css', __FILE__ ));
     wp_enqueue_script( 'admin_trail_story_js' );
     wp_enqueue_style( 'admin_trail_story_css' );
+
+    wp_register_script( 'gsx_js', plugins_url( 'inc/js/geocms.js', __FILE__ ), array('jquery'));
+    wp_register_script( 'gsx_min_js', plugins_url( 'inc/js/geocms.min.js', __FILE__ ), array('jquery'));
+    wp_register_script( 'gsx_adm_js', plugins_url( 'inc/js/geocms.admin.js', __FILE__ ), array('jquery'));
+    wp_register_script( 'gsx_adm_min_js', plugins_url( 'inc/js/geocms.admin.min.js', __FILE__ ), array('jquery'));
+
+
+    wp_register_script( 'gsx_js', plugins_url( 's/geocms.js', __FILE__ ), array('jquery'));
+    wp_register_script( 'gsx_min_js', plugins_url( 'inc/js/geocms.min.js', __FILE__ ), array('jquery'));
+    wp_register_script( 'gsx_adm_js', plugins_url( 'inc/js/geocms.admin.js', __FILE__ ), array('jquery'));
+    wp_register_script( 'gsx_adm_min_js', plugins_url( 'inc/js/geocms.admin.min.js', __FILE__ ), array('jquery'));
+    wp_register_style( 'geocms_js', plugins_url( 'inc/js/geocms.js', __FILE__ ), array('jquery'));
+    wp_register_script( 'geocms_min_js', plugins_url( 'inc/js/geocms.min.js', __FILE__ ), array('jquery'));
+
+    wp_register_style( 'admin_trail_story_css', plugins_url( 'inc/admin-trail-story.css', __FILE__ ));
+    wp_enqueue_script( 'admin_trail_story_js' );
+    wp_enqueue_style( 'admin_trail_story_css' );
+
+
+
+    wp_register_script( 'admin_trail_story_js', plugins_url( 'inc/admin-trail-story.js', __FILE__ ), array('jquery'));
+    wp_register_style( 'admin_trail_story_css', plugins_url( 'inc/admin-trail-story.css', __FILE__ ));
+    wp_enqueue_script( 'admin_trail_story_js' );
+    wp_enqueue_style( 'admin_trail_story_css' );
+
+    wp_register_script( 'admin_trail_story_js', plugins_url( 'inc/admin-trail-story.js', __FILE__ ), array('jquery'));
+    wp_register_style( 'admin_trail_story_css', plugins_url( 'inc/admin-trail-story.css', __FILE__ ));
+    wp_enqueue_script( 'admin_trail_story_js' );
+    wp_enqueue_style( 'admin_trail_story_css' );
+
+    wp_register_script( 'admin_trail_story_js', plugins_url( 'inc/admin-trail-story.js', __FILE__ ), array('jquery'));
+    wp_register_style( 'admin_trail_story_css', plugins_url( 'inc/admin-trail-story.css', __FILE__ ));
+    wp_enqueue_script( 'admin_trail_story_js' );
+    wp_enqueue_style( 'admin_trail_story_css' );
+
+
 }
 
 /**
