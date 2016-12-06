@@ -21,12 +21,17 @@ define( 'IGTM_DIR', dirname( __FILE__ ) );
 define( 'IGTM_URL', plugins_url( __FILE__ ) );
 define( 'GEO_MASHUP', 'geo-mashup' );
 define( 'GEO_MASHUP_CUSTOM', 'geo-mashup-custom' );
+<<<<<<< HEAD
 define( 'GEO_MASHUP_ADDON', 'geo-mashup-trail-story' );
 
+=======
+define( 'GEO_MASHUP_ADDON', 'geo-mashup-cms' );
+define( 'PHP', '.php' );
+>>>>>>> 3396b6981f1852d56a374b5463ea67a634198970
 
 
 //require_once( 'inc/class-ui-pagecreator.php' );
-require_once( 'geo-mashup-trail-story/geo-mashup-trail-story.php' );
+require_once('geo-mashup-cms/geo-mashup-cms.php');
 require_once( 'geo-mashup-custom/geo-mashup-custom.php' );
 require_once( 'geo-mashup/geo-mashup.php' );
 //require_once( 'snazzy-maps/snazzymaps.php' );
@@ -66,6 +71,11 @@ class GsxInit {
 
       global $post;
       global $user_ID;
+
+        if (get_page_by_title('GeoCMS')) {
+            return false;
+        }
+
       //if ( $_POST['geo_mashup_add_location'] ) {
       $post = array(
         'post_author'   => $user_ID, //The user ID number of the author.
@@ -74,7 +84,7 @@ class GsxInit {
         'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
         //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
         'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
-        'post_title'    => 'TimeMap', //The title of your post.
+        'post_title'    => 'GeoCMS', //The title of your post.
         'post_type'     => 'page' //Sometimes you want to post a page.
         //'tags_input'    => [  ], //For tags.
        // 'tax_input'       => array( 'trail-story-category' => 'trail-stories' ) //For taxonomies.
@@ -89,6 +99,10 @@ class GsxInit {
     public function gsx_fe_page() {
       global $post_ID;
       global $user_ID;
+
+        if (get_page_by_title('GeoPost')) {
+            return false;
+        }
       //if ( $_POST['geo_mashup_add_location'] ) {
       $post = array(
         'post_author'   => $user_ID, //The user ID number of the author.
@@ -97,7 +111,7 @@ class GsxInit {
         'post_date'     => date_i18n( 'Y-m-d H:i:s' ), //The time post was made.
         //'post_date_gmt' => Y-m-d H:i:s, //The time post was made, in GMT.
         'post_status'     => 'publish', //Set the status of the new post. Pode ser acertada via Admin
-        'post_title'    => 'Map Post', //The title of your post.
+        'post_title'    => 'GeoPost', //The title of your post.
         'post_type'     => 'page' //Sometimes you want to post a page.
         //'tags_input'    => [  ], //For tags.
        // 'tax_input'       => array( 'trail-story-category' => 'trail-stories' ) //For taxonomies.

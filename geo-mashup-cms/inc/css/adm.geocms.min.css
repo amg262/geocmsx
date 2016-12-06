@@ -1,0 +1,164 @@
+/** ADMIN PAGE STYLES  **/
+.icon-header-post-type-title,
+.icon-header-image-title,
+.icon-post-type,
+.icon-image-buttons {
+    width:50%;
+    display:block;
+    float:left;
+}
+.trail-story-icon-button-container,
+.trail-story-icon-image-container {
+    position:relative;
+    width:70%;
+    display:block;
+    float:left;
+}
+.trail-story-icon-button-container {
+    width:30%;
+}
+
+/*.gm-legend-title,
+#gm-trail-conditions-check-all,
+#gm-itinerary-category-check-all,
+.gm-legend .symbol,
+#gm-trail-story-category-check-all {
+	display: none !important;
+	
+}*/
+
+.gm-legend input {
+	margin: 0 10px 0 0 !important;
+
+}
+.gm-map iframe {
+	margin: 0;
+}
+
+
+.plugin-info.content h4 {
+    margin:10px 0;
+}
+
+#geo-mashup-inline-help-link-wrap {
+    display: inline;
+    float: right;
+}
+
+#trail-story-post #geo_mashup_location_editor label,
+#trail-story-post #geo_mashup_location_editor #geo_mashup_search {
+    /*display: none !important;*/
+}
+
+#trail-story-post #geo_mashup_location_editor select {
+    margin:10px 0;
+}
+
+.admin-map-label {
+    font-weight: 600;
+}
+
+#trail-story-post #geo-mashup-location-table {
+    display: none !important;
+}
+
+
+#trail-story-post #geo-mashup-inline-help-link,
+#trail-story-post #geo_mashup_add_location {
+    margin:35px 0 0 0;
+    display: block;
+}
+
+#geo-mashup-inline-help-link-wrap {
+    display: none;
+    float: left;
+}
+
+#trail-story-post #geo_mashup_add_location  {
+    float:right !important;
+}
+
+#trail-story-post fieldset {
+    margin:0;
+    padding:0;
+    border:none !important;
+}
+#trail-story-post {
+    max-width: 100%;
+    width:100%;
+}
+#trail-story-post input[type="text"] {
+    max-width:500px;
+    width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+    #ui-datepicker-div {
+        /*display: none !important;*/
+    }
+}
+/*.ml-responsive-table.ml-responsive-table-0 {
+
+.locationinfo.post-location-info .gm-style img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.gm-legend-title {
+    display: none !important;
+}
+
+/*.wp-menu-open.menu-top.menu-icon-itinerary .wp-submenu.wp-submenu-wrap {
+    border-bottom: 3px inset #4DB270 !important;
+}*/
+/*#adminmenu > li > .menu-top.menu-icon-trail-route,
+#adminmenu > li > .menu-top.menu-icon-trail-story,
+#adminmenu > li > .menu-top.menu-icon-trail-condition {
+    border-left: 3px dotted #727171;
+    border-right: 3px dotted #727171;
+}*/
+
+/* We use this media query to add styles to any device that supports media queries */
+@media only screen {
+
+}
+
+/**
+ * Foundation: XLarge.
+ * Min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues 
+ */
+@media only screen and (max-width: 120em) {
+ 
+}
+
+/**
+ * Foundation: Large.
+ * Min-width 1025px and max-width 1440px, use when QAing large screen-only issues
+ */
+@media only screen and (max-width: 90em) { 
+ 
+}
+
+/**
+ * Foundation: Medium.
+ * Min-width 641px and max-width 1024px, use when QAing tablet-only issues
+ */
+@media only screen and (max-width: 64em) {
+    
+}
+/**
+ * Foundation: Small.
+ * Max-width 640px, mobile-only styles, use when QAing mobile issues
+ */
+@media only screen and (max-width: 40em) {
+    .gm-map iframe {
+        height:400px !important;
+    }
+
+    /*.ml-responsive-table.ml-responsive-table-0 {
+        display: none;
+    }*/
+    
+}
