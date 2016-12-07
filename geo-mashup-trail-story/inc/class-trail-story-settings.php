@@ -207,7 +207,7 @@ class TrailStorySettings {
                                         <input style="width:320px;"id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
                                     
                                     </label>
-                            
+                                </fieldset>
                             </td>
                         </tr>
 
@@ -290,38 +290,57 @@ class TrailStorySettings {
                             </td>
                         </tr>
                         <hr>
-                         <tr>
-                            <?php //$key = 'delete_data'; ?>
-                            <th scope="row">
-                               Map Type
-                            </th>
-                            <td>
-       
-                                <fieldset>
-                                 <?php $key = 'map_type';
-                                    //var_dump($trail_story_options[$key]);?>
-                                    <label for="trail_story_options[<?php echo $key; ?>]">
+                <tr>
+                    <?php //$key = 'delete_data'; ?>
+                    <th scope="row">
+                        Current Map Style
+                    </th>
+                    <td>
 
-                                        <select id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="trail_story_options[<?php echo $key; ?>]" >
-                                            <option value="Subtle Grayscale" <?php selected( $trail_story_options[$key], 'Subtle Grayscale' ); ?>>Subtle Grayscale</option>
-                                            <option value="Unsaturated Browns" <?php selected( $trail_story_options[$key], 'Unsaturated Browns' ); ?>>Unsaturated Browns</option>
-                                            <option value="Paper" <?php selected( $trail_story_options[$key], 'Paper' ); ?>>Paper</option>
-                                            <option value="Pale Dawn" <?php selected( $trail_story_options[$key], 'Pale Dawn' ); ?>>Pale Dawn</option>
-                                            <option value="Midnight Commander" <?php selected( $trail_story_options[$key], 'Midnight Commander' ); ?>>Midnight Commander</option>
-                                            <option value="Retro" <?php selected( $trail_story_options[$key], 'Retro' ); ?>>Retro</option>
-                                            <option value="Bright" <?php selected( $trail_story_options[$key], 'Bright' ); ?>>Bright</option>
-                                            <option value="Avocado" <?php selected( $trail_story_options[$key], 'Avocado' ); ?>>Avocado</option>
-                                            <option value="Hopper" <?php selected( $trail_story_options[$key], 'Hopper' ); ?>>Hopper</option>
-                                            <option value="Custom" <?php selected( $trail_story_options[$key], 'Custom' ); ?>>Custom</option>
-                                            </select>
-                                    </label>
-                                <p class="description"></p>
-                                
-                            </td>
-                        </tr>
+                        <fieldset>
+                            <?php $key = 'map_type';
+                            //var_dump($trail_story_options[$key]);?>
+                            <label for="trail_story_options[<?php echo $key; ?>]">
+
+                                <select id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="trail_story_options[<?php echo $key; ?>]" >
+                                    <option value="Subtle Grayscale" <?php selected( $trail_story_options[$key], 'Subtle Grayscale' ); ?>>Subtle Grayscale</option>
+                                    <option value="Unsaturated Browns" <?php selected( $trail_story_options[$key], 'Unsaturated Browns' ); ?>>Unsaturated Browns</option>
+                                    <option value="Paper" <?php selected( $trail_story_options[$key], 'Paper' ); ?>>Paper</option>
+                                    <option value="Pale Dawn" <?php selected( $trail_story_options[$key], 'Pale Dawn' ); ?>>Pale Dawn</option>
+                                    <option value="Midnight Commander" <?php selected( $trail_story_options[$key], 'Midnight Commander' ); ?>>Midnight Commander</option>
+                                    <option value="Retro" <?php selected( $trail_story_options[$key], 'Retro' ); ?>>Retro</option>
+                                    <option value="Bright" <?php selected( $trail_story_options[$key], 'Bright' ); ?>>Bright</option>
+                                    <option value="Avocado" <?php selected( $trail_story_options[$key], 'Avocado' ); ?>>Avocado</option>
+                                    <option value="Hopper" <?php selected( $trail_story_options[$key], 'Hopper' ); ?>>Hopper</option>
+                                    <option value="Custom" <?php selected( $trail_story_options[$key], 'Custom' ); ?>>Custom</option>
+                                </select>
+                            </label>
+                            <p class="description"></p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <?php //$key = 'delete_data'; ?>
+                    <th scope="row">
+                        Custom Map Style
+                    </th>
+                    <td>
+
+                        <fieldset><?php $key = 'custom_map_style';
+                            //var_dump($trail_story_options[$key]);?>
+                            <label for="trail_story_options[<?php echo $key; ?>]">
+                                <input style="width:320px;"id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
+
+                            </label>
+                        </fieldset>
+                            <p class="description">
+                                Custom map style creator available at <a href="http://snazzymaps.com" target="_blank">Snazzy Maps</a></p>
+
+                    </td>
+                </tr>
 
 
-                            <hr>
+                <hr>
                         <?php //var_dump($trail_story_options); ?>
                             <hr>
                         <tr>
