@@ -219,195 +219,6 @@ class TrailStorySettings {
             <?php submit_button('Save Options'); ?>
         </div>
         <p><hr></p>
-        <div id="">
-            <h1><strong>Map Customization and Data Layers</strong></h1>
-            <p>
-                <table class="form-table">
-                    <tbody>
-                    <tr>
-                        <?php //$key = 'delete_data'; ?>
-                        <th scope="row">
-                            Traffic Layer
-                        </th>
-                        <td>
-
-                            <fieldset><?php $key = 'traffic_layer';
-                                //var_dump($trail_story_options[$key]);?>
-                                <label for="trail_story_options[<?php echo $key; ?>]">
-                                    <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                                </label>
-            <p class="description"></p>
-
-            </td>
-            </tr>
-
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    Transit Layer
-                </th>
-                <td>
-
-                    <fieldset><?php $key = 'transit_layer';
-                        //var_dump($trail_story_options[$key]);?>
-                        <label for="trail_story_options[<?php echo $key; ?>]">
-                            <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                        </label>
-                        <p class="description"></p>
-
-                </td>
-            </tr>
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    Bicicyle Layer
-                </th>
-                <td>
-
-                    <fieldset><?php $key = 'bike_layer';
-                        //var_dump($trail_story_options[$key]);?>
-                        <label for="trail_story_options[<?php echo $key; ?>]">
-                            <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                        </label>
-                        <p class="description"></p>
-
-                </td>
-            </tr>
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    Fusion Heat Layer
-                </th>
-                <td>
-
-                    <fieldset><?php $key = 'fusion_heat_layer';
-                        //var_dump($trail_story_options[$key]);?>
-                        <label for="trail_story_options[<?php echo $key; ?>]">
-                            <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
-                        </label>
-                        <p class="description"></p>
-
-                </td>
-            </tr>
-            <hr>
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    Current Map Style
-                </th>
-                <td>
-
-                    <fieldset>
-                        <?php $key = 'map_type';
-                        //var_dump($trail_story_options[$key]);?>
-                        <label for="trail_story_options[<?php echo $key; ?>]">
-
-                            <select id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="trail_story_options[<?php echo $key; ?>]" >
-                                <option value="Subtle Grayscale" <?php selected( $trail_story_options[$key], 'Subtle Grayscale' ); ?>>Subtle Grayscale</option>
-                                <option value="Unsaturated Browns" <?php selected( $trail_story_options[$key], 'Unsaturated Browns' ); ?>>Unsaturated Browns</option>
-                                <option value="Paper" <?php selected( $trail_story_options[$key], 'Paper' ); ?>>Paper</option>
-                                <option value="Pale Dawn" <?php selected( $trail_story_options[$key], 'Pale Dawn' ); ?>>Pale Dawn</option>
-                                <option value="Midnight Commander" <?php selected( $trail_story_options[$key], 'Midnight Commander' ); ?>>Midnight Commander</option>
-                                <option value="Retro" <?php selected( $trail_story_options[$key], 'Retro' ); ?>>Retro</option>
-                                <option value="Bright" <?php selected( $trail_story_options[$key], 'Bright' ); ?>>Bright</option>
-                                <option value="Avocado" <?php selected( $trail_story_options[$key], 'Avocado' ); ?>>Avocado</option>
-                                <option value="Hopper" <?php selected( $trail_story_options[$key], 'Hopper' ); ?>>Hopper</option>
-                                <option value="Custom" <?php selected( $trail_story_options[$key], 'Custom' ); ?>>Custom</option>
-                            </select>
-                        </label>
-                        <p class="description"></p>
-
-                </td>
-            </tr>
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    Custom Map Style
-                </th>
-                <td>
-
-                    <fieldset><?php $key = 'custom_map_style';
-                        //var_dump($trail_story_options[$key]);?>
-                        <label for="trail_story_options[<?php echo $key; ?>]">
-                            <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
-
-                        </label>
-                    </fieldset>
-                    <p class="description">
-                        Custom map style creator available at <a href="http://snazzymaps.com" target="_blank">Snazzy Maps</a></p>
-
-                </td>
-            </tr>
-
-
-            <hr>
-            <?php //var_dump($trail_story_options); ?>
-            <hr>
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    Data Layer URLs
-                </th>
-                <td>
-                    <fieldset>
-                        <?php $key = 'custom_kml_layers';
-                        //var_dump($trail_story_options[$key]); ?>
-
-                        <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
-                        <br>
-
-                        <p class="description">Seperate URLs by comma or a new line</p>
-
-                </td>
-            </tr>
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    Earthquake GeoRSS
-                </th>
-                <td>
-                    <fieldset>
-                        <?php $key = 'eq_geo_rss';
-                        //var_dump($trail_story_options[$key]); ?>
-
-
-                        <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
-                        <br>
-
-                        <p class="description">Seperate URLs by comma or a new line</p>
-
-                </td>
-            </tr>
-
-            <tr>
-                <?php //$key = 'delete_data'; ?>
-                <th scope="row">
-                    GeoJSON URLs
-                </th>
-                <td>
-                    <fieldset>
-                        <?php $key = 'geo_json';
-                        //var_dump($trail_story_options[$key]); ?>
-
-                        <label for="trail_story_options[<?php echo $key; ?>]">
-                        </label>
-                        <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
-
-                    </fieldset>
-                    <p class="description">Seperate URLs by comma or a new line</p>
-
-                </td>
-
-            </tr>
-
-
-            </tbody>
-            </table></p>
-            <?php submit_button('Save Options'); ?>
-        </div>
-        <p><hr></p>
-        <div>
-        <h1><strong>Map Marker Images</strong></h1>
         <div class="icon-wrapper">
             <div class="icon-header">
 
@@ -603,6 +414,197 @@ class TrailStorySettings {
             <?php endif; ?>
             <div style="clear:both;height:0;"></div>
         </div>
+        <hr>
+        <div id="">
+            <h1><strong>Map Customization and Data Layers</strong></h1>
+            <p>
+                <table class="form-table">
+                    <tbody>
+
+            <hr>
+            <tr>
+                <?php //$key = 'delete_data'; ?>
+                <th scope="row">
+                    Current Map Style
+                </th>
+                <td>
+
+                    <fieldset>
+                        <?php $key = 'map_type';
+                        //var_dump($trail_story_options[$key]);?>
+                        <label for="trail_story_options[<?php echo $key; ?>]">
+
+                            <select id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="trail_story_options[<?php echo $key; ?>]" >
+                                <option value="Subtle Grayscale" <?php selected( $trail_story_options[$key], 'Subtle Grayscale' ); ?>>Subtle Grayscale</option>
+                                <option value="Unsaturated Browns" <?php selected( $trail_story_options[$key], 'Unsaturated Browns' ); ?>>Unsaturated Browns</option>
+                                <option value="Paper" <?php selected( $trail_story_options[$key], 'Paper' ); ?>>Paper</option>
+                                <option value="Pale Dawn" <?php selected( $trail_story_options[$key], 'Pale Dawn' ); ?>>Pale Dawn</option>
+                                <option value="Midnight Commander" <?php selected( $trail_story_options[$key], 'Midnight Commander' ); ?>>Midnight Commander</option>
+                                <option value="Retro" <?php selected( $trail_story_options[$key], 'Retro' ); ?>>Retro</option>
+                                <option value="Bright" <?php selected( $trail_story_options[$key], 'Bright' ); ?>>Bright</option>
+                                <option value="Avocado" <?php selected( $trail_story_options[$key], 'Avocado' ); ?>>Avocado</option>
+                                <option value="Hopper" <?php selected( $trail_story_options[$key], 'Hopper' ); ?>>Hopper</option>
+                                <option value="Custom" <?php selected( $trail_story_options[$key], 'Custom' ); ?>>Custom</option>
+                            </select>
+                        </label>
+                        <p class="description"></p>
+
+                </td>
+            </tr>
+            <tr>
+                <?php //$key = 'delete_data'; ?>
+                <th scope="row">
+                    Custom Map Style
+                </th>
+                <td>
+
+                    <fieldset><?php $key = 'custom_map_style';
+                        //var_dump($trail_story_options[$key]);?>
+                        <label for="trail_story_options[<?php echo $key; ?>]">
+                            <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
+
+                        </label>
+                    </fieldset>
+                    <p class="description">
+                        Custom map style creator available at <a href="http://snazzymaps.com" target="_blank">Snazzy Maps</a></p>
+
+                </td>
+            </tr>
+
+
+            <hr>
+            <?php //var_dump($trail_story_options); ?>
+            <hr>
+            <tr>
+                <?php //$key = 'delete_data'; ?>
+                <th scope="row">
+                    Data Layer URLs
+                </th>
+                <td>
+                    <fieldset>
+                        <?php $key = 'custom_kml_layers';
+                        //var_dump($trail_story_options[$key]); ?>
+
+                        <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
+                        <br>
+
+                        <p class="description">Seperate URLs by comma or a new line</p>
+
+                </td>
+            </tr>
+            <tr>
+                <?php //$key = 'delete_data'; ?>
+                <th scope="row">
+                    Earthquake GeoRSS
+                </th>
+                <td>
+                    <fieldset>
+                        <?php $key = 'eq_geo_rss';
+                        //var_dump($trail_story_options[$key]); ?>
+
+
+                        <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
+                        <br>
+
+                        <p class="description">Seperate URLs by comma or a new line</p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <?php //$key = 'delete_data'; ?>
+                <th scope="row">
+                    GeoJSON URLs
+                </th>
+                <td>
+                    <fieldset>
+                        <?php $key = 'geo_json';
+                        //var_dump($trail_story_options[$key]); ?>
+
+                        <label for="trail_story_options[<?php echo $key; ?>]">
+                        </label>
+                        <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
+
+                    </fieldset>
+                    <p class="description">Seperate URLs by comma or a new line</p>
+
+                </td>
+
+            </tr>
+
+
+            </tbody>
+            </table></p>
+            <?php submit_button('Save Options'); ?>
+        </div>
+        <p><hr></p>
+        <div>
+        <h1><strong>Map Marker Images</strong></h1>
+        <tr>
+            <?php //$key = 'delete_data'; ?>
+            <th scope="row">
+                Traffic Layer
+            </th>
+            <td>
+
+                <fieldset><?php $key = 'traffic_layer';
+                    //var_dump($trail_story_options[$key]);?>
+                    <label for="trail_story_options[<?php echo $key; ?>]">
+                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                    </label>
+                    <p class="description"></p>
+
+            </td>
+        </tr>
+
+        <tr>
+            <?php //$key = 'delete_data'; ?>
+            <th scope="row">
+                Transit Layer
+            </th>
+            <td>
+
+                <fieldset><?php $key = 'transit_layer';
+                    //var_dump($trail_story_options[$key]);?>
+                    <label for="trail_story_options[<?php echo $key; ?>]">
+                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                    </label>
+                    <p class="description"></p>
+
+            </td>
+        </tr>
+        <tr>
+            <?php //$key = 'delete_data'; ?>
+            <th scope="row">
+                Bicicyle Layer
+            </th>
+            <td>
+
+                <fieldset><?php $key = 'bike_layer';
+                    //var_dump($trail_story_options[$key]);?>
+                    <label for="trail_story_options[<?php echo $key; ?>]">
+                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                    </label>
+                    <p class="description"></p>
+
+            </td>
+        </tr>
+        <tr>
+            <?php //$key = 'delete_data'; ?>
+            <th scope="row">
+                Fusion Heat Layer
+            </th>
+            <td>
+
+                <fieldset><?php $key = 'fusion_heat_layer';
+                    //var_dump($trail_story_options[$key]);?>
+                    <label for="trail_story_options[<?php echo $key; ?>]">
+                        <input id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="checkbox" value="1" <?php checked(1, $trail_story_options[$key], true ); ?> />
+                    </label>
+                    <p class="description"></p>
+
+            </td>
+        </tr>
         <br><br>
 
     <?php }
