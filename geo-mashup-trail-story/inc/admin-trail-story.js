@@ -2,12 +2,7 @@
 * Function that parses input fields
 */
 jQuery(document).ready(function($) {
-    $('#trail_story_options[map_type]').change(function($) {
-        alert('hi');
-        if ($('#trail_story_options[map_type]').val() == 'Custom') {
-            ($('#trail_story_options[custom_map_style]').enabled = false;
-        }
-    });
+    
     $('#trail-story-post').submit(function($) {
 
         /*if ( document.trail_story_post.quick_post_title.value == null ||
