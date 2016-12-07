@@ -329,7 +329,7 @@ class TrailStorySettings {
                         <fieldset><?php $key = 'custom_map_style';
                             //var_dump($trail_story_options[$key]);?>
                             <label for="trail_story_options[<?php echo $key; ?>]">
-                                <input style="width:320px;"id='trail_story_options[<?php echo $key; ?>]' name="trail_story_options[<?php echo $key; ?>]" type="text" value="<?php echo $trail_story_options[$key]; ?>" />
+                                <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
 
                             </label>
                         </fieldset>
@@ -353,11 +353,10 @@ class TrailStorySettings {
                                     <?php $key = 'custom_kml_layers';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
-                                    
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
                                     <br>
                                     
-                                <p class="description">DEFAULT IS COMMA DELIMITED</p>
+                                <p class="description">Seperate URLs by comma or a new line</p>
                                 
                             </td>
                         </tr>
@@ -371,11 +370,11 @@ class TrailStorySettings {
                                 <?php $key = 'eq_geo_rss';
                                                                             //var_dump($trail_story_options[$key]); ?>
 
-                                    
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+
+                                    <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
                                     <br>
-                                    
-                                <p class="description">DEFAULT IS COMMA DELIMITED</p>
+
+                                    <p class="description">Seperate URLs by comma or a new line</p>
                                 
                             </td>
                         </tr>
@@ -392,10 +391,10 @@ class TrailStorySettings {
 
                                     <label for="trail_story_options[<?php echo $key; ?>]">
                                     </label>
-                                    <input type="text"  style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>" />
+                                    <textarea rows="5" style="width:700px;" name="trail_story_options[<?php echo $key; ?>]" id="trail_story_options[<?php echo $key; ?>]" value="<?php echo $trail_story_options[$key]; ?>"><?php echo $trail_story_options[$key]; ?></textarea>
 
-                                    </fieldset>                                   
-                                <p class="description">DEFAULT IS COMMA DELIMITED</p>
+                                    </fieldset>
+                                <p class="description">Seperate URLs by comma or a new line</p>
                                 
                             </td>
                         
